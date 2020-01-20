@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04ef21514eb7823dc6b510a93582163d",
+    "revision": "b1bd1bdd8ec50c55aab7d5c3909a4598",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "6dc5dd6495421f3fcddb",
+    "revision": "271a84d0a4a2e31bdffc",
     "url": "/Craft-and-Mix/static/css/main.608e6118.chunk.css"
   },
   {
-    "revision": "4783d6a4d6c56a3b079c",
-    "url": "/Craft-and-Mix/static/js/2.1ffb93d0.chunk.js"
+    "revision": "b198c51035b981810a38",
+    "url": "/Craft-and-Mix/static/js/2.ab517895.chunk.js"
   },
   {
-    "revision": "6dc5dd6495421f3fcddb",
-    "url": "/Craft-and-Mix/static/js/main.038bed83.chunk.js"
+    "revision": "271a84d0a4a2e31bdffc",
+    "url": "/Craft-and-Mix/static/js/main.370d156a.chunk.js"
   },
   {
-    "revision": "312f5b207e244c39420d",
-    "url": "/Craft-and-Mix/static/js/runtime-main.f0a0a9d5.js"
+    "revision": "63fc250a2c7e822c53ba",
+    "url": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js"
   },
   {
     "revision": "c718425a424ac1947f840143daa231d6",
