@@ -1,0 +1,62 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.head_line {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-white;
+  padding: 30px 0;
+  & > div.text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > span {
+      position: relative;
+      flex-grow: 1;
+      margin: 10px;
+    }
+    & > span.gold {
+      border-bottom: thin solid $primary-gold;
+    }
+    & > span.white {
+      border-bottom: thin solid $primary-white;
+    }
+    & > span.black {
+      border-bottom: thin solid $primary-black;
+    }
+    & > p {
+      font-size: 20px;
+    }
+    & > p.gold {
+      color: $primary-gold;
+    }
+    & > p.white {
+      color: $primary-white;
+    }
+    & > p.black {
+      color: $primary-black;
+    }
+  }
+  & > div.arrow_down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  & > div.gold {
+    color: $primary-gold;
+  }
+  & > div.white {
+    color: $primary-white;
+  }
+  & > div.black {
+    color: $primary-black;
+  }
+}
+

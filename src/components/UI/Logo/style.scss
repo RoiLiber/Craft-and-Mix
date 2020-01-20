@@ -1,0 +1,38 @@
+@import "../../../styles/colorsConfig";
+@import "../../../styles/mixins";
+
+div.logo {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100px;
+  letter-spacing: 3px;
+  & > div.cr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: 2px;
+    & > img {
+      width: 15px;
+      height: 30px;
+      position: relative;
+      top: -5px;
+      margin-right: 2px ;
+    }
+  }
+  & > span {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: 3px;
+  }
+  & > span.and {
+    font-size: 12px;
+    position: relative;
+    left: 6px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../styles/colorsConfig";
+
+div.contact_us_section {
+  background-color: $primary-gold;
+  height: 15vh;
+  width: 100%;
+  position: absolute;
+  z-index: 900;
+  top: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 50px;
+  color: $primary-white;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+

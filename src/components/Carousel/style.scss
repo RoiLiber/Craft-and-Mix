@@ -1,0 +1,58 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.carousel {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+
+  & > div.carousel_section {
+    height: 50%;
+    background-color: #89f892;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+
+    & > img {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  & > div.black {
+    background-color: $primary-black;
+    color: $primary-white;
+  }
+  & > div.gold {
+     background-color: $primary-gold;
+     color: $primary-white;
+  }
+}
+
+div.bottomCarouselItem {
+  z-index: 5;
+}
+div.topCarouselItem {
+  z-index: 55;
+}
+
+
+
+div.logo_on_photos {
+  position: relative;
+  font-size: 15px;
+  top: 175px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $primary-white;
+  width: 100%;
+  justify-content: center;
+  z-index: 100;
+  & > img {
+    width: 25px;
+  }
+}

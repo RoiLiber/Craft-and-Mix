@@ -1,0 +1,28 @@
+@import "../../styles/colorsConfig";
+
+div.carousel_section {
+
+    & > div.dots {
+        position: absolute;
+        height: 100%;
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        color: $primary-white;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+
+        & > i {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease-in-out;
+        }
+        & > i.gold {
+            color: $primary-gold;
+        }
+    }
+}
