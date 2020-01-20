@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Craft-and-Mix/static/css/main.608e6118.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.038bed83.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.038bed83.chunk.js.map",
+    "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.f0a0a9d5.js",
+    "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.f0a0a9d5.js.map",
+    "static/js/2.1ffb93d0.chunk.js": "/Craft-and-Mix/static/js/2.1ffb93d0.chunk.js",
+    "static/js/2.1ffb93d0.chunk.js.map": "/Craft-and-Mix/static/js/2.1ffb93d0.chunk.js.map",
+    "index.html": "/Craft-and-Mix/index.html",
+    "precache-manifest.9315366281efe07012a012e387ccf30d.js": "/Craft-and-Mix/precache-manifest.9315366281efe07012a012e387ccf30d.js",
+    "service-worker.js": "/Craft-and-Mix/service-worker.js",
+    "static/css/main.608e6118.chunk.css.map": "/Craft-and-Mix/static/css/main.608e6118.chunk.css.map",
+    "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
+    "static/media/Mode.jpeg": "/Craft-and-Mix/static/media/Mode.5234f944.jpeg",
+    "static/media/On the Menu.jpeg": "/Craft-and-Mix/static/media/On the Menu.5fd669cc.jpeg",
+    "static/media/Our Services.jpeg": "/Craft-and-Mix/static/media/Our Services.83a59f4b.jpeg",
+    "static/media/gold.PNG": "/Craft-and-Mix/static/media/gold.0ebaf998.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0a0a9d5.js",
+    "static/js/2.1ffb93d0.chunk.js",
+    "static/css/main.608e6118.chunk.css",
+    "static/js/main.038bed83.chunk.js"
+  ]
+}
