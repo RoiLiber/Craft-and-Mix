@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import AboutUsSection from "../../Sections/AboutUsSection";
+import AboutUsSection from "../../sections/AboutUsSection";
 import './style.scss';
 import Footer from "../../components/Footer";
 

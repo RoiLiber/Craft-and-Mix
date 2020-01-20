@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import CarouselSection from "../../Sections/CarouselSection/CarouselSection";
-import ContactUsSection from "../../Sections/ContactUsSection/ContactUsSection";
+import CarouselSection from "../../sections/CarouselSection/CarouselSection";
+import ContactUsSection from "../../sections/ContactUsSection/ContactUsSection";
 import './style.scss';
 
 
