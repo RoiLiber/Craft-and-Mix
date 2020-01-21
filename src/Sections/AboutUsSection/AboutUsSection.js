@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SectionHeadLine from "../../components/SectionHeadLine";
 import { Events, animateScroll as scroll, scrollSpy, } from 'react-scroll';
 import { Element } from 'react-scroll';
+import {Fade, Flip, Zoom} from "react-reveal";
 import './style.scss';
 
 class AboutUsSection extends Component {
@@ -15,9 +16,26 @@ class AboutUsSection extends Component {
         });
         scrollSpy.update();
     };
+    componentWillUnmount = () => {
+        Events.scrollEvent.remove('begin');
+        Events.scrollEvent.remove('end');
+    };
 
-    scrollTo = i => {
-        scroll.scrollTo(i);
+    // scrollToTop = () => {
+    //     scroll.scrollToTop();
+    // };
+    // scrollToBottom = () => {
+    //     scroll.scrollToBottom();
+    // };
+    // scrollMore = more => {
+    //     scroll.scrollMore(more);
+    // };
+    // handleSetActive = to => {
+    //     console.log(to);
+    // };
+
+    scrollTo = to => {
+        scroll.scrollTo(to);
     };
 
     render() {
@@ -26,7 +44,7 @@ class AboutUsSection extends Component {
                 <div className={'about_us'}>
                     <SectionHeadLine
                         scrollTo={this.scrollTo}
-                        scroll={580}
+                        scroll={680}
                         text={'About us'}
                         textColor={'black'}
                         arrowColor={'gold'}
@@ -55,7 +73,7 @@ class AboutUsSection extends Component {
                     </div>
                     <SectionHeadLine
                         scrollTo={this.scrollTo}
-                        scroll={1000}
+                        scroll={980}
                         text={'Our services'}
                         textColor={'black'}
                         arrowColor={'gold'}
@@ -63,17 +81,27 @@ class AboutUsSection extends Component {
                     />
                     <div className={'services'}>
                         <div className={'service'}>
-                            <i className="fab fa-elementor"/>
-                            <p>Bars advice and cocktail's menu build</p>
+                            <Fade top delay={500}>
+                                <i className="fas fa-glass-martini-alt"/>
+                            </Fade>
+                            <Zoom cascade>
+                                <p>Bar and cocktails services for any event</p>
+                            </Zoom>
                         </div>
                         <div className={'service'}>
-                            <i className="fas fa-glass-martini-alt"/>
-                            <p>Bar and cocktails services for any event</p>
+                            <Fade top={800} delay={900}>
+                                <i className="fab fa-elementor"/>
+                            </Fade>
+                            <Zoom cascade>
+                                <p>Bars advice and cocktail's menu build</p>
+                            </Zoom>
                         </div>
-                        <div className={'service'}>
-                            <i className="fas fa-wine-bottle"/>
-                            <p>Pre mixed and ready to served craft cocktails in bottled</p>
-                        </div>
+                        {/*<div className={'service'}>*/}
+                        {/*    <Flip>*/}
+                        {/*        <i className="fas fa-wine-bottle"/>*/}
+                        {/*    </Flip>*/}
+                        {/*    <p>Pre mixed and ready to served craft cocktails in bottled</p>*/}
+                        {/*</div>*/}
                     </div>
                     <SectionHeadLine
                         scrollTo={this.scrollTo}
