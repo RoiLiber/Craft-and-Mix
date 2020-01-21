@@ -9,7 +9,6 @@ class TopLayout extends Component {
     render() {
         return (
             <div className="top_layout">
-                {/*<div className={'clear_top'}/>*/}
                 <AboutUsSection/>
                 <div className={'test'}/>
                 <Footer/>

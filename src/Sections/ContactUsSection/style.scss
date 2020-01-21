@@ -6,12 +6,17 @@ div.contact_us_section {
   width: 100%;
   position: absolute;
   z-index: 900;
-  top: 70vh;
+  top: 75vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   font-size: 50px;
   color: $primary-white;
+
+  & > div {
+    width: 100%;
+  }
 
   & > a {
     display: flex;
@@ -20,6 +25,7 @@ div.contact_us_section {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    padding: 20px;
   }
 }
 

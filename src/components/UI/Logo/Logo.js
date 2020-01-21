@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assest/img/logos/gold.PNG';
+import logo from '../../../assest/img/logos/A.jpeg';
 import './style.scss';
 
 export default function Logo(props) {

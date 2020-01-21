@@ -22,7 +22,9 @@ class Header extends Component {
     }
     handleScroll = () => {
         let scrollTopY = window.scrollY;
-        if (scrollTopY > 585) {
+        let width = window.innerWidth;
+
+        if (scrollTopY > 585 && width <= 1200) {
             this.setState({ styleClassName: true });
         } else {
             this.setState({ styleClassName: false });
@@ -42,9 +44,9 @@ class Header extends Component {
                 <div className={styleClassName ? 'header sm' : 'header'}>
                     <div className={'top'}>
                         <Logo/>
-                        <div className={'menu_button'} onClick={() => this.toggleMenu()}>
-                            <i className="fas fa-ellipsis-h"/>
-                        </div>
+                    </div>
+                    <div className={'menu_button'} onClick={() => this.toggleMenu()}>
+                        <i className="fas fa-ellipsis-h"/>
                     </div>
                     <span>cocktail bar service and much more</span>
                     <Menu className={styleClassName ? 'menu sm' : 'menu'}/>

@@ -8,6 +8,7 @@ div.logo {
   flex-wrap: wrap;
   width: 100px;
   letter-spacing: 3px;
+  transition: 0.3s ease-in-out;
   & > div.cr {
     display: flex;
     align-items: center;
@@ -15,12 +16,21 @@ div.logo {
     width: 100%;
     position: relative;
     left: 2px;
+    font-size: 25px;
+    @include respond-to('large') {
+      font-size: 15px;
+    }
     & > img {
       width: 15px;
       height: 30px;
       position: relative;
       top: -5px;
       margin-right: 2px ;
+      @include respond-to('large') {
+        font-size: 15px;
+        width: 15px;
+        height: 25px;
+      };
     }
   }
   & > span {
@@ -29,6 +39,9 @@ div.logo {
     width: 100%;
     position: relative;
     left: 3px;
+    @include respond-to('large') {
+      font-size: 15px;
+    }
   }
   & > span.and {
     font-size: 12px;

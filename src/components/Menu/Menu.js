@@ -29,7 +29,7 @@ class Menu extends Component {
 
     clickedMenu = index => {
         const { toggleMenu } = this.props;
-        const scrollTo = index === 0 ? 568 : index === 5 ? 754 : 0;
+        const scrollTo = index === 0 ? 580 : index === 1 ? 1000 : index === 5 ? 754 : 0;
         this.scrollTo(scrollTo);
         toggleMenu(false)
     };

@@ -8,16 +8,20 @@ div.head_line {
   justify-content: center;
   align-items: center;
   background-color: $primary-white;
-  padding: 30px 0;
+  @include respond-to('large') {
+    height: 10vh;
+  }
+
   & > div.text {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding-top: 40px;
     & > span {
       position: relative;
       flex-grow: 1;
-      margin: 10px;
+      margin: 15px;
     }
     & > span.gold {
       border-bottom: thin solid $primary-gold;
@@ -29,7 +33,7 @@ div.head_line {
       border-bottom: thin solid $primary-black;
     }
     & > p {
-      font-size: 20px;
+      font-size: 25px;
     }
     & > p.gold {
       color: $primary-gold;
@@ -48,6 +52,14 @@ div.head_line {
     align-items: center;
     font-size: 25px;
     margin-top: 10px;
+    @include respond-to('large') {
+      margin-top: 0;
+    }
+  }
+  & > div.up {
+    position: relative;
+    bottom: 50px;
+    left: 2px;
   }
   & > div.gold {
     color: $primary-gold;
