@@ -95,7 +95,6 @@ class MoodSection extends Component {
                         </Fade>
                     </div>
                     }
-
                 </div>
                 <SectionHeadLine
                     scrollTo={this.scrollTo}
