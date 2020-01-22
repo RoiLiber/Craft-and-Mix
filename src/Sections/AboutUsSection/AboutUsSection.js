@@ -81,18 +81,18 @@ class AboutUsSection extends Component {
                     />
                     <div className={'services'}>
                         <div className={'service'}>
-                            <Fade top delay={500}>
+                            <Flip delay={500}>
                                 <i className="fas fa-glass-martini-alt"/>
-                            </Fade>
-                            <Zoom cascade>
+                            </Flip>
+                            <Zoom cascade delay={500}>
                                 <p>Bar and cocktails services for any event</p>
                             </Zoom>
                         </div>
                         <div className={'service'}>
-                            <Fade top={800} delay={900}>
+                            <Flip delay={900}>
                                 <i className="fab fa-elementor"/>
-                            </Fade>
-                            <Zoom cascade>
+                            </Flip>
+                            <Zoom cascade delay={900}>
                                 <p>Bars advice and cocktail's menu build</p>
                             </Zoom>
                         </div>

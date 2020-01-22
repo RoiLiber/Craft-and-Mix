@@ -29,7 +29,13 @@ const carousel = [
 ];
 
 const mood = [
-    imgMood7, imgMood4, imgMood6, imgMood1, imgMood3, imgMood2, imgMood5,
+    { text: 'Our team', img: imgMood7, color: 'black', index: 0 },
+    { text: 'She know some shit', img: imgMood4, color: 'gold', index: 1 },
+    { text: 'Craft it', img: imgMood6, color: 'black', index: 2 },
+    { text: 'Lime???', img: imgMood1, color: 'gold', index: 3 },
+    { text: 'Our Services Google event', img: imgMood3, color: 'gold', index: 4 },
+    { text: 'Our Services', img: imgMood2, color: 'black', index: 5 },
+    { text: 'Mode', img: imgMood5, color: 'gold', index: 6 }
 ];
 
 const initialState = {

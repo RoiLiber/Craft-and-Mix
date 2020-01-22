@@ -12,6 +12,17 @@ div.pop_up_wrapper {
   top: 0;
   z-index: 700;
 
+  & > i {
+    font-size: 35px;
+    color: $primary-white;
+    position: relative;
+    top: 40%;
+    transition: 0.3s ease-in-out;
+  }
+  & > i:hover {
+    color: $primary-black;
+    font-size: 40px;
+  }
   & > div.photo {
     position: absolute;
     font-size: 15px;
@@ -24,7 +35,6 @@ div.pop_up_wrapper {
       height: 90%;
       width: 70%;
     }
-
 
     & > img {
       height: 100%;

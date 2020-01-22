@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { Fade } from "react-reveal";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';
+import {find, slice} from 'lodash';
 
 class MoodSection extends Component {
 
@@ -12,19 +13,57 @@ class MoodSection extends Component {
         super(props);
         this.state = {
             popUpPhoto: false,
-            photo: ''
+            photo: this.props.mood[0].img,
+            photoText: '',
+            nextPhoto: this.props.mood[1].img,
+            popPhoto: '',
+            nextPhotoIndex: 1,
+            activeCarousel: false
         };
     }
 
+    componentDidMount() {
+        this.toggleCarousel(true)
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        const { nextPhotoIndex, activeCarousel } = this.state;
+
+        if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
+            setTimeout(() => {
+                this.carousel(nextPhotoIndex)
+            }, 3000)
+        }
+    }
+
+    toggleCarousel = bool => {
+        this.setState({ activeCarousel: bool })
+    };
+
+    carousel = index => {
+        const { mood } = this.props;
+
+        const img = find(mood, { index: index });
+        this.toggleCarousel(false);
+        this.setState({
+            photo: img.img,
+            nextPhoto: index === 6 ? mood[0].img : mood[index + 1].img,
+            nextPhotoIndex: index === 6 ? 0 : index + 1,
+            photoText: img.text
+        });
+        this.toggleCarousel(true)
+    };
+
     popUp = item => {
         const { popUpPhoto } = this.state;
-        this.setState({ popUpPhoto: !popUpPhoto, photo: item })
+        this.setState({ popUpPhoto: !popUpPhoto, popPhoto: item })
     };
 
     render() {
         const { mood } = this.props;
-        const { photo, popUpPhoto } = this.state;
+        const { popPhoto, popUpPhoto, photo, activeCarousel, nextPhotoIndex,photoText } = this.state;
         let width = window.innerWidth;
+        // const photos = width < 767 ? slice(mood, 0, 2) : mood;
 
         return (
             <div className={'mood_section'} style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -42,50 +81,22 @@ class MoodSection extends Component {
                 {/*        <i className="far fa-envelope"/>*/}
                 {/*    </a>*/}
                 {/*</Fragment>*/}
-                {popUpPhoto && <PopUpImg photo={photo} onClick={() => this.popUp()} />}
+                {popUpPhoto && <PopUpImg photo={popPhoto} onClick={() => this.popUp()} />}
                 <div className={'mood'}>
+                    {activeCarousel &&
                     <div className={'mood_img_wrapper'}>
-                        {mood.map((item, index) => {
-                            return <Fragment>
-                                {width < 767 && index === 1
-                                ? <div onClick={() => this.popUp(item)}>
-                                        <Fade bottom delay={120 * index}>
-                                            <img src={item} alt={`${index}`}/>
-                                        </Fade>
-                                    </div>
-                                    : (index === 0 || index === 1 || index === 2) && width > 767
-                                ? <div onClick={() => this.popUp(item)}>
-                                        <Fade bottom delay={120 * index}>
-                                            <img src={item} alt={`${index}`}/>
-                                        </Fade>
-                                    </div>
-                                    : null
-                                }
-                            </Fragment>
-                        })}
+                        <Fade delay={120}>
+                            <div onClick={() => this.popUp(photo)}>
+                                <img src={photo} alt={`mood`}/>
+                            </div>
+                        </Fade>
+                        <Fade delay={350}>
+                            <span className={'text'}>{photoText}</span>
+                        </Fade>
                     </div>
-                    <div className={'mood_img_wrapper'}>
-                        {mood.map((item, index) => {
-                            return <Fragment>
-                                {width < 767 && index === 2
-                                    ? <div onClick={() => this.popUp(item)}>
-                                        <Fade bottom delay={120 * index}>
-                                            <img src={item} alt={`${index}`}/>
-                                        </Fade>
-                                    </div>
-                                    : (index === 3 || index === 4 || index === 5) && width > 767
-                                        ? <div onClick={() => this.popUp(item)}>
-                                            <Fade bottom delay={120 * index}>
-                                                <img src={item} alt={`${index}`}/>
-                                            </Fade>
-                                        </div>
-                                        : null
-                                }
-                            </Fragment>
-                        })}
-                    </div>
-                </div>
+                    }
 
+                </div>
                 <SectionHeadLine
                     scrollTo={this.scrollTo}
                     scroll={1000}
