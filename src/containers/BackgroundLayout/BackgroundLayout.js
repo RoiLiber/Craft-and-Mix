@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import CarouselSection from "../../sections/CarouselSection/CarouselSection";
-import MoodSection from "../../sections/Mood/Mood";
+import Mood from "../../sections/Mood/Mood";
 import './style.scss';
 
 class BackgroundLayout extends Component {
@@ -10,7 +10,7 @@ class BackgroundLayout extends Component {
         super(props);
         this.state = {
             carouselSection: true,
-            contactUsSection: false
+            moodSection: false
         };
     }
 
@@ -22,20 +22,21 @@ class BackgroundLayout extends Component {
     }
     handleScroll = () => {
         let scrollTopY = window.scrollY;
-        if (scrollTopY > 585) {
-            this.setState({ carouselSection: false, contactUsSection: true });
+
+        if (scrollTopY > 705) {
+            this.setState({ carouselSection: false, moodSection: true });
         } else {
-            this.setState({ carouselSection: true, contactUsSection: false });
+            this.setState({ carouselSection: true, moodSection: false });
         }
     };
 
     render() {
-        const { carouselSection, contactUsSection } = this.state;
+        const { carouselSection, moodSection } = this.state;
 
         return (
             <div className="background_layout">
                 {carouselSection && <CarouselSection/>}
-                {contactUsSection && <MoodSection/>}
+                {moodSection && <Mood/>}
             </div>
         )
     };

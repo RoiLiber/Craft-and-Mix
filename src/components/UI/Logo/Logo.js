@@ -4,10 +4,10 @@ import gold from '../../../assest/img/logos/gold.PNG';
 import './style.scss';
 
 export default function Logo(props) {
-    const { backgroundColor } = props;
+    const { backgroundColor, sm } = props;
 
     return (
-        <div className={'logo'}>
+        <div className={sm ? 'logo logo_sm' : 'logo'}>
             <div className={'cr'}>
                 <span>CR</span>
                 <img alt={'logo'} src={backgroundColor ? gold : logo}/>

@@ -14,6 +14,7 @@ class TopLayout extends Component {
                 <AboutUs/>
                 <OurServices/>
                 <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'}/>
+                {/*<div className={'mood_head_line'}/>*/}
                 <div className={'test'}/>
                 <Footer/>
             </div>

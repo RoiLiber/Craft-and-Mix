@@ -2,24 +2,21 @@
 @import "../../../styles/mixins";
 
 div.logo {
-  font-size: 25px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100px;
   letter-spacing: 3px;
   transition: 0.3s ease-in-out;
+
   & > div.cr {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     position: relative;
-    left: 2px;
-    font-size: 25px;
-    @include respond-to('large') {
-      font-size: 15px;
-    }
+    left: 1px;
+
     & > img {
       width: 15px;
       height: 30px;
@@ -27,7 +24,6 @@ div.logo {
       top: -5px;
       margin-right: 2px ;
       @include respond-to('large') {
-        font-size: 15px;
         width: 15px;
         height: 25px;
       };
@@ -39,13 +35,41 @@ div.logo {
     width: 100%;
     position: relative;
     left: 3px;
-    @include respond-to('large') {
-      font-size: 15px;
-    }
   }
+
   & > span.and {
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     left: 6px;
+  }
+}
+
+div.logo_sm {
+  flex-wrap: nowrap;
+  color: $primary-white;
+  margin-right: 10px;
+
+  & > div.cr {
+    display: flex;
+    left: 0;
+
+    & > img {
+      width: 12px;
+      height: 20px;
+      position: relative;
+      top: -3px;
+    }
+  }
+  & > span {
+    display: flex;
+    align-items: center;
+    left: 0;
+  }
+  & > span.and {
+    font-size: 9px;
+    left: 0;
   }
 }

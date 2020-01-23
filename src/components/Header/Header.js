@@ -20,11 +20,13 @@ class Header extends Component {
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
+
     handleScroll = () => {
+        const { windowWidthSm } = this.props;
         let scrollTopY = window.scrollY;
         let width = window.innerWidth;
 
-        if (scrollTopY > 585 && width <= 1200) {
+        if (scrollTopY > 702 && width <= windowWidthSm) {
             this.setState({ styleClassName: true });
         } else {
             this.setState({ styleClassName: false });
@@ -33,6 +35,7 @@ class Header extends Component {
 
     toggleMenu = () => {
         const { openMenu, toggleMenu } = this.props;
+
         toggleMenu(!openMenu)
     };
 
@@ -40,26 +43,25 @@ class Header extends Component {
         const { styleClassName } = this.state;
 
         return (
-            <Fragment>
-                <div className={styleClassName ? 'header sm' : 'header'}>
-                    <div className={'top'}>
-                        <Logo/>
-                    </div>
-                    <div className={'menu_button'} onClick={() => this.toggleMenu()}>
-                        <i className="fas fa-ellipsis-h"/>
-                    </div>
-                    <span>cocktail bar service and much more</span>
-                    <Menu className={styleClassName ? 'menu sm' : 'menu'}/>
+            <div className={styleClassName ? 'header sm' : 'header'}>
+                <div className={'header_logo'}>
+                    <Logo sm={styleClassName}/>
+                    <span className={'logo_line'}>cocktail bar service and much more</span>
                 </div>
-            </Fragment>
+                <div className={'menu_button'} onClick={() => this.toggleMenu()}>
+                    <i className="fas fa-ellipsis-h"/>
+                </div>
+                <Menu className={styleClassName ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={styleClassName}/>
+            </div>
         )
     };
 }
 
 const mapStateToProps = state => {
-    const { openMenu } = state.mainReducer;
+    const { openMenu, windowWidthSm } = state.mainReducer;
     return {
-        openMenu
+        openMenu,
+        windowWidthSm
     };
 };
 

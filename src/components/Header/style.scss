@@ -1,7 +1,7 @@
 @import "../../styles/colorsConfig";
 @import "../../styles/mixins";
 
-.header {
+div.header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,127 +10,66 @@
     top: 0;
     padding: 10px 0;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     color: $primary-white;
     z-index: 999;
     background-color: $primary-black;
-    opacity: 0.95;
     transition: 0.3s ease-in-out;
     @include respond-to('large') {
-        height: 10vh;
         flex-wrap: nowrap;
-        justify-content: space-between;
         padding: 10px 20px;
-        width: 100%;
     }
-    & > div.top {
-        width: 100%;
+    & > div.header_logo {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
-        font-size: 20px;
-        @include respond-to('large') {
-            height: 10vh;
-            width: auto;
+        justify-content: center;
+
+        & > span {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: 0.3s ease-in-out;
         }
     }
     & > div.menu_button {
-        font-size: 17px;
+        font-size: 20px;
         color: $primary-gold;
         position: absolute;
-        right: 15px;
-        top: 20px;
-        z-index: 1200;
-        @include respond-to('large') {
-            height: 100%;
-            align-items: center;
-            position: relative;
-            left: 0;
-        }
-    }
-    & > span {
-        position: absolute;
-        left: 10px;
-        align-items: flex-end;
-        height: 100%;
-        width: 100%;
         display: flex;
-        justify-content: center;
-        @include respond-to('large') {
-            height: 100%;
-            width: 120px;
-            left: 110px;
-            bottom: 11px;
-            align-items: flex-end;
-            font-size: 12px;
-        }
+        align-items: center;
+        right: 20px;
+        height: 100%;
+        z-index: 1200;
     }
 }
 
 div.sm {
     height: 5vh;
-    font-size: 10px;
-    & > div.top {
+    justify-content: flex-start;
+    padding: 0;
+
+    & > div.header_logo {
         justify-content: space-between;
-        & > div.logo {
-            font-size: 10px;
-            flex-wrap: nowrap;
-            position: relative;
-            top: -4px;
-            color: $primary-white;
+        flex-wrap: nowrap;
+        padding-left: 20px;
 
-            & > div.cr {
-                display: block;
-                width: 50px;
-                margin-right: 3px;
-                font-size: 10px;
-
-                & > img {
-                    width: 10px;
-                    height: 15px;
-                    position: relative;
-                    top: 0;
-                    margin-right: 2px ;
-                }
-            }
-            & > span {
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                width: 30px;
-                position: relative;
-                left: 0;
-            }
-            & > span.and {
-                font-size: 8px;
-                width: 5px;
-                margin-right: 3px;
-                position: relative;
-                bottom: 1px;
-                left: 1px;
-            }
+        div.cr {
+            font-size: 15px;
         }
 
         & > img {
             width: 10px;
             height: 10px;
         }
-    }
-    & > div.menu_button {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-    }
-    & > span {
-        position: absolute;
-        left: 10px;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
 
+        & > span.logo_line {
+            font-size: 12px;
+            position: relative;
+            left: 10px;
+        }
     }
+
 }
 
 

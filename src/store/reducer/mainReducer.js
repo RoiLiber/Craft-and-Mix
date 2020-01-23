@@ -11,14 +11,17 @@ import imgMood5 from "../../assest/img/mood/w.jpeg";
 import imgMood6 from "../../assest/img/carousel/On the Menu.jpeg";
 import imgMood7 from "../../assest/img/on-the-roof-tlv/team_craft.jpeg";
 
+const windowWidthSm = 767;
+const windowWidthMd = 992;
+const windowWidthLr = 1200;
 
 const menuList = [
-    'About us',
-    'Our Services',
-    'Mode',
-    'On the Menu',
-    'Some happy Customers',
-    'Connect us',
+    { text: 'About us', elementName: 'aboutUs' },
+    { text: 'Our Services', elementName: 'OurServices' },
+    { text: 'Mood', elementName: 'mood' },
+    // { text: 'On the Menu', elementName: 'onTheMenu' },
+    { text: 'Some happy Customers', elementName: 'someHappyCustomers' },
+    { text: 'Contact us', elementName: 'contactUs' },
 ];
 
 const carousel = [
@@ -39,6 +42,9 @@ const mood = [
 ];
 
 const initialState = {
+    windowWidthSm,
+    windowWidthMd,
+    windowWidthLr,
     menuList,
     openMenu: false,
     carousel,

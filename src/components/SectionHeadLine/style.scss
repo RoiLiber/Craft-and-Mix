@@ -12,8 +12,8 @@
     align-items: center;
     background-color: $primary-white;
     font-size: 25px;
-    padding: 2vh 0;
-    max-height: 10vh;
+    padding: 3vh 0;
+    height: 15vh;
 
     & > div.text {
       width: 100%;
@@ -58,6 +58,9 @@
         color: $primary-black;
       }
     }
+  }
+  & > div.goldBackground {
+    background-color: rgba($primary-gold, 0);
   }
 }
 
