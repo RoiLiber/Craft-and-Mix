@@ -7,19 +7,18 @@ div.menu {
     flex-wrap: wrap;
     align-items: center;
     position: absolute;
-    top: 10vh;
-    height: 90vh;
+    top: 15vh;
+    height: 85vh;
     z-index: 700;
     background-color: rgba($primary-gold, 0.95);
+
 
     & > div {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        @include respond-to('large') {
 
-        }
     }
 }
 

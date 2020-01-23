@@ -46,15 +46,16 @@ class Header extends Component {
         this.setState({ clickedSection: true });
         setTimeout(() => {
             this.setState({ clickedSection: false, selectedSection });
-        }, 900)
+        }, 1000)
 
     };
 
     handleScroll = () => {
-        const { windowWidthSm } = this.props;
+        const { windowWidthMd } = this.props;
         const { clickedSection } = this.state;
         let scrollTopY = window.scrollY;
         let width = window.innerWidth;
+
         const selectedSection = scrollTopY >= 716 && scrollTopY < 1091
             ? 'aboutUs'
             : scrollTopY >= 1091 && scrollTopY < 1466
@@ -64,7 +65,7 @@ class Header extends Component {
                     : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (scrollTopY > 702 && width <= windowWidthSm) {
+        if (scrollTopY > 600 && width < windowWidthMd) {
             this.setState({ styleClassName: true });
         } else {
             this.setState({ styleClassName: false });
@@ -108,7 +109,7 @@ class Header extends Component {
                                 >
                                     <span className={'menu_list_item_text'}>{item.text}</span>
                                         {selectedSection === item.elementName &&
-                                        <Slide left duration={500}>
+                                        <Slide left duration={700}>
                                             <span className={'menu_list_item_line'}/>
                                         </Slide>
                                         }
@@ -124,11 +125,12 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => {
-    const { openMenu, windowWidthLr, windowWidthSm, menuList } = state.mainReducer;
+    const { openMenu, windowWidthLr, windowWidthSm, menuList, windowWidthMd } = state.mainReducer;
     return {
         openMenu,
         windowWidthLr,
         windowWidthSm,
+        windowWidthMd,
         menuList
     };
 };
