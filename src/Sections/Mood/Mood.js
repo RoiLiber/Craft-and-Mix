@@ -7,7 +7,7 @@ import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';
 import {find, slice} from 'lodash';
 
-class MoodSection extends Component {
+class Mood extends Component {
 
     constructor(props) {
         super(props);
@@ -61,9 +61,9 @@ class MoodSection extends Component {
 
     render() {
         const { mood } = this.props;
-        const { popPhoto, popUpPhoto, photo, activeCarousel, nextPhotoIndex,photoText } = this.state;
+        const { popPhoto, popUpPhoto, photo, activeCarousel, nextPhotoIndex, photoText } = this.state;
         let width = window.innerWidth;
-        // const photos = width < 767 ? slice(mood, 0, 2) : mood;
+        const lr = width < 767;
 
         return (
             <div className={'mood_section'} style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -96,15 +96,22 @@ class MoodSection extends Component {
                     </div>
                     }
                 </div>
-                <SectionHeadLine
-                    scrollTo={this.scrollTo}
-                    scroll={1000}
-                    text={'Mood'}
-                    textColor={'black'}
-                    arrowColor={'gold'}
-                    lineColor={'gold'}
-                    arrowUp={true}
-                />
+                {
+                    lr && <div className={'mood'}>
+                        {activeCarousel &&
+                        <div className={'mood_img_wrapper'}>
+                            <Fade delay={120}>
+                                <div onClick={() => this.popUp(photo)}>
+                                    <img src={photo} alt={`mood`}/>
+                                </div>
+                            </Fade>
+                            <Fade delay={350}>
+                                <span className={'text'}>{photoText}</span>
+                            </Fade>
+                        </div>
+                        }
+                    </div>
+                }
             </div>
         )
     };
@@ -117,4 +124,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps)(MoodSection);
+export default connect(mapStateToProps)(Mood);

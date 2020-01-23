@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import CarouselSection from "../../sections/CarouselSection/CarouselSection";
-import MoodSection from "../../sections/MoodSection/MoodSection";
+import MoodSection from "../../sections/Mood/Mood";
 import './style.scss';
-
-
 
 class BackgroundLayout extends Component {
 
@@ -33,6 +31,7 @@ class BackgroundLayout extends Component {
 
     render() {
         const { carouselSection, contactUsSection } = this.state;
+
         return (
             <div className="background_layout">
                 {carouselSection && <CarouselSection/>}

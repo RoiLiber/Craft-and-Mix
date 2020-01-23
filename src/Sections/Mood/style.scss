@@ -2,15 +2,13 @@
 @import "../../styles/mixins";
 
 div.mood_section {
-  background-color: $primary-white;
   width: 100%;
   position: absolute;
-  z-index: 900;
-  top: 20vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   & > div.mood {
     width: 100%;

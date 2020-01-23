@@ -1,0 +1,44 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.about_us {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-white;
+  color: $primary-black;
+  min-height: 25vh;
+
+  & > div.text_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include respond-to('large') {
+      flex-wrap: nowrap;
+    }
+
+    & > div.about_us_text {
+      margin: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      max-width: 350px;
+
+      & > p  {
+        margin: 5px;
+        width: 100%;
+        & > span.gold_color {
+          color: $primary-gold;
+        }
+      }
+    }
+  }
+
+}
+
+

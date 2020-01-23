@@ -49,8 +49,7 @@ class Menu extends Component {
                                 <SectionHeadLine
                                     text={item}
                                     textColor={'black'}
-                                    arrowColor={'gold'}
-                                    lineColor={'gold'}
+                                    color={'gold'}
                                 />
                                 </span>
                             </Fade>

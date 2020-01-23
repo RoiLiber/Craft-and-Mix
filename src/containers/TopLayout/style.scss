@@ -5,8 +5,9 @@ div.top_layout {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    z-index: 500;
+    z-index: 700;
     position: absolute;
+    top: 85vh;
 
     & > div.test {
         width: 100%;

@@ -1,74 +1,65 @@
 @import "../../styles/colorsConfig";
 @import "../../styles/mixins";
 
-div.head_line {
+.element_link {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: $primary-white;
-  @include respond-to('large') {
-    height: 10vh;
-  }
 
-  & > div.text {
+  & > div.head_line {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
-    & > span {
-      position: relative;
-      flex-grow: 1;
-      margin: 15px;
-    }
-    & > span.gold {
-      border-bottom: thin solid $primary-gold;
-    }
-    & > span.white {
-      border-bottom: thin solid $primary-white;
-    }
-    & > span.black {
-      border-bottom: thin solid $primary-black;
-    }
-    & > p {
-      font-size: 25px;
-    }
-    & > p.gold {
-      color: $primary-gold;
-    }
-    & > p.white {
-      color: $primary-white;
-    }
-    & > p.black {
-      color: $primary-black;
-    }
-  }
-  & > div.arrow_down {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $primary-white;
     font-size: 25px;
-    margin-top: 10px;
-    @include respond-to('large') {
-      margin-top: 0;
+    padding: 2vh 0;
+    max-height: 10vh;
+
+    & > div.text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+
+      & > span {
+        flex-grow: 1;
+        margin: 0 15px;
+      }
+      & > span.gold {
+        border-bottom: thin solid $primary-gold;
+      }
+      & > span.white {
+        border-bottom: thin solid $primary-white;
+      }
+      & > span.black {
+        border-bottom: thin solid $primary-black;
+      }
+      & > p.gold {
+        color: $primary-gold;
+      }
+      & > p.white {
+        color: $primary-white;
+      }
+      & > p.black {
+        color: $primary-black;
+      }
     }
-  }
-  & > div.up {
-    position: relative;
-    bottom: 50px;
-    left: 2px;
-  }
-  & > div.gold {
-    color: $primary-gold;
-  }
-  & > div.white {
-    color: $primary-white;
-  }
-  & > div.black {
-    color: $primary-black;
+    & > div.arrow_down {
+      height: 1vh;
+
+      & > i.gold {
+        color: $primary-gold;
+      }
+      & > i.white {
+        color: $primary-white;
+      }
+      & > i.black {
+        color: $primary-black;
+      }
+    }
   }
 }
+
+
 

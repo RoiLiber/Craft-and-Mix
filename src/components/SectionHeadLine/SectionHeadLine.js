@@ -4,16 +4,17 @@ import './style.scss';
 class SectionHeadLine extends Component {
 
     render() {
-        const { text, textColor, arrowColor, lineColor, scrollTo, scroll, arrowUp } = this.props;
+        const { text, textColor, color } = this.props;
+
         return (
             <div className={'head_line'}>
                 <div className={'text'}>
-                    <span className={lineColor}/>
+                    <span className={color}/>
                     <p className={textColor}>{text}</p>
-                    <span className={lineColor}/>
+                    <span className={color}/>
                 </div>
-                <div className={`arrow_down ${arrowColor} ${arrowUp ? 'up': ''}`} onClick={() => scrollTo(scroll)}>
-                    {arrowUp ? <i className="fas fa-angle-up"/> : <i className="fas fa-angle-down"/>}
+                <div className={'arrow_down'}>
+                    <i className={`fas fa-angle-down ${color}`}/>
                 </div>
             </div>
 

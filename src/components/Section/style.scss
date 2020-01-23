@@ -1,0 +1,47 @@
+@import "../../styles/colorsConfig";
+
+div.element {
+  width: 100%;
+
+  .section_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 700;
+  }
+  .position10 {
+    position: relative;
+    top: 10vh
+  }
+  .position20 {
+    position: relative;
+    top: 10vh
+  }
+  .position30 {
+    position: relative;
+    top: 10vh
+  }
+  .position40 {
+    position: relative;
+    top: 10vh
+  }
+  .position50 {
+    position: relative;
+    top: 10vh
+  }
+  .position60 {
+    position: relative;
+    top: 10vh
+  }
+  .position70 {
+    position: relative;
+    top: 10vh
+  }
+  .position80 {
+    position: relative;
+    top: 10vh
+  }
+}
+
