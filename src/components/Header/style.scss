@@ -57,7 +57,7 @@ div.header {
             margin-right: 15px;
             transition: 0.5s ease-in-out;
             @include respond-to('larger') {
-                font-size: 14px;
+                font-size: 15px;
                 margin-right: 20px;
             }
             @include respond-to('max-large') {
@@ -104,9 +104,7 @@ div.sm {
         }
 
         & > span.logo_line {
-            font-size: 12px;
-            position: relative;
-            left: 10px;
+            font-size: 11px;
         }
     }
     & > div.menu_button {

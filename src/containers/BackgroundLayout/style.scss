@@ -5,8 +5,11 @@ div.background_layout {
     width: 100%;
     z-index: 100;
     position: fixed;
-    top: 10vh;
+    top: 15vh;
     transition: 0.3s ease-in-out;
     height: 100%;
+    @include respond-to('large') {
+        top: 10vh;
+    }
 }
 

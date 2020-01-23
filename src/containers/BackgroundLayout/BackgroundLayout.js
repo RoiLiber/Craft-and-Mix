@@ -23,7 +23,7 @@ class BackgroundLayout extends Component {
     handleScroll = () => {
         let scrollTopY = window.scrollY;
 
-        if (scrollTopY > 705) {
+        if (scrollTopY > 680) {
             this.setState({ carouselSection: false, moodSection: true });
         } else {
             this.setState({ carouselSection: true, moodSection: false });

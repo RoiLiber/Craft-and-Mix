@@ -65,7 +65,7 @@ class Header extends Component {
                     : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (scrollTopY > 600 && width < windowWidthMd) {
+        if (scrollTopY > 660 && width < windowWidthMd) {
             this.setState({ styleClassName: true });
         } else {
             this.setState({ styleClassName: false });
