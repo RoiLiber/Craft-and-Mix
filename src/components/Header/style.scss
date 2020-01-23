@@ -41,6 +41,38 @@ div.header {
         right: 20px;
         height: 100%;
         z-index: 1200;
+
+        & > a.menu_list_item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            font-size: 11px;
+            margin: 0 10px;
+            transition: 0.5s ease-in-out;
+            @include respond-to('larger') {
+                font-size: 13px;
+                margin: 0 15px;
+            }
+            @include respond-to('max-large') {
+                font-size: 15px;
+                margin: 0 20px;
+            }
+            & > span.menu_list_item_text {
+                width: 100%;
+            }
+            & > span.menu_list_item_line {
+                position: relative;
+                top: 15px;
+                width: 100%;
+                transition: 0.5s ease-in-out;
+                border-bottom: thin solid $primary-white;
+            }
+        }
+        & > a.selected {
+            color: $primary-white;
+        }
     }
 }
 

@@ -45,7 +45,7 @@ class SectionHeadLine extends Component {
                 smooth={true}
                 offset={windowWidthMobile ? -35 : -80}
                 duration={900}
-                onClick={toggleMenu ? () => toggleMenu() : ''}
+                onClick={toggleMenu ? () => toggleMenu() : null}
                 onSetActive={() => {}}
             >
                 <div className={backgroundColorGold ? 'head_line goldBackground' : 'head_line'}>
