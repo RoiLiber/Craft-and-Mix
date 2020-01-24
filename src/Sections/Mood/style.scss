@@ -22,7 +22,7 @@ div.mood_section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    //padding-top: 25px;
     @include respond-to('large') {
       padding-top: 55px;
     }

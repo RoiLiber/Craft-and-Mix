@@ -16,6 +16,7 @@ class Mood extends Component {
         this.state = {
             setWindowSizeWide: '',
             setWindowSizeMd: '',
+            windowWidthSm: '',
             isPopUpPhoto: false,
             popPhoto: '',
         };
@@ -36,12 +37,17 @@ class Mood extends Component {
     };
 
     setWindowSizeWide = () => {
-        const { windowWidthLr, windowWidthMd } = this.props;
+        const { windowWidthLr, windowWidthMd, windowWidthSm } = this.props;
         let width = window.innerWidth;
+        const windowSizeSm = width < 0 || width > (windowWidthSm + 100);
         const windowSizeMd = width > windowWidthMd;
         const windowSizeWide = width > (windowWidthLr + 300);
 
-        this.setState({ setWindowSizeWide: windowSizeWide, windowSizeMd: windowSizeMd })
+        this.setState({
+            setWindowSizeWide: windowSizeWide,
+            windowSizeMd: windowSizeMd,
+            windowWidthSm: windowSizeSm
+        })
     };
 
     popUp = item => {
@@ -64,7 +70,7 @@ class Mood extends Component {
     };
 
     render() {
-        const { popPhoto, isPopUpPhoto } = this.state;
+        const { popPhoto, isPopUpPhoto, windowWidthSm } = this.state;
         const { mood } = this.props;
 
         return (
@@ -74,10 +80,10 @@ class Mood extends Component {
                         <Carousel carouselArray={mood} popUp={this.popUp}/>
                         {this.addCarousels(mood)}
                     </div>
-                    <div className={'carousels_wrapper'}>
+                    {windowWidthSm && <div className={'carousels_wrapper'}>
                         <Carousel carouselArray={mood} popUp={this.popUp}/>
                         {this.addCarousels(mood)}
-                    </div>
+                    </div>}
                 </div>
                 {isPopUpPhoto && <div className={'pop_up_wrapper'} onClick={() => this.popUp()}>
                     <img src={popPhoto.img} alt={popPhoto.text}/>
