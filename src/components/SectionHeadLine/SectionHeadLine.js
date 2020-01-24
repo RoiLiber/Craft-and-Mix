@@ -33,12 +33,12 @@ class SectionHeadLine extends Component {
     };
 
     render() {
-        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu } = this.props;
+        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart } = this.props;
         const { windowWidthMobile } = this.state;
 
         return (
             <Link
-                className={'element_link'}
+                className={`element_link`}
                 activeClass="active"
                 to={elementName}
                 spy={true}
@@ -55,7 +55,10 @@ class SectionHeadLine extends Component {
                         <span className={color}/>
                     </div>
                     <div className={'arrow_down'}>
-                        <i className={`fas fa-angle-down ${color}`}/>
+                        {addHeart
+                            ? <i className="far fa-heart"/>
+                            : <i className={`fas fa-angle-down ${color}`}
+                            />}
                     </div>
                 </div>
             </Link>

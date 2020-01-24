@@ -6,122 +6,120 @@ import { Fade } from "react-reveal";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';
 import {find, slice} from 'lodash';
+import Section from "../../components/Section";
+import Carousel from "../../components/Carousel";
 
 class Mood extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            popUpPhoto: false,
-            photo: this.props.mood[0].img,
-            photoText: '',
-            nextPhoto: this.props.mood[1].img,
+            setWindowSizeWide: '',
+            setWindowSizeMd: '',
+            isPopUpPhoto: false,
             popPhoto: '',
-            nextPhotoIndex: 1,
-            activeCarousel: false
         };
     }
 
     componentDidMount() {
-        this.toggleCarousel(true)
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.reportWindowSize);
+        this.setWindowSizeWide()
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.reportWindowSize);
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        const { nextPhotoIndex, activeCarousel } = this.state;
-
-        if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
-            setTimeout(() => {
-                this.carousel(nextPhotoIndex)
-            }, 3000)
-        }
-    }
-
-    toggleCarousel = bool => {
-        this.setState({ activeCarousel: bool })
+    reportWindowSize = () => {
+        this.setWindowSizeWide()
     };
 
-    carousel = index => {
-        const { mood } = this.props;
+    setWindowSizeWide = () => {
+        const { windowWidthLr, windowWidthMd } = this.props;
+        let width = window.innerWidth;
+        const windowSizeMd = width > windowWidthMd;
+        const windowSizeWide = width > (windowWidthLr + 300);
 
-        const img = find(mood, { index: index });
-        this.toggleCarousel(false);
-        this.setState({
-            photo: img.img,
-            nextPhoto: index === 6 ? mood[0].img : mood[index + 1].img,
-            nextPhotoIndex: index === 6 ? 0 : index + 1,
-            photoText: img.text
-        });
-        this.toggleCarousel(true)
+        this.setState({ setWindowSizeWide: windowSizeWide, windowSizeMd: windowSizeMd })
     };
 
     popUp = item => {
-        const { popUpPhoto } = this.state;
-        this.setState({ popUpPhoto: !popUpPhoto, popPhoto: item })
+        const { isPopUpPhoto } = this.state;
+
+        this.setState({ isPopUpPhoto: !isPopUpPhoto, popPhoto: item })
+    };
+
+    addCarousels = array => {
+        const { windowSizeMd, setWindowSizeWide } = this.state;
+
+        if (setWindowSizeWide) {
+            return <Fragment>
+                <Carousel carouselArray={array} popUp={this.popUp}/>
+                <Carousel carouselArray={array} popUp={this.popUp}/>
+            </Fragment>
+        } else if (windowSizeMd && !setWindowSizeWide) {
+            return <Carousel carouselArray={array} popUp={this.popUp}/>
+        }
     };
 
     render() {
+        const { popPhoto, isPopUpPhoto } = this.state;
         const { mood } = this.props;
-        const { popPhoto, popUpPhoto, photo, activeCarousel, nextPhotoIndex, photoText } = this.state;
-        let width = window.innerWidth;
-        const lr = width < 767;
 
         return (
             <div className={'mood_section'} style={{ backgroundImage: `url(${backgroundImage})` }}>
-                {/*<Fragment>*/}
-                {/*    <a href={'https://www.instagram.com/craftnmix/'} target={'_blank'}>*/}
-                {/*        <i className="fab fa-instagram"/>*/}
-                {/*    </a>*/}
-                {/*    <a href={'https://www.facebook.com/asafamir1'} target={'_blank'}>*/}
-                {/*        <i className="fab fa-facebook-square"/>*/}
-                {/*    </a>*/}
-                {/*    <a href={'#'} target={'_blank'}>*/}
-                {/*        <i className="fas fa-phone-square-alt"/>*/}
-                {/*    </a>*/}
-                {/*    <a href={'#'} target={'_blank'}>*/}
-                {/*        <i className="far fa-envelope"/>*/}
-                {/*    </a>*/}
-                {/*</Fragment>*/}
-                {popUpPhoto && <PopUpImg photo={popPhoto} onClick={() => this.popUp()} />}
-                <div className={'mood'}>
-                    {activeCarousel &&
-                    <div className={'mood_img_wrapper'}>
-                        <Fade delay={120}>
-                            <div onClick={() => this.popUp(photo)}>
-                                <img src={photo} alt={`mood`}/>
-                            </div>
-                        </Fade>
-                        <Fade delay={350}>
-                            <span className={'text'}>{photoText}</span>
-                        </Fade>
+                <div className={'center_carousels'}>
+                    <div className={'carousels_wrapper'}>
+                        <Carousel carouselArray={mood} popUp={this.popUp}/>
+                        {this.addCarousels(mood)}
                     </div>
-                    }
+                    <div className={'carousels_wrapper'}>
+                        <Carousel carouselArray={mood} popUp={this.popUp}/>
+                        {this.addCarousels(mood)}
+                    </div>
                 </div>
-                {
-                    lr && <div className={'mood'}>
-                        {activeCarousel &&
-                        <div className={'mood_img_wrapper'}>
-                            <Fade delay={120}>
-                                <div onClick={() => this.popUp(photo)}>
-                                    <img src={photo} alt={`mood`}/>
-                                </div>
-                            </Fade>
-                            <Fade delay={350}>
-                                <span className={'text'}>{photoText}</span>
-                            </Fade>
-                        </div>
-                        }
-                    </div>
-                }
+                {isPopUpPhoto && <div className={'pop_up_wrapper'} onClick={() => this.popUp()}>
+                    <img src={popPhoto.img} alt={popPhoto.text}/>
+                    <i className="far fa-times-circle"/>
+                </div>}
+                <SectionHeadLine
+                    text={'Mood'}
+                    textColor={'black'}
+                    color={'gold'}
+                    elementName={'mood'}
+                    addHeart
+                />
             </div>
         )
     };
 }
 
 const mapStateToProps = state => {
-    const { mood } = state.mainReducer;
+    const { mood, windowWidthSm, windowWidthMd, windowWidthLr } = state.mainReducer;
     return {
-        mood
+        mood,
+        windowWidthSm,
+        windowWidthMd,
+        windowWidthLr
     };
 };
 
 export default connect(mapStateToProps)(Mood);
+
+const contact = () => {
+    return <Fragment>
+        <a href={'https://www.instagram.com/craftnmix/'} target={'_blank'}>
+            <i className="fab fa-instagram"/>
+        </a>
+        <a href={'https://www.facebook.com/asafamir1'} target={'_blank'}>
+            <i className="fab fa-facebook-square"/>
+        </a>
+        <a href={'#'} target={'_blank'}>
+            <i className="fas fa-phone-square-alt"/>
+        </a>
+        <a href={'#'} target={'_blank'}>
+            <i className="far fa-envelope"/>
+        </a>
+    </Fragment>
+}

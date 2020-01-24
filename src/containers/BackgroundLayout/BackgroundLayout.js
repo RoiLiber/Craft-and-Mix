@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import CarouselSection from "../../sections/CarouselSection/CarouselSection";
+import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import Mood from "../../sections/Mood/Mood";
 import './style.scss';
 
@@ -35,7 +35,7 @@ class BackgroundLayout extends Component {
 
         return (
             <div className="background_layout">
-                {carouselSection && <CarouselSection/>}
+                {carouselSection && <TopCarousel/>}
                 {moodSection && <Mood/>}
             </div>
         )

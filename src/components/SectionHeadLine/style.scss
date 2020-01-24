@@ -1,8 +1,10 @@
 @import "../../styles/colorsConfig";
 @import "../../styles/mixins";
 
-.element_link {
+a.element_link {
   width: 100%;
+  cursor: pointer;
+  padding: 0 !important;
 
   & > div.head_line {
     width: 100%;
@@ -56,6 +58,12 @@
       }
       & > i.black {
         color: $primary-black;
+      }
+      & > i.fa-heart {
+        position: relative;
+        bottom: 65px;
+        color: $primary-gold;
+        transform: rotateZ(-10deg);
       }
     }
   }

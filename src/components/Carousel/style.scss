@@ -1,46 +1,77 @@
 @import "../../styles/colorsConfig";
 @import "../../styles/mixins";
 
-div.carousel_wrapper {
-  width: 100%;
+div.mood_carousel_wrapper {
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
-  position: relative;
+  flex-wrap: wrap;
+  margin: 10px 50px;
+  transition: 0.5s ease-in-out;
 
-  & > div.white {
-    background-color: $primary-white;
-    color: $primary-black;
-  }
-  & > div.gold {
-    background-color: $primary-gold;
-    color: $primary-white;
-  }
-
-  & > div.carousel_background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 300;
+  & > div.carousel_image_wrapper {
     display: flex;
-    align-items: center;
+    width: 400px;
+    height: 220px;
     justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
 
     & > img {
-      display: flex;
       width: 100%;
-      height: 100%;
+      max-height: 100%;
+      border-radius: 15px 15px 0 0;
+      box-shadow:
+              0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+              0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+              0 12.5px 10px rgba(0, 0, 0, 0.06),
+              0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+              0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+              0 100px 80px rgba(0, 0, 0, 0.12);
     }
   }
-  & > .carousel_img {
+
+  & > div.carousel_text {
     display: flex;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 600;
-    justify-content: center;
     align-items: center;
-  }
+    font-size: 20px;
+    flex-wrap: wrap;
+    background-color: $primary-white;
+    color: $primary-gold;
+    box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
 
+    & > div {
+      display: flex;
+      padding: 5px 15px;
+      align-items: center;
+      background-color: $primary-white;
+
+      & > i {
+        margin-right: 10px;
+        color: $primary-gold;
+      }
+    }
+
+    & > span {
+      width: 100%;
+      color: $primary-black;
+      padding: 5px 15px;
+
+    }
+  }
 }

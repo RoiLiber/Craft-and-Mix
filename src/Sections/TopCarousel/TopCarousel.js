@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import Carousel from '../../components/Carousel';
 import { findIndex} from 'lodash';
 import { Slide } from "react-reveal";
 import './style.scss';
 
-class CarouselSection extends Component {
+class TopCarousel extends Component {
 
     constructor(props) {
         super(props);
@@ -24,7 +23,7 @@ class CarouselSection extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        const { activeCarousel, carouselNextItem, selectedCarouselItem } = this.state;
+        const { activeCarousel, carouselNextItem } = this.state;
         const { topCarousel } = this.props;
         const index = findIndex(topCarousel, { text: carouselNextItem.text });
 
@@ -96,6 +95,7 @@ class CarouselSection extends Component {
                     :   <div>{text}</div>}
             </div>
             {activeCarousel && <Slide
+                opposite
                 left={!isEven}
                 right={isEven}
                 delay={5000}>
@@ -132,4 +132,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps)(CarouselSection);
+export default connect(mapStateToProps)(TopCarousel);

@@ -29,17 +29,17 @@ const topCarousel = [
     { text: 'Our Services', img: imgServices, backgroundColor: 'gold' },
     { text: 'Mood', img: imgMode, backgroundColor: 'white' },
     // { text: 'On the Menu', img: imgMenu, backgroundColor: 'gold' },
-    { text: 'Contact us', img: imgMood7, backgroundColor: 'gold' }
+    { text: 'Contact us', img: imgMenu, backgroundColor: 'gold' }
 ];
 
 const mood = [
-    { text: 'Our team', img: imgMood7, color: 'black', index: 0 },
-    { text: 'She know some shit', img: imgMood4, color: 'gold', index: 1 },
-    { text: 'Craft it', img: imgMood6, color: 'black', index: 2 },
-    { text: 'Lime???', img: imgMood1, color: 'gold', index: 3 },
-    { text: 'Our Services Google event', img: imgMood3, color: 'gold', index: 4 },
-    { text: 'Our Services', img: imgMood2, color: 'black', index: 5 },
-    { text: 'Mode', img: imgMood5, color: 'gold', index: 6 }
+    { text: 'Our team', event: 'google fun', img: imgMood7 },
+    { text: 'She know some shit', event: 'google fun', img: imgMood4 },
+    { text: 'Craft it', event: 'google fun', img: imgMood6 },
+    { text: 'Lime???', event: 'google fun', img: imgMood1 },
+    { text: 'Our Services Google event', event: 'google fun', img: imgMood3 },
+    { text: 'Our Services', event: 'google fun', img: imgMood2 },
+    { text: 'Mode', event: 'google fun', img: imgMood5 }
 ];
 
 const initialState = {
