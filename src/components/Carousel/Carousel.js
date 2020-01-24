@@ -1,62 +1,117 @@
 import React, { Component, Fragment } from 'react';
 import { Slide } from 'react-reveal';
+import { findIndex } from 'lodash';
 import './style.scss';
+import {connect} from "react-redux";
 
 class Carousel extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            carouselItem: this.props.topCarousel[0],
+            carouselNextItem: this.props.topCarousel[1],
+            activeCarousel: false,
+        };
+    }
+
+    componentDidMount() {
+        this.toggleCarousel(true)
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        const { activeCarousel, carouselNextItem } = this.state;
+        const { topCarousel, selectedCarouselItem } = this.props;
+        const index = findIndex(topCarousel, { text: carouselNextItem.text });
+
+        if (prevProps.topCarousel !== topCarousel && activeCarousel) {
+            setTimeout(() => {
+                this.setCarouselItem(0);
+                selectedCarouselItem(index)
+            }, 6000);
+            return
+        }
+        else if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
+            setTimeout(() => {
+                this.setCarouselItem(index);
+                selectedCarouselItem(index)
+            }, 6000)
+        }
+
+
+    }
+
+    toggleCarousel = bool => {
+        this.setState({ activeCarousel: bool })
+    };
+
+    setCarouselItem = index => {
+        const { topCarousel } = this.props;
+        const carouselItem = topCarousel[index];
+
+        this.toggleCarousel(false);
+        this.setState({
+            carouselItem,
+            carouselNextItem: index === topCarousel.length - 1 ? topCarousel[0] : topCarousel[index + 1],
+        });
+        this.toggleCarousel(true);
+    };
 
     render() {
-        const { carouselItem, carouselNextItem, activeCarousel } = this.props;
-        const text = (text, color) => {
-            return <div className={`carousel_section ${color}`}>
-                <span>{text}</span>
-            </div>
-        };
-        const photo = (img, color) => {
-            return <div className={`carousel_section ${color}`}>
-                <img src={img} alt={'mood_photo'}/>
-            </div>
-        };
+        const { activeCarousel, carouselItem, carouselNextItem } = this.state;
+        const nextImg = carouselNextItem.img;
+        const img = carouselItem.img;
+        const nextText = carouselNextItem.text;
+        const text = carouselItem.text;
+        const nextBackgroundColor = carouselNextItem.backgroundColor;
+        const backgroundColor = carouselItem.backgroundColor;
+
         return (
             <Fragment>
-                {
-                    carouselItem.index === 0 || carouselItem.index === 2
-                        ?   <div className={`carousel bottomCarouselItem`}>
-                                {text(carouselItem.text, carouselItem.color)}
-                                {photo(carouselItem.img, carouselItem.color)}
-                        </div>
-                        :   <div className={`carousel bottomCarouselItem`}>
-                                {photo(carouselItem.img, carouselItem.color)}
-                                {text(carouselItem.text, carouselItem.color)}
-                        </div>
-                }
-                {
-                    activeCarousel
-                        ? carouselItem.index === 0 || carouselItem.index === 2
-                        ?   <div className={`carousel topCarouselItem`}>
-                                <Slide left delay={5000}>
-                                    {photo(carouselNextItem.img, carouselNextItem.color)}
-                                </Slide>
-                                <Slide right delay={5000}>
-                                    {text(carouselNextItem.text, carouselNextItem.color)}
-                                </Slide>
-                        </div>
-                        :   <div className={`carousel topCarouselItem`}>
-                            <Slide left delay={5000}>
-                                {text(carouselNextItem.text, carouselNextItem.color)}
-                            </Slide>
-                            <Slide right delay={5000}>
-                                {photo(carouselNextItem.img, carouselNextItem.color)}
-                            </Slide>
-                        </div>
-                        : null
-                }
+                <div className={`carousel_wrapper`}>
+                    <div className={`carousel_background ${backgroundColor}`}>
+                        {carouselItem.img
+                            ?   <img src={img ? img : ''} alt={img}/>
+                            :   <div>{text}</div>}
+                    </div>
+                    {activeCarousel && <Slide
+                        left
+                        delay={5000}>
+                        {nextImg
+                            ?   <img src={nextImg ? nextImg : ''} alt={nextText} className={'carousel_img'}/>
+                            :   <div className={`carousel_img ${nextBackgroundColor}`}>{nextText}</div>}
+                    </Slide>
+                    }
+                </div>
+                <div className={`carousel_wrapper`}>
+                    <div className={`carousel_background ${backgroundColor}`}>
+                        {carouselItem.img
+                            ?   <img src={img ? img : ''} alt={img}/>
+                            :   <div>{text}</div>}
+                    </div>
+                    {activeCarousel && <Slide
+                        right
+                        delay={5000}>
+                        {nextImg
+                            ?   <img src={nextImg ? nextImg : ''} alt={nextText} className={'carousel_img'}/>
+                            :   <div className={`carousel_img ${nextBackgroundColor}`}>{nextText}</div>}
+                    </Slide>
+                    }
+                </div>
             </Fragment>
+
         )
     };
 }
 
-export default Carousel;
+const mapStateToProps = state => {
+    const { topCarousel } = state.mainReducer;
+    return {
+        topCarousel
+    };
+};
+
+export default connect(mapStateToProps)(Carousel);
 
 
 

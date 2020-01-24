@@ -90,10 +90,10 @@ div.sm {
     padding: 0;
 
     & > div.header_logo {
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        padding-left: 20px;
-
+        justify-content: center;
+        //flex-wrap: nowrap;
+        padding-left: 15px;
+        width: 100%;
         div.cr {
             font-size: 15px;
         }
@@ -104,7 +104,8 @@ div.sm {
         }
 
         & > span.logo_line {
-            font-size: 11px;
+            //font-size: 11px;
+            display: none;
         }
     }
     & > div.menu_button {

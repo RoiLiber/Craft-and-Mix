@@ -24,11 +24,12 @@ const menuList = [
     { text: 'Contact us', elementName: 'contactUs' },
 ];
 
-const carousel = [
-    { text: 'About us', img: imgAbout, color: 'black', index: 0 },
-    { text: 'Our Services', img: imgServices, color: 'gold', index: 1 },
-    { text: 'Mode', img: imgMode, color: 'black', index: 2 },
-    { text: 'On the Menu', img: imgMenu, color: 'gold', index: 3 }
+const topCarousel = [
+    { text: 'About us', img: imgAbout, backgroundColor: 'white' },
+    { text: 'Our Services', img: imgServices, backgroundColor: 'gold' },
+    { text: 'Mood', img: imgMode, backgroundColor: 'white' },
+    // { text: 'On the Menu', img: imgMenu, backgroundColor: 'gold' },
+    { text: 'Contact us', img: imgMood7, backgroundColor: 'gold' }
 ];
 
 const mood = [
@@ -47,7 +48,7 @@ const initialState = {
     windowWidthLr,
     menuList,
     openMenu: false,
-    carousel,
+    topCarousel,
     mood
 };
 

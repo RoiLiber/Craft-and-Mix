@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import Carousel from '../../components/Carousel';
-import { find } from 'lodash';
+import { findIndex} from 'lodash';
+import { Slide } from "react-reveal";
 import './style.scss';
 
 class CarouselSection extends Component {
@@ -9,9 +10,12 @@ class CarouselSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            carouselItem: this.props.carousel[0],
-            carouselNextItem: this.props.carousel[1],
+            carouselArray: this.props.topCarousel,
+            carouselItem: this.props.topCarousel[0],
+            carouselNextItem: this.props.topCarousel[1],
+            selectedCarouselItem: 0,
             activeCarousel: false,
+            forceCarousel: false
         };
     }
 
@@ -20,11 +24,13 @@ class CarouselSection extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        const { activeCarousel, carouselNextItem } = this.state;
+        const { activeCarousel, carouselNextItem, selectedCarouselItem } = this.state;
+        const { topCarousel } = this.props;
+        const index = findIndex(topCarousel, { text: carouselNextItem.text });
 
-        if (prevProps.activeCarousel !== activeCarousel && activeCarousel) {
+        if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
             setTimeout(() => {
-                this.setCarouselItem(carouselNextItem.index)
+                this.flowCarouselItems(index);
             }, 6000)
         }
     }
@@ -33,55 +39,96 @@ class CarouselSection extends Component {
         this.setState({ activeCarousel: bool })
     };
 
-    forceCarouselItem = index => {
-        // this.toggleCarousel(false);
-        // this.setCarouselItem(index)
-        // this.toggleCarousel(true);
+    flowCarouselItems = index => {
+        const { activeCarousel } = this.state;
+
+        if (activeCarousel) {
+            this.toggleCarousel(false);
+            this.setStateConfig(index, false)
+        }
     };
 
-    setCarouselItem = (index) => {
-        const { carousel } = this.props;
-        this.toggleCarousel(false);
-        find = find(carousel, { index: index });
+    setStateConfig = (index, forceState) => {
+        const { topCarousel } = this.props;
+        const carouselItem = topCarousel[index];
+        const carouselNextItem = index === topCarousel.length - 1
+            ? topCarousel[0] : topCarousel[index + 1];
+
         this.setState({
-            carouselItem: find,
-            carouselNextItem: find.index === 3 ? carousel[0] : carousel[find.index + 1],
-        });
-        this.toggleCarousel(true);
+            carouselItem,
+            carouselNextItem,
+            selectedCarouselItem: index,
+            activeCarousel: !forceState
+        })
+    };
+
+    forceCarouselItem = index => {
+        this.setStateConfig(index, true);
+        setTimeout(() => {
+            this.toggleCarousel(true)
+        }, 6000)
     };
 
     render() {
-        const { carouselItem, carouselNextItem, activeCarousel } = this.state;
-
         return (
             <div className={'carousel_section'}>
-                <Carousel
-                    carouselItem={carouselItem}
-                    carouselNextItem={carouselNextItem}
-                    toggleCarousel={this.toggleCarousel}
-                    activeCarousel={activeCarousel}
-                />
+                {this.carousel(false)}
+                {this.carousel(true)}
                 {this.carouselDots()}
             </div>
         )
     };
+
+    carousel = isEven => {
+        const { carouselItem, carouselNextItem, activeCarousel, selectedCarouselItem } = this.state;
+        const { img, text, backgroundColor } = carouselItem;
+        const nextImg = carouselNextItem.img;
+        const nextText = carouselNextItem.text;
+        const nextBackgroundColor = carouselNextItem.backgroundColor;
+        const selected = isEven
+            ? selectedCarouselItem === 0 || selectedCarouselItem === 2
+            : selectedCarouselItem === 1 || selectedCarouselItem === 3;
+
+        return <div className={`carousel_wrapper`}>
+            <div className={`carousel_background ${backgroundColor}`}>
+                {selected
+                    ?   <img src={img} alt={text}/>
+                    :   <div>{text}</div>}
+            </div>
+            {activeCarousel && <Slide
+                left={!isEven}
+                right={isEven}
+                delay={5000}>
+                {activeCarousel && !selected
+                    ?   <img src={nextImg} alt={nextText} className={'carousel_img'}/>
+                    :   <div className={`carousel_img ${nextBackgroundColor}`}>{nextText}</div>}
+            </Slide>}
+        </div>
+    };
+
     carouselDots = () => {
-        const { carouselItem } = this.state;
-        const dotsArray = [1, 2, 3, 4];
+        const { carouselArray, selectedCarouselItem } = this.state;
 
         return <div className={'dots'}>
-            {dotsArray.map((item, index) => {
-                const selectedCarouselItem = index === carouselItem.index;
-                return <i key={index} className={selectedCarouselItem ? "far fa-dot-circle gold" :  "far fa-dot-circle"} onClick={() => this.forceCarouselItem(index)}/>
+            {carouselArray.map((item, index) => {
+                const selected = selectedCarouselItem === index;
+
+                return selected
+                    ? <i key={index} className={'far fa-dot-circle gold'}/>
+                    : <i key={index}
+                         className={'far fa-dot-circle'}
+                         onClick={() => this.forceCarouselItem(index)}/>;
+
             })}
         </div>
     }
 }
 
 const mapStateToProps = state => {
-    const { carousel } = state.mainReducer;
+    const { topCarousel } = state.mainReducer;
+
     return {
-        carousel
+        topCarousel
     };
 };
 
