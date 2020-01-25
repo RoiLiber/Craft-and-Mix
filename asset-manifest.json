@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Craft-and-Mix/static/css/main.15762386.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.220a212f.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.220a212f.chunk.js.map",
+    "main.js": "/Craft-and-Mix/static/js/main.60d8174e.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.60d8174e.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
     "static/js/2.e2e3c25d.chunk.js": "/Craft-and-Mix/static/js/2.e2e3c25d.chunk.js",
     "static/js/2.e2e3c25d.chunk.js.map": "/Craft-and-Mix/static/js/2.e2e3c25d.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.19cf050575bda04402dc05812306e675.js": "/Craft-and-Mix/precache-manifest.19cf050575bda04402dc05812306e675.js",
+    "precache-manifest.186b221632c1783c74e4335708c8641f.js": "/Craft-and-Mix/precache-manifest.186b221632c1783c74e4335708c8641f.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
     "static/css/main.15762386.chunk.css.map": "/Craft-and-Mix/static/css/main.15762386.chunk.css.map",
     "static/media/A.jpeg": "/Craft-and-Mix/static/media/A.1b02a294.jpeg",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.d8daa51c.js",
     "static/js/2.e2e3c25d.chunk.js",
     "static/css/main.15762386.chunk.css",
-    "static/js/main.220a212f.chunk.js"
+    "static/js/main.60d8174e.chunk.js"
   ]
 }
