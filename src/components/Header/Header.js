@@ -67,15 +67,15 @@ class Header extends Component {
         let scrollTopY = window.scrollY;
         let width = window.innerWidth;
         console.log(scrollTopY)
-        const selectedSection = scrollTopY >= 716 && scrollTopY < 1091
+        const selectedSection = scrollTopY >= 375 && scrollTopY < 720
             ? 'aboutUs'
-            : scrollTopY >= 1091 && scrollTopY < 1326
+            : scrollTopY >= 720 && scrollTopY < 1326
                 ? 'OurServices'
-                : scrollTopY >= 1326 && scrollTopY < 1580
+                : scrollTopY >= 1326 && scrollTopY < 1700
                     ? 'mood'
-                    : scrollTopY >= 1580 && scrollTopY < 1830
+                    : scrollTopY >= 1700 && scrollTopY < 2002
                         ? 'someHappyCustomers'
-                        : scrollTopY >= 1830
+                        : scrollTopY >= 2002
                             ? 'contactUs'
                             : '';
 
