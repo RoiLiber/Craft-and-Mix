@@ -2,11 +2,9 @@ import React, { Component, Fragment } from 'react';
 import './style.scss';
 import SectionHeadLine from "../../components/SectionHeadLine";
 import { connect } from "react-redux";
-import { Fade } from "react-reveal";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';
-import {find, slice} from 'lodash';
-import Section from "../../components/Section";
+import { random } from 'lodash';
 import Carousel from "../../components/Carousel";
 
 class Mood extends Component {
@@ -56,16 +54,20 @@ class Mood extends Component {
         this.setState({ isPopUpPhoto: !isPopUpPhoto, popPhoto: item })
     };
 
+    delay = () => {
+        return random(5000, 9000);
+    };
+
     addCarousels = array => {
         const { windowSizeMd, setWindowSizeWide } = this.state;
 
         if (setWindowSizeWide) {
             return <Fragment>
-                <Carousel carouselArray={array} popUp={this.popUp}/>
-                <Carousel carouselArray={array} popUp={this.popUp}/>
+                <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
+                <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
             </Fragment>
         } else if (windowSizeMd && !setWindowSizeWide) {
-            return <Carousel carouselArray={array} popUp={this.popUp}/>
+            return <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
         }
     };
 
@@ -77,18 +79,15 @@ class Mood extends Component {
             <div className={'mood_section'} style={{ backgroundImage: `url(${backgroundImage})` }}>
                 <div className={'center_carousels'}>
                     <div className={'carousels_wrapper'}>
-                        <Carousel carouselArray={mood} popUp={this.popUp}/>
+                        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
                         {this.addCarousels(mood)}
                     </div>
                     {windowWidthSm && <div className={'carousels_wrapper'}>
-                        <Carousel carouselArray={mood} popUp={this.popUp}/>
+                        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
                         {this.addCarousels(mood)}
                     </div>}
                 </div>
-                {isPopUpPhoto && <div className={'pop_up_wrapper'} onClick={() => this.popUp()}>
-                    <img src={popPhoto.img} alt={popPhoto.text}/>
-                    <i className="far fa-times-circle"/>
-                </div>}
+                {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
                 <SectionHeadLine
                     text={'Mood'}
                     textColor={'black'}

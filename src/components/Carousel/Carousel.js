@@ -21,13 +21,13 @@ class Carousel extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         const { activeCarousel, carouselNextItem } = this.state;
-        const { carouselArray } = this.props;
+        const { carouselArray,delay } = this.props;
         const index = findIndex(carouselArray, { text: carouselNextItem.text });
 
         if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
             setTimeout(() => {
                 this.flowCarouselItems(index);
-            }, 5000)
+            }, delay)
         }
     }
 
@@ -51,7 +51,7 @@ class Carousel extends Component {
     };
 
     render() {
-        const { popUp } = this.props;
+        const { popUp, delay } = this.props;
         const { activeCarousel, carouselItem } = this.state;
         const img = carouselItem.img;
         const event = carouselItem.event;
@@ -60,7 +60,7 @@ class Carousel extends Component {
         return (
             <div className={`mood_carousel_wrapper`}>
                 <div className={'carousel_image_wrapper'}>
-                    {activeCarousel && <Zoom deley={120}>
+                    {activeCarousel && <Zoom deley={delay}>
                         <img src={img} alt={text}
                              className={'carousel_img'}
                              onClick={() => popUp(carouselItem)}
@@ -72,7 +72,7 @@ class Carousel extends Component {
                         <i className="fas fa-map-marker-alt"/>
                         <span>{event}</span>
                     </div>
-                    <Zoom deley={350}><span>{text}</span></Zoom>
+                    <Zoom deley={delay}><span>{text}</span></Zoom>
                 </div>
             </div>
         )
