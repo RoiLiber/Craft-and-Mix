@@ -6,7 +6,7 @@ import SectionHeadLine from '../SectionHeadLine';
 class Section extends Component {
 
     render() {
-        const { elementName, text, textColor, color, children, position } = this.props;
+        const { elementName, text, textColor, color, children, position, addHeart } = this.props;
 
         return (
             <Element name={elementName} className={'element'}>
@@ -16,6 +16,7 @@ class Section extends Component {
                         textColor={textColor}
                         color={color}
                         elementName={elementName}
+                        addHeart
                     />
                     {children}
                 </div>

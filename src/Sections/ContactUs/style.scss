@@ -1,0 +1,30 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.contact {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-white;
+  color: $primary-black;
+  min-height: 20vh;
+  padding: 0 20%;
+
+  & > div.icon_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    //flex-wrap: wrap;
+    @include respond-to('large') {
+      flex-wrap: nowrap;
+    }
+    & > a {
+      font-size: 60px;
+      color: $primary-gold;
+    }
+  }
+}
+
+

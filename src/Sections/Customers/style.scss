@@ -1,0 +1,53 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.Customers {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-white;
+  color: $primary-black;
+  min-height: 20vh;
+  padding: 0 20%;
+
+  & > div.icon_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    //flex-wrap: wrap;
+    @include respond-to('large') {
+      flex-wrap: nowrap;
+    }
+    & > i {
+      font-size: 90px;
+      color: $primary-gold;
+    }
+    & span {
+      font-size: 70px;
+      color: $primary-gold;
+      display: flex;
+      align-items: center;
+      & > i.one {
+        position: relative;
+        right: -16%;
+      }
+      & > i.two {
+        position: relative;
+        right: -5%;
+      }
+      & > i.three {
+        position: relative;
+        right: 5%;
+      }
+      & > i.four {
+        position: relative;
+        right: 16%;
+      }
+    }
+  }
+
+}
+
+

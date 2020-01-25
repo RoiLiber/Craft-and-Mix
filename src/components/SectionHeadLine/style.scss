@@ -63,8 +63,16 @@ a.element_link {
         position: relative;
         bottom: 65px;
         color: $primary-gold;
+        font-weight: bold;
         transform: rotateZ(-10deg);
       }
+    }
+    & > i.fa-heart {
+      position: relative;
+      color: $primary-gold;
+      //font-weight: bold;
+      //font-size: 30px;
+      transform: rotateZ(-10deg);
     }
   }
   & > div.goldBackground {
