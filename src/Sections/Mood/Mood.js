@@ -55,7 +55,7 @@ class Mood extends Component {
     };
 
     delay = () => {
-        return random(5000, 9000);
+        return random(5000, 8000);
     };
 
     addCarousels = array => {
@@ -72,7 +72,7 @@ class Mood extends Component {
     };
 
     render() {
-        const { popPhoto, isPopUpPhoto, windowWidthSm } = this.state;
+        const { popPhoto, isPopUpPhoto } = this.state;
         const { mood } = this.props;
 
         return (
@@ -82,10 +82,6 @@ class Mood extends Component {
                         <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
                         {this.addCarousels(mood)}
                     </div>
-                    {windowWidthSm && <div className={'carousels_wrapper'}>
-                        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
-                        {this.addCarousels(mood)}
-                    </div>}
                 </div>
                 {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
                 <SectionHeadLine
