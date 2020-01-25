@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "493b45b0c04d74c5ebeb92125132a20c",
+    "revision": "68e13768a3dc879053381afe884856cd",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "67edfac776593980906f",
+    "revision": "e426d24c8a0ff634793a",
     "url": "/Craft-and-Mix/static/css/main.09205dfb.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/js/2.141b0011.chunk.js"
   },
   {
-    "revision": "67edfac776593980906f",
-    "url": "/Craft-and-Mix/static/js/main.babb40d6.chunk.js"
+    "revision": "e426d24c8a0ff634793a",
+    "url": "/Craft-and-Mix/static/js/main.6ff54300.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
