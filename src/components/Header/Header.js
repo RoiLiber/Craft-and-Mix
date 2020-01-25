@@ -42,7 +42,18 @@ class Header extends Component {
     };
 
     clickedSection = index => {
-        const selectedSection = index === 0 ? 'aboutUs' : index === 1 ? 'OurServices' :index === 2 ? 'mood' : '';
+        const selectedSection =
+            index === 0
+                ? 'aboutUs'
+                : index === 1
+                    ? 'OurServices'
+                    : index === 2
+                        ? 'mood'
+                        : index === 3
+                            ? 'someHappyCustomers'
+                            : index === 4
+                                ? 'contactUs'
+                                : '';
         this.setState({ clickedSection: true });
         setTimeout(() => {
             this.setState({ clickedSection: false, selectedSection });
@@ -55,14 +66,18 @@ class Header extends Component {
         const { clickedSection } = this.state;
         let scrollTopY = window.scrollY;
         let width = window.innerWidth;
-
+        console.log(scrollTopY)
         const selectedSection = scrollTopY >= 716 && scrollTopY < 1091
             ? 'aboutUs'
-            : scrollTopY >= 1091 && scrollTopY < 1466
+            : scrollTopY >= 1091 && scrollTopY < 1326
                 ? 'OurServices'
-                : scrollTopY >= 1466
+                : scrollTopY >= 1326 && scrollTopY < 1580
                     ? 'mood'
-                    : '';
+                    : scrollTopY >= 1580 && scrollTopY < 1830
+                        ? 'someHappyCustomers'
+                        : scrollTopY >= 1830
+                            ? 'contactUs'
+                            : '';
 
         !clickedSection && this.setState({ selectedSection });
         if (scrollTopY > 660 && width < windowWidthMd) {
