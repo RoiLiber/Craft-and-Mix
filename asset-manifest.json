@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.09205dfb.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.6ff54300.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.6ff54300.chunk.js.map",
+    "main.css": "/Craft-and-Mix/static/css/main.e2afbbb7.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.25935dfa.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.25935dfa.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
-    "static/js/2.141b0011.chunk.js": "/Craft-and-Mix/static/js/2.141b0011.chunk.js",
-    "static/js/2.141b0011.chunk.js.map": "/Craft-and-Mix/static/js/2.141b0011.chunk.js.map",
+    "static/js/2.e2e3c25d.chunk.js": "/Craft-and-Mix/static/js/2.e2e3c25d.chunk.js",
+    "static/js/2.e2e3c25d.chunk.js.map": "/Craft-and-Mix/static/js/2.e2e3c25d.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.e1029682c235c6a11fdd77c047e65c39.js": "/Craft-and-Mix/precache-manifest.e1029682c235c6a11fdd77c047e65c39.js",
+    "precache-manifest.177afa3636cd5adec64ad593abb009c6.js": "/Craft-and-Mix/precache-manifest.177afa3636cd5adec64ad593abb009c6.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.09205dfb.chunk.css.map": "/Craft-and-Mix/static/css/main.09205dfb.chunk.css.map",
+    "static/css/main.e2afbbb7.chunk.css.map": "/Craft-and-Mix/static/css/main.e2afbbb7.chunk.css.map",
     "static/media/A.jpeg": "/Craft-and-Mix/static/media/A.1b02a294.jpeg",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
-    "static/media/G.png": "/Craft-and-Mix/static/media/G.3e3e846c.png",
+    "static/media/G.png": "/Craft-and-Mix/static/media/G.505fe7e0.png",
     "static/media/Mode.jpeg": "/Craft-and-Mix/static/media/Mode.5234f944.jpeg",
     "static/media/On the Menu.jpeg": "/Craft-and-Mix/static/media/On the Menu.5fd669cc.jpeg",
     "static/media/Our Services.jpeg": "/Craft-and-Mix/static/media/Our Services.83a59f4b.jpeg",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
-    "static/js/2.141b0011.chunk.js",
-    "static/css/main.09205dfb.chunk.css",
-    "static/js/main.6ff54300.chunk.js"
+    "static/js/2.e2e3c25d.chunk.js",
+    "static/css/main.e2afbbb7.chunk.css",
+    "static/js/main.25935dfa.chunk.js"
   ]
 }
