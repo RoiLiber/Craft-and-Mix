@@ -47,6 +47,7 @@ div.footer_wrapper {
         justify-content: center;
         align-items: center;
         padding: 20px;
+        text-decoration: none;
       }
     }
 
@@ -59,7 +60,6 @@ div.footer_wrapper {
         border: thin solid $primary-black;
         padding: 15px;
         margin:  0 15px;
-        text-decoration: none;
         color: $primary-gold;
         width: 70px;
         height: 70px;
