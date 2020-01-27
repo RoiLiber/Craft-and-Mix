@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import AboutUs from "../../sections/AboutUs";
 import Footer from "../../sections/ContactUs";
 import OurServices from "../../sections/OurServices";
-import Customers from "../../sections/Customers";
+import Clients from "../../sections/Clients";
 import Section from "../../components/Section";
 import './style.scss';
 
@@ -15,7 +15,7 @@ class TopLayout extends Component {
                 <AboutUs/>
                 <OurServices/>
                 <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart/>
-                <Customers/>
+                <Clients/>
                 <Footer/>
             </div>
         )

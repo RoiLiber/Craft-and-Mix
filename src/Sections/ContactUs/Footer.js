@@ -24,13 +24,13 @@ class Footer extends Component {
                     <div className={'contact_wrapper'}>
                         <p>FOLLOW US</p>
                         <div className={'follow'}>
-                            <Fade delay={1500}>
-                                <a href={'https://www.instagram.com/craftnmix/'} target={'_blank'}>
+                            <Fade delay={500}>
+                                <a className={'instagram'} href={'https://www.instagram.com/craftnmix/'} target={'_blank'}>
                                     <i className="fab fa-instagram"/>
                                 </a>
                             </Fade>
-                            <Fade delay={1500}>
-                                <a href={'https://www.facebook.com/asafamir1'} target={'_blank'}>
+                            <Fade delay={700}>
+                                <a className={'facebook'} href={'https://www.facebook.com/asafamir1'} target={'_blank'}>
                                     <i className="fab fa-facebook-f"/>
                                 </a>
                             </Fade>
@@ -38,7 +38,6 @@ class Footer extends Component {
                     </div>
                     <div className={'footer'}>
                         <Logo backgroundColor={'white'}/>
-                        <span>by Asaf Amir</span>
                     </div>
                 </div>
             </Section>

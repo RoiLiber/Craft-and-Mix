@@ -19,13 +19,10 @@ div.footer_wrapper {
     flex-wrap: wrap;
     justify-content: center;
     height: 100%;
-    @include respond-to('large') {
-      width: 30%;
-    }
 
     & > p {
-      font-size: 30px;
-      margin: 10px;
+      font-size: 25px;
+      margin: 15px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -53,10 +50,10 @@ div.footer_wrapper {
           margin: 0 15px;
         }
         & > a.sms {
-          border: thin solid $primary-black;
           color: $primary-gold;
           padding: 5px;
           border-radius: 5px;
+          background-color: $primary-black;
         }
       }
       & > a {
@@ -79,14 +76,13 @@ div.footer_wrapper {
       flex-wrap: nowrap;
       align-items: flex-end;
 
-      & > a {
-        font-size: 35px;
-        border: thin solid $primary-black;
-        padding: 15px;
+      & > a.facebook, a.instagram {
+        font-size: 20px;
+        background-color: $primary-black;
         margin:  0 15px;
         color: $primary-gold;
-        width: 70px;
-        height: 70px;
+        width: 45px;
+        height: 45px;
       }
     }
   }

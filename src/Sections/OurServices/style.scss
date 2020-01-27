@@ -6,7 +6,7 @@ div.services {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 10px;
-  font-size: 20px;
+  //font-size: 15px;
   justify-content: center;
   background-color: $primary-white;
   color: $primary-black;
@@ -27,21 +27,20 @@ div.services {
     & > p {
       transition: 0.2s ease-in-out;
       color: $primary-gold;
-      font-size: 25px;
+      font-size: 20px;
+      padding: 5px;
     }
     & > i {
-      font-size: 75px;
+      font-size: 55px;
       padding: 20px;
-      color: $warm-grey;
+      width: 100%;
+      color: $primary-black;
       transition: 0.7s ease-in-out;
     }
   }
   & > div.service:hover {
     & > i {
       color: $primary-gold;
-    }
-    & > p {
-      color: $primary-black;
     }
   }
 }

@@ -7,7 +7,7 @@ class SectionHeadLine extends Component {
 
     render() {
         const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart, addHeartTop, small } = this.props;
-        const customers = elementName === 'someHappyCustomers';
+        const clients = elementName === 'clients';
         const contact = elementName === 'contactUs';
 
         return (
@@ -17,7 +17,7 @@ class SectionHeadLine extends Component {
                 to={elementName}
                 spy={true}
                 smooth={true}
-                offset={(customers || contact) ? 700 : small ? -35 : -80}
+                offset={clients ? 170 : contact ? 570 : small ? -35 : -80}
                 duration={900}
                 onClick={toggleMenu ? () => toggleMenu() : null}
                 onSetActive={() => {}}

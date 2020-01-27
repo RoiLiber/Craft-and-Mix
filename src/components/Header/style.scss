@@ -11,14 +11,16 @@ div.header {
     padding: 10px 0;
     width: 100%;
     height: 15vh;
-    color: $primary-white;
+    color: $primary-black;
     z-index: 999;
-    background-color: $primary-black;
+    background-color: rgba($primary-white, 0);
     transition: 0.3s ease-in-out;
     @include respond-to('large') {
         flex-wrap: nowrap;
         padding: 0 20px;
         height: 10vh;
+        background-color: $primary-white;
+        //border-bottom: thin solid $primary-black;
     }
     & > div.header_logo {
         display: flex;
@@ -29,8 +31,10 @@ div.header {
         & > span {
             width: 100%;
             display: flex;
+            font-size: 12px;
             justify-content: center;
             transition: 0.3s ease-in-out;
+            padding-top: 10px;
         }
     }
     & > div.menu_button {
@@ -72,14 +76,14 @@ div.header {
                 top: 15px;
                 width: 100%;
                 transition: 0.5s ease-in-out;
-                border-bottom: thin solid $primary-white;
+                border-bottom: thin solid $primary-gold;
             }
         }
         & > a.selected {
-            color: $primary-white;
+            color: $primary-black;
         }
         & > a.menu_list_item:hover {
-            color: $primary-white;
+            color: $primary-black;
         }
     }
 }
@@ -90,7 +94,7 @@ div.sm {
     padding: 0;
 
     & > div.header_logo {
-        justify-content: center;
+        justify-content: flex-start;
         //flex-wrap: nowrap;
         padding-left: 15px;
         width: 100%;
@@ -111,6 +115,10 @@ div.sm {
     & > div.menu_button {
         bottom: 0;
     }
+}
+
+div.background {
+    background-color: $primary-white;
 }
 
 

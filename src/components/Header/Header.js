@@ -43,15 +43,16 @@ class Header extends Component {
         const { large, larger, windowHeight, windowScrollY, reportWindowScrollTopY } = this.props;
         const { clickedSection } = this.state;
         let height10vh = windowHeight / 10;
+
         const selectedSection = windowScrollY >= 375 && windowScrollY < 720
             ? 'aboutUs'
             : windowScrollY >= 720 && windowScrollY < 1326
                 ? 'OurServices'
                 : windowScrollY >= 1326 && windowScrollY < 1700
                     ? 'mood'
-                    : windowScrollY >= 1700 && windowScrollY < 2002
-                        ? 'someHappyCustomers'
-                        : windowScrollY >= 2002
+                    : windowScrollY >= 1700 && windowScrollY < 2070
+                        ? 'clients'
+                        : windowScrollY >= 2070
                             ? 'contactUs'
                             : '';
 
@@ -81,7 +82,7 @@ class Header extends Component {
                 break
             }
             case 3: {
-                selectedSection = 'someHappyCustomers';
+                selectedSection = 'clients';
                 break
             }
             case 4: {
@@ -106,12 +107,14 @@ class Header extends Component {
 
     render() {
         const { shrinkHeader, selectedSection } = this.state;
-        const { menuList, large, larger } = this.props;
+        const { menuList, large, larger, small, openMenu } = this.props;
+        const clients = selectedSection === 'clients';
+        const contact = selectedSection === 'contactUs';
 
         return (
-            <div className={shrinkHeader ? 'header sm' : 'header'}>
+            <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
                 <div className={'header_logo'}>
-                    <Logo sm={shrinkHeader}/>
+                    <Logo sm={shrinkHeader} backgroundColor={'gold'}/>
                     <span className={'logo_line'}>cocktail bar service and much more</span>
                 </div>
                 <div className={'menu_button'} onClick={large ? null : () => this.toggleMenu()}>
@@ -128,7 +131,7 @@ class Header extends Component {
                                     to={item.elementName}
                                     spy={true}
                                     smooth={true}
-                                    offset={-80}
+                                    offset={clients ? 570 : contact ? 570 : small ? -35 : -80}
                                     duration={900}
                                     onClick={() => this.clickedSection(index)}
                                     onSetActive={() => {}}
@@ -144,7 +147,7 @@ class Header extends Component {
                         :   <i className="fas fa-ellipsis-h"/>
                     }
                 </div>
-                {!large && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
+                {(!large || !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
             </div>
         )
     };
@@ -152,12 +155,13 @@ class Header extends Component {
 
 const mapStateToProps = state => {
     const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY } = state.mainReducer;
-    const { large, larger } = windowWidthSize;
+    const { large, larger, small } = windowWidthSize;
 
     return {
         openMenu,
         large,
         larger,
+        small,
         menuList,
         windowHeight,
         windowScrollY,

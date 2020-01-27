@@ -15,7 +15,7 @@ export const menuList = [
     { text: 'Our Services', elementName: 'OurServices' },
     { text: 'Mood', elementName: 'mood' },
     // { text: 'On the Menu', elementName: 'onTheMenu' },
-    { text: 'Some happy Customers', elementName: 'someHappyCustomers' },
+    { text: 'Happy Clients', elementName: 'clients' },
     { text: 'Contact us', elementName: 'contactUs' },
 ];
 
