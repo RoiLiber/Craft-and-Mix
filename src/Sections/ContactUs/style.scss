@@ -79,13 +79,31 @@ div.footer_wrapper {
       flex-wrap: nowrap;
       align-items: flex-end;
 
-      & > a.facebook, a.instagram {
-        font-size: 20px;
-        background-color: $primary-black;
-        margin:  0 15px;
-        color: $primary-gold;
-        width: 45px;
-        height: 45px;
+      & > div.card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px -5px rgba($primary-gold, 0.5);
+        transition: box-shadow 0.5s;
+        will-change: transform;
+        margin: 0 15px;
+        background-color: rgba($primary-gold, 0.1);
+
+        & > a.facebook, a.instagram {
+          font-size: 20px;
+          background-color: $primary-black;
+          color: $primary-gold;
+          width: 45px;
+          height: 45px;
+          transition: all .2s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+      }
+      .card:hover {
+        box-shadow: 0 30px 100px -10px rgba($primary-gold, 0.7);
       }
     }
   }
@@ -105,7 +123,7 @@ div.footer_wrapper {
       top: 20px;
     }
   }
-  & div.stars_wrapper {
+  & > div.stars_wrapper {
     width: 100%;
     box-shadow: 10px 25px 55px 10px $primary-gold;
   }

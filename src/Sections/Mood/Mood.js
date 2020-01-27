@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import SectionHeadLine from "../../components/SectionHeadLine";
 import { connect } from "react-redux";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';

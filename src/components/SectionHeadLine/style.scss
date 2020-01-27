@@ -42,6 +42,7 @@ a.element_link {
       }
       & > p.white {
         color: $primary-white;
+        font-size: 20px;
       }
       & > p.black {
         color: $primary-black;
@@ -75,6 +76,7 @@ a.element_link {
   }
   & > div.goldBackground {
     background-color: rgba($primary-gold, 0);
+    height: 15vh;
   }
 }
 
