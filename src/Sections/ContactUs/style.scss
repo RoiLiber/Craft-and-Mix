@@ -48,6 +48,10 @@ div.footer_wrapper {
         align-items: center;
         padding: 20px;
         text-decoration: none;
+        color: $primary-black;
+        & > span {
+          color: $primary-gold;
+        }
       }
     }
 
