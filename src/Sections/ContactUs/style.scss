@@ -39,6 +39,26 @@ div.footer_wrapper {
       justify-content: center;
       align-items: center;
 
+      & > span.phone_number {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: thin solid $primary-gold;
+        width: 100%;
+        padding-bottom: 5px;
+        & > a.phone, a.sms {
+          text-decoration: none;
+          color: $primary-black;
+          margin: 0 15px;
+        }
+        & > a.sms {
+          border: thin solid $primary-black;
+          color: $primary-gold;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
       & > a {
         border-bottom: thin solid $primary-gold;
         width: 100%;

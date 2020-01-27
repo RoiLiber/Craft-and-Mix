@@ -14,7 +14,10 @@ class Footer extends Component {
                     <div className={'contact_wrapper'}>
                         <p>GET IN TOUCH</p>
                         <div className={'contact'}>
-                            <a className={'phone'} href={'tel:0525730004'}>052 5730004</a>
+                            <span className={'phone_number'}>
+                                <a className={'phone'} href={'tel:0525730004'}>052 5730004</a>
+                                <a className={'sms'} href={'sms:0525730004'}><i className="far fa-comment"/></a>
+                            </span>
                             <a className={'mail'} href={'mailto:craftandmix@gmail.com'}>craftandmix<span>@</span>gmail.com</a>
                         </div>
                     </div>
