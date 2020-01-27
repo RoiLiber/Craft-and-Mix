@@ -11,6 +11,11 @@ class Footer extends Component {
         return (
             <Section position={'position80'} elementName={'contactUs'} text={'Contact Us'} textColor={'black'} color={'gold'}>
                 <div className={'footer_wrapper'}>
+                    <div className={'stars_wrapper'}>
+                        <div id='stars'/>
+                        <div id='stars2'/>
+                        <div id='stars3'/>
+                    </div>
                     <div className={'contact_wrapper'}>
                         <p>GET IN TOUCH</p>
                         <div className={'contact'}>

@@ -53,14 +53,7 @@ class Mood extends Component {
                     </div>
                 </div>
                 {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
-                <SectionHeadLine
-                    text={'Mood'}
-                    textColor={'black'}
-                    color={'gold'}
-                    elementName={'mood'}
-                    addHeartTop
-                    addHeart
-                />
+                <div className={'clear_white'}/>
             </div>
         )
     };
