@@ -5,36 +5,8 @@ import './style.scss';
 
 class SectionHeadLine extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            windowWidthMobile: ''
-        };
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.reportWindowSize);
-        this.setWindowSizeMobile()
-    }
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.reportWindowSize);
-    }
-
-    reportWindowSize = () => {
-        this.setWindowSizeMobile()
-    };
-
-    setWindowSizeMobile = () => {
-        const { windowWidthSm } = this.props;
-        let width = window.innerWidth;
-        const mobile = width < windowWidthSm;
-
-        this.setState({ windowWidthMobile: mobile })
-    };
-
     render() {
-        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart, addHeartTop } = this.props;
-        const { windowWidthMobile } = this.state;
+        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart, addHeartTop, small } = this.props;
         const customers = elementName === 'someHappyCustomers';
         const contact = elementName === 'contactUs';
 
@@ -45,7 +17,7 @@ class SectionHeadLine extends Component {
                 to={elementName}
                 spy={true}
                 smooth={true}
-                offset={(customers || contact) ? 700 : windowWidthMobile ? -35 : -80}
+                offset={(customers || contact) ? 700 : small ? -35 : -80}
                 duration={900}
                 onClick={toggleMenu ? () => toggleMenu() : null}
                 onSetActive={() => {}}
@@ -67,9 +39,11 @@ class SectionHeadLine extends Component {
 }
 
 const mapStateToProps = state => {
-    const { windowWidthSm } = state.mainReducer;
+    const { windowWidthSize } = state.mainReducer;
+    const { small } = windowWidthSize;
+
     return {
-        windowWidthSm
+        small
     };
 };
 

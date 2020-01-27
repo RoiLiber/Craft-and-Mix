@@ -6,44 +6,26 @@ import './style.scss';
 
 class BackgroundLayout extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            carouselSection: true,
-            moodSection: false
-        };
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-    handleScroll = () => {
-        let scrollTopY = window.scrollY;
-
-        if (scrollTopY > 680) {
-            this.setState({ carouselSection: false, moodSection: true });
-        } else {
-            this.setState({ carouselSection: true, moodSection: false });
-        }
-    };
-
     render() {
-        const { carouselSection, moodSection } = this.state;
+        const { windowHeight, windowScrollY } = this.props;
+        const height10vh = windowHeight / 10;
+        const scrollAtTop = windowScrollY > (windowHeight - height10vh * 3);
 
         return (
             <div className="background_layout">
-                {carouselSection && <TopCarousel/>}
-                {moodSection && <Mood/>}
+                {!scrollAtTop && <TopCarousel/>}
+                {scrollAtTop && <Mood/>}
             </div>
         )
     };
 }
 
 const mapStateToProps = state => {
+    const { windowHeight, windowScrollY } = state.mainReducer;
+
     return {
+        windowHeight,
+        windowScrollY
     };
 };
 

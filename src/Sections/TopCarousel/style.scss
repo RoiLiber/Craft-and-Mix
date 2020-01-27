@@ -8,6 +8,7 @@ div.carousel_section {
     flex-wrap: wrap;
     width: 100%;
     height: 70vh;
+
     @include respond-to('large') {
         flex-wrap: nowrap;
         height: 75vh;

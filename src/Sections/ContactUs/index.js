@@ -1,3 +1,3 @@
-import ContactUs from './ContactUs';
+import Footer from './Footer';
 
-export default ContactUs;
+export default Footer;

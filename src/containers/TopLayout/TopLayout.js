@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import AboutUs from "../../sections/AboutUs";
-import Footer from "../../components/Footer";
+import Footer from "../../sections/ContactUs";
 import OurServices from "../../sections/OurServices";
 import Customers from "../../sections/Customers";
-import ContactUs from "../../sections/ContactUs";
 import Section from "../../components/Section";
 import './style.scss';
 
@@ -17,7 +16,6 @@ class TopLayout extends Component {
                 <OurServices/>
                 <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart/>
                 <Customers/>
-                <ContactUs/>
                 <Footer/>
             </div>
         )
@@ -25,7 +23,9 @@ class TopLayout extends Component {
 }
 
 const mapStateToProps = state => {
+    const { mood } = state.mainReducer;
     return {
+        mood
     };
 };
 

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import Logo from '../UI/Logo/Logo';
-import { toggleMenu } from '../../store/actions/mainActions';
+import {
+    toggleMenu,
+    setWindowWidth,
+    setWindowHeight,
+    reportWindowScrollTopY
+} from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
 import Menu from '../../components/Menu';
 import { Link } from "react-scroll";
@@ -12,9 +17,8 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            styleClassName: false,
+            shrinkHeader: false,
             clickedSection: false,
-            setWindowSizeWide: '',
             selectedSection: '',
         };
     }
@@ -22,7 +26,6 @@ class Header extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.reportWindowSize);
-        this.setWindowSizeWide()
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
@@ -30,61 +33,69 @@ class Header extends Component {
     }
 
     reportWindowSize = () => {
-        this.setWindowSizeWide()
-    };
+        const { setWindowWidth, setWindowHeight } = this.props;
 
-    setWindowSizeWide = () => {
-        const { windowWidthLr } = this.props;
-        let width = window.innerWidth;
-        const windowSizeWide = width > windowWidthLr;
-
-        this.setState({ setWindowSizeWide: windowSizeWide })
-    };
-
-    clickedSection = index => {
-        const selectedSection =
-            index === 0
-                ? 'aboutUs'
-                : index === 1
-                    ? 'OurServices'
-                    : index === 2
-                        ? 'mood'
-                        : index === 3
-                            ? 'someHappyCustomers'
-                            : index === 4
-                                ? 'contactUs'
-                                : '';
-        this.setState({ clickedSection: true });
-        setTimeout(() => {
-            this.setState({ clickedSection: false, selectedSection });
-        }, 1000)
-
+        setWindowWidth(window.innerWidth);
+        setWindowHeight(window.innerHeight)
     };
 
     handleScroll = () => {
-        const { windowWidthMd } = this.props;
+        const { large, larger, windowHeight, windowScrollY, reportWindowScrollTopY } = this.props;
         const { clickedSection } = this.state;
-        let scrollTopY = window.scrollY;
-        let width = window.innerWidth;
-        console.log(scrollTopY)
-        const selectedSection = scrollTopY >= 375 && scrollTopY < 720
+        let height10vh = windowHeight / 10;
+        const selectedSection = windowScrollY >= 375 && windowScrollY < 720
             ? 'aboutUs'
-            : scrollTopY >= 720 && scrollTopY < 1326
+            : windowScrollY >= 720 && windowScrollY < 1326
                 ? 'OurServices'
-                : scrollTopY >= 1326 && scrollTopY < 1700
+                : windowScrollY >= 1326 && windowScrollY < 1700
                     ? 'mood'
-                    : scrollTopY >= 1700 && scrollTopY < 2002
+                    : windowScrollY >= 1700 && windowScrollY < 2002
                         ? 'someHappyCustomers'
-                        : scrollTopY >= 2002
+                        : windowScrollY >= 2002
                             ? 'contactUs'
                             : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (scrollTopY > 660 && width < windowWidthMd) {
-            this.setState({ styleClassName: true });
+        if (windowScrollY > (windowHeight - height10vh * 3) && (!large && !larger)) {
+            this.setState({ shrinkHeader: true });
         } else {
-            this.setState({ styleClassName: false });
+            this.setState({ shrinkHeader: false });
         }
+        reportWindowScrollTopY(window.scrollY)
+    };
+
+    clickedSection = index => {
+        let  selectedSection = '';
+
+        switch (index) {
+            case 0: {
+                selectedSection = 'aboutUs';
+                break
+            }
+            case 1: {
+                selectedSection = 'OurServices';
+                break
+            }
+            case 2: {
+                selectedSection = 'mood';
+                break
+            }
+            case 3: {
+                selectedSection = 'someHappyCustomers';
+                break
+            }
+            case 4: {
+                selectedSection = 'contactUs';
+                break
+            }
+            default: {
+                selectedSection = ''
+            }
+        }
+        this.setState({ clickedSection: true });
+        setTimeout(() => {
+            this.setState({ clickedSection: false, selectedSection });
+        }, 1000)
     };
 
     toggleMenu = () => {
@@ -94,17 +105,17 @@ class Header extends Component {
     };
 
     render() {
-        const { styleClassName, setWindowSizeWide, selectedSection } = this.state;
-        const { menuList } = this.props;
+        const { shrinkHeader, selectedSection } = this.state;
+        const { menuList, large, larger } = this.props;
 
         return (
-            <div className={styleClassName ? 'header sm' : 'header'}>
+            <div className={shrinkHeader ? 'header sm' : 'header'}>
                 <div className={'header_logo'}>
-                    <Logo sm={styleClassName}/>
+                    <Logo sm={shrinkHeader}/>
                     <span className={'logo_line'}>cocktail bar service and much more</span>
                 </div>
-                <div className={'menu_button'} onClick={setWindowSizeWide ? null : () => this.toggleMenu()}>
-                    {setWindowSizeWide
+                <div className={'menu_button'} onClick={large ? null : () => this.toggleMenu()}>
+                    {large || larger
                         ?   menuList.map((item, index) => {
                                 return <Link
                                     key={index}
@@ -133,26 +144,32 @@ class Header extends Component {
                         :   <i className="fas fa-ellipsis-h"/>
                     }
                 </div>
-                <Menu className={styleClassName ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={styleClassName}/>
+                {!large && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
             </div>
         )
     };
 }
 
 const mapStateToProps = state => {
-    const { openMenu, windowWidthLr, windowWidthSm, menuList, windowWidthMd } = state.mainReducer;
+    const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY } = state.mainReducer;
+    const { large, larger } = windowWidthSize;
+
     return {
         openMenu,
-        windowWidthLr,
-        windowWidthSm,
-        windowWidthMd,
-        menuList
+        large,
+        larger,
+        menuList,
+        windowHeight,
+        windowScrollY,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         toggleMenu: bool => dispatch(toggleMenu(bool)),
+        setWindowWidth: width => dispatch(setWindowWidth(width)),
+        setWindowHeight: height => dispatch(setWindowHeight(height)),
+        reportWindowScrollTopY: scroll => dispatch(reportWindowScrollTopY(scroll)),
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,28 +1,87 @@
 @import "../../styles/colorsConfig";
 @import "../../styles/mixins";
 
-div.contact {
+div.footer_wrapper {
   width: 100%;
+  position: relative;
   display: flex;
-  font-size: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
   background-color: $primary-white;
+  z-index: 999;
   color: $primary-black;
-  min-height: 20vh;
-  padding: 0 20%;
+  padding-bottom: 5vh;
 
-  & > div.icon_wrapper {
+  & > div.contact_wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
     @include respond-to('large') {
-      flex-wrap: nowrap;
+      width: 30%;
     }
-    & > a {
-      font-size: 60px;
+
+    & > p {
+      font-size: 30px;
+      margin: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    & > div.contact, div.follow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      & > a {
+        border-bottom: thin solid $primary-gold;
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+    }
+
+    & > div.follow {
+      flex-wrap: nowrap;
+      align-items: flex-end;
+
+      & > a {
+        font-size: 35px;
+        border: thin solid $primary-black;
+        padding: 15px;
+        margin:  0 15px;
+        text-decoration: none;
+        color: $primary-gold;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  & > div.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    background-color: $primary-white;
+    padding-top: 5vh;
+
+    & > span {
       color: $primary-gold;
+      display: flex;
+      align-items: center;
+      position: relative;
+      top: 20px;
     }
   }
 }

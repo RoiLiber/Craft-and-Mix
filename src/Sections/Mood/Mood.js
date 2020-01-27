@@ -1,52 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import './style.scss';
 import SectionHeadLine from "../../components/SectionHeadLine";
 import { connect } from "react-redux";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import backgroundImage from '../../assest/img/logos/G.png';
 import { random } from 'lodash';
 import Carousel from "../../components/Carousel";
+import './style.scss';
 
 class Mood extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            setWindowSizeWide: '',
-            setWindowSizeMd: '',
-            windowWidthSm: '',
             isPopUpPhoto: false,
             popPhoto: '',
         };
     }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener('resize', this.reportWindowSize);
-        this.setWindowSizeWide()
-    }
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-        window.removeEventListener('resize', this.reportWindowSize);
-    }
-
-    reportWindowSize = () => {
-        this.setWindowSizeWide()
-    };
-
-    setWindowSizeWide = () => {
-        const { windowWidthLr, windowWidthMd, windowWidthSm } = this.props;
-        let width = window.innerWidth;
-        const windowSizeSm = width < 0 || width > (windowWidthSm + 100);
-        const windowSizeMd = width > windowWidthMd;
-        const windowSizeWide = width > (windowWidthLr + 300);
-
-        this.setState({
-            setWindowSizeWide: windowSizeWide,
-            windowSizeMd: windowSizeMd,
-            windowWidthSm: windowSizeSm
-        })
-    };
 
     popUp = item => {
         const { isPopUpPhoto } = this.state;
@@ -59,14 +28,14 @@ class Mood extends Component {
     };
 
     addCarousels = array => {
-        const { windowSizeMd, setWindowSizeWide } = this.state;
+        const { larger, large } = this.props;
 
-        if (setWindowSizeWide) {
+        if (larger) {
             return <Fragment>
                 <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
                 <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
             </Fragment>
-        } else if (windowSizeMd && !setWindowSizeWide) {
+        } else if (large) {
             return <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
         }
     };
@@ -98,12 +67,15 @@ class Mood extends Component {
 }
 
 const mapStateToProps = state => {
-    const { mood, windowWidthSm, windowWidthMd, windowWidthLr } = state.mainReducer;
+    const { mood, windowWidthSize } = state.mainReducer;
+    const { small, medium, large, larger } = windowWidthSize;
+
     return {
         mood,
-        windowWidthSm,
-        windowWidthMd,
-        windowWidthLr
+        small,
+        medium,
+        large,
+        larger
     };
 };
 

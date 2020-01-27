@@ -8,3 +8,32 @@ export const toggleMenu = bool => {
         })
     }
 };
+
+export const reportWindowScrollTopY = windowScroll => {
+    return (dispatch) => {
+        dispatch({
+            type: actionTypes.REPORT_SCROLL_TOP_Y,
+            payload: windowScroll
+        })
+    }
+};
+
+export const setWindowWidth = windowWidth => {
+    return (dispatch) => {
+        dispatch({
+            type: actionTypes.REPORT_WINDOW_WIDTH,
+            payload: windowWidth
+        })
+    }
+};
+
+export const setWindowHeight = windowHeight => {
+    return (dispatch) => {
+        dispatch({
+            type: actionTypes.REPORT_WINDOW_HEIGHT,
+            payload: windowHeight
+        })
+    }
+};
+
+
