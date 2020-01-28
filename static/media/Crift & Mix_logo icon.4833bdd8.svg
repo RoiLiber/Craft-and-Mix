@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="135px" viewBox="0 0 73 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>logo icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.1504 0.039 68.3454 0.039 68.3454 45.8777 0.1504 45.8777"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="&lt;!---Generator:-Adobe-Illustrator-24.0.3,-SVG-Export-Plug-In----&gt;-&lt;svg-version=&quot;1.1&quot;-xmlns=&quot;http://www.w3.org/2000/svg&quot;-xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;-x=&quot;0px&quot;-y=&quot;0px&quot;-width=&quot;72.5px&quot;---height=&quot;135px&quot;-viewBox=&quot;0-0-72.5-135&quot;-style=&quot;enable-background:new-0-0-72.5-135;&quot;-xml:space=&quot;preserve&quot;&gt;-&lt;style-type=&quot;text/css&quot;&gt;--.st0{opacity:0.9;fill:#C1983F;}--.st1{opacity:0.9;fill:none;stroke:#C1983F;stroke-width:5;stroke-miterlimit:10;}-&lt;/style&gt;-&lt;defs&gt;-&lt;/defs&gt;-&lt;g&gt;--&lt;path-class=&quot;st0&quot;-d=&quot;M36.2,0H2.2l17,24.9l14.3,20.9H39l14.3-20.9L70.3,0H36.2z-M10.6,4.9h22.6l-9.9,17.1L10.6,4.9z-M36.2,40.6---L25.8,25.4L36.2,9l10.2,16.5L36.2,40.6z-M49.5,22l-10.8-17h21.6L49.5,22z&quot;/&gt;--&lt;polygon-class=&quot;st1&quot;-points=&quot;36.8,53-35.5,53-3.7,132.5-68.8,132.5--&quot;/&gt;-&lt;/g&gt;-&lt;/svg&gt;-" transform="translate(-94.000000, -44.000000)">
+            <g id="logo-icon" transform="translate(96.000000, 43.000000)">
+                <g id="Group-3" transform="translate(0.000000, 0.961000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M47.5284,22.0237 L36.7354,4.9747 L58.3214,4.9747 L47.5284,22.0237 Z M34.2484,40.6817 L23.7844,25.4627 L34.2484,9.0467 L44.4924,25.5357 L34.2484,40.6817 Z M8.6384,4.9747 L31.2484,4.9747 L21.3704,22.0967 L8.6384,4.9747 Z M34.2484,0.0387 L0.1504,0.0387 L17.1994,24.9337 L31.5424,45.8777 L36.9544,45.8777 L51.2974,24.9337 L68.3454,0.0387 L34.2484,0.0387 Z" id="Fill-1" fill="#C1983F" mask="url(#mask-2)"></path>
+                </g>
+                <polygon id="Stroke-4" stroke="#C1983F" stroke-width="5" points="34.7501 54.016 33.5401 54.016 1.6951 133.461 66.8011 133.461"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
