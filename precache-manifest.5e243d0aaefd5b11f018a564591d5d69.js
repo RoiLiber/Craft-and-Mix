@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e636a4fa3fac6b7d0781349fef84c65",
+    "revision": "9125e7161539c5b11657573896cc8df2",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "af70df5c7e93fe3f5fc1",
-    "url": "/Craft-and-Mix/static/css/main.f2827acb.chunk.css"
+    "revision": "7e7100cffdcc00d8ab4a",
+    "url": "/Craft-and-Mix/static/css/main.847254bc.chunk.css"
   },
   {
-    "revision": "9e1dd328f30764eb6310",
-    "url": "/Craft-and-Mix/static/js/2.166cd202.chunk.js"
+    "revision": "883ce1ee67e60c7bdb78",
+    "url": "/Craft-and-Mix/static/js/2.5b75e060.chunk.js"
   },
   {
-    "revision": "af70df5c7e93fe3f5fc1",
-    "url": "/Craft-and-Mix/static/js/main.dd999c9b.chunk.js"
+    "revision": "7e7100cffdcc00d8ab4a",
+    "url": "/Craft-and-Mix/static/js/main.dcbcc591.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -62,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "448113b6c7f5180d0fac27d4c5cef0ec",
     "url": "/Craft-and-Mix/static/media/WhatsApp Image 2020-01-17 at 21.54.03.448113b6.jpeg"
+  },
+  {
+    "revision": "75363ad687bb63b6247855463ffdbd73",
+    "url": "/Craft-and-Mix/static/media/WhatsApp.75363ad6.jpg"
   },
   {
     "revision": "0ebaf998301c1e9b4a82941c0bd68f57",
