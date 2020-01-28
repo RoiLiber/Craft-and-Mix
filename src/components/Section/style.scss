@@ -3,6 +3,8 @@
 
 div.element {
   width: 100%;
+  position: relative;
+  top: 70vh;
 
   .section_Wrapper {
     display: flex;
@@ -10,7 +12,7 @@ div.element {
     align-items: center;
     justify-content: center;
     width: 100%;
-    z-index: 700;
+    z-index: 500;
   }
   .position10 {
     position: relative;

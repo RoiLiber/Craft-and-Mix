@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import TopCarousel from "../../sections/TopCarousel/TopCarousel";
-import Mood from "../../sections/Mood/Mood";
 import './style.scss';
 
 class BackgroundLayout extends Component {
@@ -13,8 +11,7 @@ class BackgroundLayout extends Component {
 
         return (
             <div className="background_layout">
-                {!scrollAtTop && <TopCarousel/>}
-                {scrollAtTop && <div className={'background'}/>}
+                <div className={'background'}/>
             </div>
         )
     };

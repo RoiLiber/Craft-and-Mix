@@ -23,7 +23,6 @@ export const topCarousel = [
     { text: 'About us', img: imgAbout, backgroundColor: 'black' },
     { text: 'Our Services', img: imgServices, backgroundColor: 'gold' },
     { text: 'Mood', img: imgMode, backgroundColor: 'black' },
-    // { text: 'On the Menu', img: imgMenu, backgroundColor: 'gold' },
     { text: 'Contact us', img: imgMenu, backgroundColor: 'gold' }
 ];
 

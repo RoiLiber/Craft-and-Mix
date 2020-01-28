@@ -11,6 +11,7 @@ div.services {
   background-color: $primary-white;
   color: $primary-black;
   min-height: 25vh;
+  z-index: 500;
   @include respond-to('large') {
     flex-wrap: nowrap;
   }

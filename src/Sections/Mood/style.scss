@@ -9,6 +9,8 @@ div.mood_section {
   justify-content: center;
   align-items: flex-end;
   padding: 5vh 0;
+  z-index: 500;
+  background-color: $primary-white;
 
   & > div.clear_white {
     width: 100%;

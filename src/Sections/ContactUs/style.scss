@@ -8,11 +8,11 @@ div.footer_wrapper {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: center;
-  z-index: 999;
+  z-index: 500;
   color: $primary-black;
   padding-bottom: 5vh;
   background: radial-gradient(ellipse at bottom, $primary-white 30%, $primary-gold 90%);
-  box-shadow: 25px 10px 25px 30px $primary-gold;
+  box-shadow: 25px 20px 15px 30px $primary-gold;
   overflow: hidden;
 
   & > div.contact_wrapper {

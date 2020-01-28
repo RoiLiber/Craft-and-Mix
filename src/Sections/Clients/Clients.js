@@ -16,7 +16,7 @@ class Clients extends Component {
                     <div className={'icon_wrapper'}>
                         <Fade delay={500}>
                             <span>
-                                <img className={'google'} src={google} alt={'audi logo'}/>
+                                <img className={'mobilaye'} src={mobilaye} alt={'audi logo'}/>
                             </span>
                         </Fade>
                         <Fade delay={700}>
@@ -26,7 +26,7 @@ class Clients extends Component {
                         </Fade>
                         <Fade delay={900}>
                             <span>
-                                <img className={'mobilaye'} src={mobilaye} alt={'audi logo'}/>
+                                <img className={'google'} src={google} alt={'audi logo'}/>
                             </span>
                         </Fade>
                     </div>

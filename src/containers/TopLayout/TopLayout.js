@@ -4,20 +4,29 @@ import AboutUs from "../../sections/AboutUs";
 import Footer from "../../sections/ContactUs";
 import OurServices from "../../sections/OurServices";
 import Clients from "../../sections/Clients";
-import Section from "../../components/Section";
+import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import './style.scss';
 import Mood from "../../sections/Mood/Mood";
+import photo from '../../assest/img/logos/WhatsApp.jpg';
 
 class TopLayout extends Component {
 
     render() {
+        const { windowHeight, windowScrollY } = this.props;
+        let height10vh = windowHeight / 10;
+        const carouselExit = windowScrollY > (windowHeight - height10vh * 3);
         return (
             <div className="top_layout">
+                {!carouselExit && <TopCarousel/>}
                 <AboutUs/>
-                {/*<div className={'parallax_w parallax'}/>*/}
                 <OurServices/>
+                <div className={'clear'}/>
                 <Mood/>
+                <div className={'clear'}/>
                 <Clients/>
+                <div className={'photo'}>
+                    <img src={photo} alt={'photo'}/>
+                </div>
                 <Footer/>
             </div>
         )
@@ -25,9 +34,10 @@ class TopLayout extends Component {
 }
 
 const mapStateToProps = state => {
-    const { mood } = state.mainReducer;
+    const { windowScrollY, windowHeight } = state.mainReducer;
     return {
-        mood
+        windowScrollY,
+        windowHeight
     };
 };
 

@@ -11,6 +11,7 @@ div.clients {
   color: $primary-black;
   min-height: 20vh;
   padding: 0 20%;
+  z-index: 500;
 
   & > div.icon_wrapper {
     width: 100%;

@@ -2,8 +2,8 @@
 @import "../../styles/mixins";
 
 div.carousel_section {
-    position: relative;
-    top: 10vh;
+    position: fixed;
+    z-index: 100;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -12,7 +12,7 @@ div.carousel_section {
     @include respond-to('large') {
         flex-wrap: nowrap;
         height: 75vh;
-        top: 0;
+        top: 10vh;
     }
 
     div.carousel_wrapper {
