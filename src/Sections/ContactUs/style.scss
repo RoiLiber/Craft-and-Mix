@@ -114,13 +114,16 @@ div.footer_wrapper {
     background-color: $primary-white;
     padding-top: 5vh;
 
-    & > span {
-      color: $primary-gold;
-      display: flex;
-      align-items: center;
-      position: relative;
-      top: 20px;
+    & > img {
+      width: 65px;
     }
+    //& > span {
+    //  color: $primary-gold;
+    //  display: flex;
+    //  align-items: center;
+    //  position: relative;
+    //  top: 20px;
+    //}
   }
   & > div.stars_wrapper {
     width: 100%;

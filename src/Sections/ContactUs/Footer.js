@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import { Fade } from "react-reveal";
 import Logo from "../../components/UI/Logo/Logo";
 import { useSpring, animated } from 'react-spring';
+import logo from '../../assest/icon/Crift&Mix-black logo.svg';
 import './style.scss';
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -60,7 +61,8 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={'footer'}>
-                    <Logo backgroundColor={'white'}/>
+                    {/*<Logo backgroundColor={'white'}/>*/}
+                    <img src={logo} alt={'logo'}/>
                 </div>
             </div>
         </Section>

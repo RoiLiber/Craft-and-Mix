@@ -28,13 +28,21 @@ div.header {
         align-items: center;
         justify-content: center;
 
+        & > img {
+            width: 85px;
+            padding-bottom: 15px;
+            @include respond-to('large') {
+                width: 65px;
+                padding-bottom: 10px;
+            }
+        }
+
         & > span {
             width: 100%;
             display: flex;
             font-size: 12px;
             justify-content: center;
             transition: 0.3s ease-in-out;
-            padding-top: 10px;
         }
     }
     & > div.menu_button {
@@ -95,20 +103,19 @@ div.sm {
 
     & > div.header_logo {
         justify-content: flex-start;
-        //flex-wrap: nowrap;
         padding-left: 15px;
         width: 100%;
-        div.cr {
-            font-size: 15px;
-        }
 
-        & > img {
-            width: 10px;
-            height: 10px;
-        }
+        //div.cr {
+        //    font-size: 15px;
+        //}
+
+        //& > img {
+        //    width: 10px;
+        //    height: 10px;
+        //}
 
         & > span.logo_line {
-            //font-size: 11px;
             display: none;
         }
     }

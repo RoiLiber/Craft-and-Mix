@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { findIndex} from 'lodash';
 import { Slide } from "react-reveal";
-import { Spring } from 'react-spring/renderprops'
+import { Spring } from 'react-spring/renderprops';
+import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
 
 class TopCarousel extends Component {
@@ -75,6 +76,7 @@ class TopCarousel extends Component {
                 {this.carousel(false)}
                 {this.carousel(true)}
                 {this.carouselDots()}
+                <img className={'logo'} src={logo} alt={'logo'}/>
             </div>
         )
     };

@@ -8,11 +8,23 @@ div.carousel_section {
     flex-wrap: wrap;
     width: 100%;
     height: 70vh;
-
     @include respond-to('large') {
         flex-wrap: nowrap;
         height: 75vh;
         top: 10vh;
+    }
+
+    & > img.logo {
+        position: absolute;
+        top: calc( 50% - 27px);
+        left: calc( 50% - 20px);
+        width: 40px;
+        z-index: 700;
+        @include respond-to('large') {
+            top: calc( 50% - 65px);
+            left: calc( 50% - 35px);
+            width: 70px;
+        }
     }
 
     div.carousel_wrapper {

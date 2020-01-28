@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import Logo from '../UI/Logo/Logo';
+// import Logo from '../UI/Logo/Logo';
+import logo from '../../assest/icon/Crift&Mix-black logo.svg';
+import logoOneLine from '../../assest/icon/Crift&Mix-black logo_v2.svg';
 import {
     toggleMenu,
     setWindowWidth,
@@ -114,7 +116,8 @@ class Header extends Component {
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
                 <div className={'header_logo'}>
-                    <Logo sm={shrinkHeader} backgroundColor={'gold'}/>
+                    {/*<Logo sm={shrinkHeader} backgroundColor={'gold'}/>*/}
+                    <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                     <span className={'logo_line'}>cocktail bar service and much more</span>
                 </div>
                 <div className={'menu_button'} onClick={large ? null : () => this.toggleMenu()}>
