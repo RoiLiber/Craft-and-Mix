@@ -2,6 +2,7 @@
 @import "../../styles/mixins";
 
 div.mood_carousel_wrapper {
+  width: 100%;
   max-width: 400px;
   display: flex;
   justify-content: center;
