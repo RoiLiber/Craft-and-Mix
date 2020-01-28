@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from "./components/Header";
 import BackgroundLayout from "./containers/BackgroundLayout";
+// import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 import TopLayout from "./containers/TopLayout";
 import './reset.scss';
 import './App.scss';

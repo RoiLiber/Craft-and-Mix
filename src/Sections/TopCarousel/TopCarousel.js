@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { findIndex} from 'lodash';
 import { Slide } from "react-reveal";
+import { Spring } from 'react-spring/renderprops'
 import './style.scss';
 
 class TopCarousel extends Component {
@@ -88,7 +89,7 @@ class TopCarousel extends Component {
             ? selectedCarouselItem === 0 || selectedCarouselItem === 2
             : selectedCarouselItem === 1 || selectedCarouselItem === 3;
 
-        return <div className={`carousel_wrapper`}>
+        return <div className={`carousel_wrapper`} onClick={() => this.forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>
                 {selected
                     ?   <img src={img} alt={text}/>
@@ -98,7 +99,8 @@ class TopCarousel extends Component {
                 opposite
                 left={!isEven}
                 right={isEven}
-                delay={5000}>
+                delay={5000}
+            >
                 {activeCarousel && !selected
                     ?   <img src={nextImg} alt={nextText} className={'carousel_img'}/>
                     :   <div className={`carousel_img ${nextBackgroundColor}`}>{nextText}</div>}

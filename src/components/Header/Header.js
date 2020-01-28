@@ -147,7 +147,7 @@ class Header extends Component {
                         :   <i className="fas fa-ellipsis-h"/>
                     }
                 </div>
-                {(!large || !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
+                {(!large && !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
             </div>
         )
     };

@@ -5,6 +5,7 @@ import backgroundImage from '../../assest/img/logos/G.png';
 import { random } from 'lodash';
 import Carousel from "../../components/Carousel";
 import './style.scss';
+import Section from "../../components/Section";
 
 class Mood extends Component {
 
@@ -44,16 +45,18 @@ class Mood extends Component {
         const { mood } = this.props;
 
         return (
-            <div className={'mood_section'} style={{ backgroundImage: `url(${backgroundImage})` }}>
-                <div className={'center_carousels'}>
-                    <div className={'carousels_wrapper'}>
-                        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
-                        {this.addCarousels(mood)}
+            <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart>
+                <div className={'mood_section'}>
+                    <div className={'center_carousels'}>
+                        <div className={'carousels_wrapper'}>
+                            <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
+                            {this.addCarousels(mood)}
+                        </div>
                     </div>
+                    {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
+                    <div className={'clear_white'}/>
                 </div>
-                {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
-                <div className={'clear_white'}/>
-            </div>
+            </Section>
         )
     };
 }

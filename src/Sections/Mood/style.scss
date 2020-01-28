@@ -8,12 +8,7 @@ div.mood_section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  height: 85vh;
-  padding-top: 10vh;
-  @include respond-to('large') {
-    height: 80vh;
-    padding-top: 5vh;
-  }
+  padding: 5vh 0;
 
   & > div.clear_white {
     width: 100%;

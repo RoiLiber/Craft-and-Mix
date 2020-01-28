@@ -6,6 +6,7 @@ import OurServices from "../../sections/OurServices";
 import Clients from "../../sections/Clients";
 import Section from "../../components/Section";
 import './style.scss';
+import Mood from "../../sections/Mood/Mood";
 
 class TopLayout extends Component {
 
@@ -13,8 +14,9 @@ class TopLayout extends Component {
         return (
             <div className="top_layout">
                 <AboutUs/>
+                {/*<div className={'parallax_w parallax'}/>*/}
                 <OurServices/>
-                <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart/>
+                <Mood/>
                 <Clients/>
                 <Footer/>
             </div>

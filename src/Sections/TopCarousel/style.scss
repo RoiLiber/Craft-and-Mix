@@ -31,6 +31,10 @@ div.carousel_section {
             background-color: $primary-gold;
             color: $primary-white;
         }
+        & > div.black {
+            background-color: $primary-black;
+            color: $primary-white;
+        }
 
         & > div.carousel_background {
             width: 100%;

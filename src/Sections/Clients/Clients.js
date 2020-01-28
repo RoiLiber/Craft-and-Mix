@@ -11,7 +11,7 @@ class Clients extends Component {
     render() {
 
         return (
-            <Section position={'position70'} elementName={'clients'} text={'Some of Our Happy Clients'} textColor={'black'} color={'gold'}>
+            <Section elementName={'clients'} text={'Some of Our Happy Clients'} textColor={'black'} color={'gold'}>
                 <div className={'clients'}>
                     <div className={'icon_wrapper'}>
                         <Fade delay={500}>

@@ -14,7 +14,7 @@ class BackgroundLayout extends Component {
         return (
             <div className="background_layout">
                 {!scrollAtTop && <TopCarousel/>}
-                {scrollAtTop && <Mood/>}
+                {scrollAtTop && <div className={'background'}/>}
             </div>
         )
     };

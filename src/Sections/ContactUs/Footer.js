@@ -13,7 +13,7 @@ export default function Footer() {
     const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
 
     return (
-        <Section position={'position80'} elementName={'contactUs'} text={'Contact Us'} textColor={'black'} color={'gold'}>
+        <Section elementName={'contactUs'} text={'Contact Us'} textColor={'black'} color={'gold'} noHeadLine>
             <div className={'footer_wrapper'}>
                 <div className={'stars_wrapper'}>
                     <div id='stars'/>

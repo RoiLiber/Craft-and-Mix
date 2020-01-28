@@ -6,16 +6,8 @@ div.top_layout {
     flex-wrap: wrap;
     justify-content: center;
     z-index: 700;
-    position: absolute;
+    position: relative;
     top: 85vh;
-
-    & > div.test {
-        width: 100%;
-        position: relative;
-        top: 70vh;
-        height: 15vh;
-        background-color: $primary-gold;
-    }
 }
 
 
