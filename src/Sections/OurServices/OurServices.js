@@ -10,22 +10,22 @@ class OurServices extends Component {
             <Section elementName={'OurServices'} text={'Our services'} textColor={'black'} color={'gold'}>
                 <div className={'services'}>
                     <div className={'service'}>
-                        <Fade delay={300}>
+                        <Fade bottom delay={300}>
                             <i className="fas fa-glass-martini-alt"/>
                         </Fade>
-                        <Zoom cascade delay={500}>
+                        <Fade bottom delay={500}>
                             <p>Bar & Cocktails services</p>
                             <p>for any event</p>
-                        </Zoom>
+                        </Fade>
                     </div>
                     <div className={'service'}>
-                        <Fade delay={600}>
+                        <Fade bottom delay={600}>
                             <i className="far fa-edit"/>
                         </Fade>
-                        <Zoom cascade delay={800}>
+                        <Fade bottom delay={800}>
                             <p>Bar & Cocktail's menu</p>
                             <p>Consultancy services</p>
-                        </Zoom>
+                        </Fade>
                     </div>
                     {/*<div className={'service'}>*/}
                     {/*    <Flip>*/}

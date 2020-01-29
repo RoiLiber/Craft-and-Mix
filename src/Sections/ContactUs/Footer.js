@@ -61,7 +61,6 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={'footer'}>
-                    {/*<Logo backgroundColor={'white'}/>*/}
                     <img src={logo} alt={'logo'}/>
                 </div>
             </div>

@@ -21,7 +21,7 @@ div.services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 20px 20px 5vh 20px;
     text-align: center;
     max-width: 335px;
 
@@ -33,7 +33,7 @@ div.services {
       width: 100%;
     }
     & > i {
-      font-size: 55px;
+      font-size: 45px;
       padding: 20px;
       width: 100%;
       color: $primary-black;
@@ -41,6 +41,9 @@ div.services {
       background: linear-gradient(0deg, rgba($primary-black, 0.8) 50%, rgba($primary-gold, 1) 60%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include respond-to('large') {
+        font-size: 55px;
+      }
 
     }
     & > i:hover {

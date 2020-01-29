@@ -10,7 +10,7 @@ div.header {
     top: 0;
     padding: 10px 0;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     color: $primary-black;
     z-index: 999;
     background-color: rgba($primary-white, 0);
@@ -18,9 +18,7 @@ div.header {
     @include respond-to('large') {
         flex-wrap: nowrap;
         padding: 0 20px;
-        height: 10vh;
         background-color: $primary-white;
-        //border-bottom: thin solid $primary-black;
     }
     & > div.header_logo {
         display: flex;
@@ -29,19 +27,9 @@ div.header {
 
         & > img {
             width: 85px;
-            padding-bottom: 5px;
             @include respond-to('large') {
                 width: 65px;
-                padding-bottom: 10px;
             }
-        }
-
-        & > span {
-            width: 100%;
-            display: flex;
-            font-size: 12px;
-            justify-content: center;
-            transition: 0.3s ease-in-out;
         }
     }
     & > div.menu_button {
@@ -51,7 +39,6 @@ div.header {
         display: flex;
         align-items: center;
         right: 25px;
-        bottom: 20px;
         height: 100%;
         z-index: 1200;
         @include respond-to('medium') {
@@ -64,15 +51,11 @@ div.header {
             justify-content: center;
             align-items: center;
             width: auto;
-            font-size: 11px;
-            margin-right: 15px;
+            font-size: 15px;
+            margin-right: 20px;
             transition: 0.5s ease-in-out;
             @include respond-to('larger') {
-                font-size: 15px;
-                margin-right: 20px;
-            }
-            @include respond-to('max-large') {
-                font-size: 18px;
+                font-size: 20px;
                 margin-right: 25px;
             }
             & > span.menu_list_item_text {
@@ -96,30 +79,16 @@ div.header {
 }
 
 div.sm {
-    height: 5vh;
     justify-content: flex-start;
-    padding: 0;
 
     & > div.header_logo {
         justify-content: flex-start;
-        padding-left: 15px;
+        padding-left: 25px;
         width: 100%;
 
-        //div.cr {
-        //    font-size: 15px;
-        //}
-
-        //& > img {
-        //    width: 10px;
-        //    height: 10px;
-        //}
-
-        & > span.logo_line {
-            display: none;
+        & > img {
+            width: 95px;
         }
-    }
-    & > div.menu_button {
-        bottom: 0;
     }
 }
 

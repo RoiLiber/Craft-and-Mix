@@ -11,8 +11,8 @@ div.footer_wrapper {
   z-index: 500;
   color: $primary-black;
   padding-bottom: 5vh;
-  background: radial-gradient(ellipse at bottom, $primary-white 30%, $primary-gold 90%);
-  box-shadow: 25px 20px 15px 30px $primary-gold;
+  background: radial-gradient(ellipse at bottom, $primary-white 20%, $primary-black 90%);
+  //box-shadow: 25px 20px 15px 30px $primary-gold;
   overflow: hidden;
 
   & > div.contact_wrapper {
@@ -117,17 +117,10 @@ div.footer_wrapper {
     & > img {
       width: 65px;
     }
-    //& > span {
-    //  color: $primary-gold;
-    //  display: flex;
-    //  align-items: center;
-    //  position: relative;
-    //  top: 20px;
-    //}
   }
   & > div.stars_wrapper {
     width: 100%;
-    box-shadow: 10px 25px 55px 10px $primary-gold;
+    box-shadow: 10px 15px 55px 10px $primary-gold;
   }
 }
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-// import Logo from '../UI/Logo/Logo';
 import logo from '../../assest/icon/Crift&Mix-black logo.svg';
 import logoOneLine from '../../assest/icon/Crift&Mix-black logo_v2.svg';
 import {
@@ -57,7 +56,7 @@ class Header extends Component {
                         : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (windowScrollY > (windowHeight - height10vh * 3) && (!large && !larger)) {
+        if (windowScrollY > (windowHeight - height10vh * 2.5) && (!large && !larger)) {
             this.setState({ shrinkHeader: true });
         } else {
             this.setState({ shrinkHeader: false });
@@ -110,9 +109,7 @@ class Header extends Component {
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
                 <div className={'header_logo'}>
-                    {/*<Logo sm={shrinkHeader} backgroundColor={'gold'}/>*/}
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
-                    <span className={'logo_line'}>cocktail bar service and much more</span>
                 </div>
                 <div className={'menu_button'} onClick={large ? null : () => this.toggleMenu()}>
                     {large || larger

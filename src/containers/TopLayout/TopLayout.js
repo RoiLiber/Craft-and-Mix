@@ -7,15 +7,15 @@ import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import './style.scss';
 import Mood from "../../sections/Mood/Mood";
+import photo2 from '../../assest/img/logos/wsd.jpg';
 import photo from '../../assest/img/logos/WhatsApp.jpg';
-import photo2 from '../../assest/img/logos/w.jpg';
 
 class TopLayout extends Component {
 
     render() {
         const { windowHeight, windowScrollY } = this.props;
         let height10vh = windowHeight / 10;
-        const carouselExit = windowScrollY > (windowHeight - height10vh * 3);
+        const carouselExit = windowScrollY > (windowHeight - height10vh * 2.5);
         return (
             <div className="top_layout">
                 {!carouselExit && <TopCarousel/>}

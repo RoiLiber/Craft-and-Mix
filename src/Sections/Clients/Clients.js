@@ -14,17 +14,17 @@ class Clients extends Component {
             <Section elementName={'clients'} text={'Some of Our Happy Clients'} textColor={'black'} color={'gold'}>
                 <div className={'clients'}>
                     <div className={'icon_wrapper'}>
-                        <Fade delay={500}>
+                        <Fade bottom delay={500}>
                             <span>
                                 <img className={'mobilaye'} src={mobilaye} alt={'audi logo'}/>
                             </span>
                         </Fade>
-                        <Fade delay={700}>
+                        <Fade bottom delay={700}>
                             <span>
                                 <img src={audi} alt={'audi logo'}/>
                             </span>
                         </Fade>
-                        <Fade delay={900}>
+                        <Fade bottom delay={900}>
                             <span>
                                 <img className={'google'} src={google} alt={'audi logo'}/>
                             </span>

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from "react-redux";
 import { findIndex, split, includes, slice } from 'lodash';
-import { Slide, Flip, Fade   } from "react-reveal";
+import { Slide, Flip, Fade } from "react-reveal";
+import Pulse from 'react-reveal/Pulse';
 import { Spring } from 'react-spring/renderprops';
 import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
@@ -85,7 +86,13 @@ class TopCarousel extends Component {
             } else if (goldTextForCraft) {
                 return <p key={index}><span>{newText[0]}</span>{newText[1]}</p>
             } else if (goldLogo) {
-                return <Fade forever duration={4500} ><img key={index} src={logo} alt={item}/></Fade >
+                return <Fragment>
+                        <Pulse forever duration={1200}>
+                            <img key={index} src={logo} alt={item}/>
+                        </Pulse >
+                        <p>Cocktail bar service</p>
+                        <p>and much more</p>
+                </Fragment>
             } else {
                 return <p key={index}>{item}</p>
             }
