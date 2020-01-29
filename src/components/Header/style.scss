@@ -26,9 +26,10 @@ div.header {
         justify-content: center;
 
         & > img {
-            width: 85px;
+            width: 70px;
+            transition: 0.3s ease-in-out;
             @include respond-to('large') {
-                width: 65px;
+                width: 75px;
             }
         }
     }
