@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.9355cbcf.chunk.css",
+    "main.css": "/Craft-and-Mix/static/css/main.ecde8f61.chunk.css",
     "main.js": "/Craft-and-Mix/static/js/main.f8577d53.chunk.js",
     "main.js.map": "/Craft-and-Mix/static/js/main.f8577d53.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
@@ -8,9 +8,9 @@
     "static/js/2.38453a1c.chunk.js": "/Craft-and-Mix/static/js/2.38453a1c.chunk.js",
     "static/js/2.38453a1c.chunk.js.map": "/Craft-and-Mix/static/js/2.38453a1c.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.8a50ae1b7eaa264031121123c54bfbe7.js": "/Craft-and-Mix/precache-manifest.8a50ae1b7eaa264031121123c54bfbe7.js",
+    "precache-manifest.e008f491453b9cb22b74c21de958be8a.js": "/Craft-and-Mix/precache-manifest.e008f491453b9cb22b74c21de958be8a.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.9355cbcf.chunk.css.map": "/Craft-and-Mix/static/css/main.9355cbcf.chunk.css.map",
+    "static/css/main.ecde8f61.chunk.css.map": "/Craft-and-Mix/static/css/main.ecde8f61.chunk.css.map",
     "static/media/A.jpeg": "/Craft-and-Mix/static/media/A.1b02a294.jpeg",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
     "static/media/Crift & Mix_logo icon.svg": "/Craft-and-Mix/static/media/Crift & Mix_logo icon.4833bdd8.svg",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
     "static/js/2.38453a1c.chunk.js",
-    "static/css/main.9355cbcf.chunk.css",
+    "static/css/main.ecde8f61.chunk.css",
     "static/js/main.f8577d53.chunk.js"
   ]
 }
