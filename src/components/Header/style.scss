@@ -30,10 +30,9 @@ div.header {
 
         & > img {
             width: 85px;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
             @include respond-to('large') {
                 width: 65px;
-                padding-bottom: 10px;
             }
         }
 

@@ -97,12 +97,15 @@ div.carousel_section {
         font-size: 17px;
         display: flex;
         flex-wrap: wrap;
-        color: $warm-grey;
+        color: $primary-white;
         width: 30px;
         justify-content: center;
         align-items: center;
         z-index: 700;
         margin: 5px;
+        @include respond-to('large') {
+            top: 0;
+        }
 
         & > i {
             width: 100%;
@@ -114,6 +117,9 @@ div.carousel_section {
         }
         & > i.gold {
             color: $primary-gold;
+            @include respond-to('large') {
+                color: $primary-black;
+            }
         }
     }
 }
