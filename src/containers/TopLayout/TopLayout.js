@@ -8,6 +8,7 @@ import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import './style.scss';
 import Mood from "../../sections/Mood/Mood";
 import photo from '../../assest/img/logos/WhatsApp.jpg';
+import photo2 from '../../assest/img/logos/w.jpg';
 
 class TopLayout extends Component {
 
@@ -18,9 +19,10 @@ class TopLayout extends Component {
         return (
             <div className="top_layout">
                 {!carouselExit && <TopCarousel/>}
-                <AboutUs/>
                 <OurServices/>
-                <div className={'clear'}/>
+                <div className={'photo'}>
+                    <img src={photo2} alt={'photo'}/>
+                </div>
                 <Mood/>
                 <div className={'clear'}/>
                 <Clients/>

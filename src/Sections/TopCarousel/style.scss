@@ -62,6 +62,23 @@ div.carousel_section {
                 width: 100%;
                 height: 100%;
             }
+            & > div {
+                margin: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                max-width: 350px;
+                font-size: 20px;
+                & > p {
+                    margin: 5px;
+                    width: 100%;
+                    & > span {
+                        color: $primary-black;
+                    }
+                }
+            }
         }
         & > .carousel_img {
             display: flex;
@@ -76,6 +93,7 @@ div.carousel_section {
 
     & > div.dots {
         position: absolute;
+        top: 50%;
         font-size: 17px;
         display: flex;
         flex-wrap: wrap;

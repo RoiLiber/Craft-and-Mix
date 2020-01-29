@@ -47,16 +47,14 @@ class Header extends Component {
         let height10vh = windowHeight / 10;
 
         const selectedSection = windowScrollY >= 375 && windowScrollY < 720
-            ? 'aboutUs'
+            ? 'OurServices'
             : windowScrollY >= 720 && windowScrollY < 1326
-                ? 'OurServices'
+                ? 'mood'
                 : windowScrollY >= 1326 && windowScrollY < 1700
-                    ? 'mood'
+                    ? 'clients'
                     : windowScrollY >= 1700 && windowScrollY < 2070
-                        ? 'clients'
-                        : windowScrollY >= 2070
-                            ? 'contactUs'
-                            : '';
+                        ? 'contactUs'
+                        : '';
 
         !clickedSection && this.setState({ selectedSection });
         if (windowScrollY > (windowHeight - height10vh * 3) && (!large && !larger)) {
@@ -72,22 +70,18 @@ class Header extends Component {
 
         switch (index) {
             case 0: {
-                selectedSection = 'aboutUs';
-                break
-            }
-            case 1: {
                 selectedSection = 'OurServices';
                 break
             }
-            case 2: {
+            case 1: {
                 selectedSection = 'mood';
                 break
             }
-            case 3: {
+            case 2: {
                 selectedSection = 'clients';
                 break
             }
-            case 4: {
+            case 3: {
                 selectedSection = 'contactUs';
                 break
             }
@@ -167,7 +161,7 @@ const mapStateToProps = state => {
         small,
         menuList,
         windowHeight,
-        windowScrollY,
+        windowScrollY
     };
 };
 

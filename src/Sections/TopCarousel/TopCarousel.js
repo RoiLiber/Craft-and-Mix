@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { findIndex} from 'lodash';
+import { findIndex, split, includes, slice } from 'lodash';
 import { Slide } from "react-reveal";
 import { Spring } from 'react-spring/renderprops';
 import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
@@ -70,13 +70,34 @@ class TopCarousel extends Component {
         }, 6000)
     };
 
+    textBreak = text => {
+        const textArray = split(text, '|');
+
+        return textArray.map((item, index) => {
+            const goldTextForAsaf = includes(item, 'Asaf Amir');
+            const goldTextForCraft = includes(item, 'CRAFT & MIX');
+            const goldLogo = includes(item, 'svg');
+            const newText = goldTextForAsaf ? split(item, '-')
+                : goldTextForCraft ? split(item, '-') : '';
+
+            if (goldTextForAsaf) {
+                return <p key={index}>{newText[0]}<span>{newText[1]}</span></p>
+            } else if (goldTextForCraft) {
+                return <p key={index}><span>{newText[0]}</span>{newText[1]}</p>
+            } else if (goldLogo) {
+                return <img key={index} src={logo} alt={item}/>
+            } else {
+                return <p key={index}>{item}</p>
+            }
+        })
+    };
+
     render() {
         return (
             <div className={'carousel_section'}>
                 {this.carousel(false)}
                 {this.carousel(true)}
                 {this.carouselDots()}
-                <img className={'logo'} src={logo} alt={'logo'}/>
             </div>
         )
     };
@@ -95,7 +116,7 @@ class TopCarousel extends Component {
             <div className={`carousel_background ${backgroundColor}`}>
                 {selected
                     ?   <img src={img} alt={text}/>
-                    :   <div>{text}</div>}
+                    :   <div>{this.textBreak(text)}</div>}
             </div>
             {activeCarousel && <Slide
                 opposite
@@ -103,9 +124,12 @@ class TopCarousel extends Component {
                 right={isEven}
                 delay={5000}
             >
-                {activeCarousel && !selected
-                    ?   <img src={nextImg} alt={nextText} className={'carousel_img'}/>
-                    :   <div className={`carousel_img ${nextBackgroundColor}`}>{nextText}</div>}
+                <div className={`carousel_background ${nextBackgroundColor}`}>
+                    {activeCarousel && !selected
+                        ?   <img src={nextImg} alt={nextText} className={'carousel_img'}/>
+                        :   <div className={`carousel_img ${nextBackgroundColor}`}>{this.textBreak(nextText)}</div>}
+                </div>
+
             </Slide>}
         </div>
     };

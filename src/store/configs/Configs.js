@@ -9,9 +9,9 @@ import imgMood3 from "../../assest/img/mood/WhatsApp Image 2020-01-17 at 21.54.0
 import imgMood2 from "../../assest/img/mood/WhatsApp Image 2020-01-17 at 21.54.02.jpeg";
 import imgMood5 from "../../assest/img/mood/w.jpeg";
 import imgMood6 from "../../assest/img/carousel/On the Menu.jpeg";
+import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 
 export const menuList = [
-    { text: 'About us', elementName: 'aboutUs' },
     { text: 'Our Services', elementName: 'OurServices' },
     { text: 'Mood', elementName: 'mood' },
     // { text: 'On the Menu', elementName: 'onTheMenu' },
@@ -20,10 +20,20 @@ export const menuList = [
 ];
 
 export const topCarousel = [
-    { text: 'About us', img: imgAbout, backgroundColor: 'black' },
-    { text: 'Our Services', img: imgServices, backgroundColor: 'gold' },
-    { text: 'Mood', img: imgMode, backgroundColor: 'black' },
-    { text: 'Contact us', img: imgMenu, backgroundColor: 'gold' }
+    { text: 'Created by- Asaf Amir,|' +
+            'CRAFT & MIX- is set to give you|' +
+            'the best cocktail and bar|' +
+            'experience you can get!', img: imgAbout, backgroundColor: 'gold' },
+    { text: 'Our top priority is|' +
+            'professional and kind service|' +
+            'next to deep|' +
+            'mixology creativity|' +
+            'and fancy cocktails.', img: imgServices, backgroundColor: 'black' },
+    { text: 'We give services to|' +
+            'private clients,|' +
+            'business companies,|' +
+            'bars and restaurants.', img: imgMode, backgroundColor: 'gold' },
+    { text: logo, img: imgMenu, backgroundColor: 'black' }
 ];
 
 export const mood = [
