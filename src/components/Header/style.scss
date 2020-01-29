@@ -25,14 +25,14 @@ div.header {
     & > div.header_logo {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
 
         & > img {
             width: 85px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             @include respond-to('large') {
                 width: 65px;
+                padding-bottom: 10px;
             }
         }
 

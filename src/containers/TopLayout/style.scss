@@ -10,7 +10,7 @@ div.top_layout {
     position: relative;
     top: 15vh;
     @include respond-to('large') {
-        top: 15vh;
+        top: 10vh;
     }
 
     & > div.clear {
