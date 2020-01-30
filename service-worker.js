@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Craft-and-Mix/precache-manifest.2dad04f6cd1eed861c401eb11a005882.js"
+  "/Craft-and-Mix/precache-manifest.d11149f28bdf4e2d9ad6129e492f250b.js"
 );
 
 self.addEventListener('message', (event) => {
