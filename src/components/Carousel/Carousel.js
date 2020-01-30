@@ -58,12 +58,11 @@ class Carousel extends Component {
         const text = carouselItem.text;
 
         return (
-            <div className={`mood_carousel_wrapper`}>
+            <div className={`mood_carousel_wrapper`} onClick={() => popUp(carouselItem)}>
                 <div className={'carousel_image_wrapper'}>
                     {activeCarousel && <Fade deley={delay}>
                         <img src={img} alt={text}
                              className={'carousel_img'}
-                             onClick={() => popUp(carouselItem)}
                         />
                     </Fade>}
                 </div>

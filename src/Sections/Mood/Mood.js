@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from "react-redux";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
-import { random, shuffle } from 'lodash';
+import { random, shuffle, slice } from 'lodash';
 import Carousel from "../../components/Carousel";
 import './style.scss';
 import Section from "../../components/Section";
@@ -26,27 +26,28 @@ class Mood extends Component {
         return random(5000, 25000);
     };
 
-    addCarousels = array => {
-        const { larger, large } = this.props;
-
-        if (larger) {
-            return <Fragment>
-                <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-                <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-            </Fragment>
-        } else if (large) {
-            return <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-        }
-    };
+    // addCarousels = array => {
+    //     const { larger, large } = this.props;
+    //
+    //     if (larger) {
+    //         return <Fragment>
+    //             <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
+    //             <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
+    //         </Fragment>
+    //     } else if (large) {
+    //         return <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
+    //     }
+    // };
 
     render() {
         const { popPhoto, isPopUpPhoto } = this.state;
-        const { mood } = this.props;
+        const { mood, small, medium, large, larger } = this.props;
+        const eventsNum = small ? mood : slice(mood, 0, 3);
 
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart>
                 <div className={'mood_section'}>
-                    {mood.map((item, index) => {
+                    {eventsNum.map((item, index) => {
                         const carouselArray = shuffle(item.photos);
 
                         return <div key={index} className={'carousels_wrapper'}>
@@ -59,6 +60,9 @@ class Mood extends Component {
                             <div className={'carousel_wrapper'}>
                                 <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
                             </div>
+                            {larger && <div className={'carousel_wrapper'}>
+                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                            </div>}
                         </div>
                     })}
                     {/*<div className={'center_carousels'}>*/}
@@ -67,7 +71,7 @@ class Mood extends Component {
                     {/*        {this.addCarousels(mood)}*/}
                     {/*    </div>*/}
                     {/*</div>*/}
-                    {/*{isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}*/}
+                    {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
                     {/*<div className={'clear_white'}/>*/}
                 </div>
             </Section>
