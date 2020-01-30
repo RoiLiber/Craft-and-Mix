@@ -23,7 +23,7 @@ const initialState = {
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
     mood: configs.mood,
-    centerPhotoItem: ''
+    centerPhotoItem: false
 };
 
 const authReducer = (state = initialState, action) => {
@@ -33,7 +33,8 @@ const authReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                openMenu
+                openMenu,
+                centerPhotoItem: false
             };
         }
         case actionTypes.REPORT_SCROLL_TOP_Y: {

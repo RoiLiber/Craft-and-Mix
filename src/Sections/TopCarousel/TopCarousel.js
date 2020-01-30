@@ -90,9 +90,6 @@ class TopCarousel extends Component {
                         <div className="box">
                             <img key={index} src={logo} alt={item} className={'hourglass'}/>
                         </div>
-                        {/*<Pulse forever duration={1200}>*/}
-                        {/*    <img key={index} src={logo} alt={item}/>*/}
-                        {/*</Pulse >*/}
                         <p>Cocktail bar service</p>
                         <p>and much more</p>
                 </Fragment>

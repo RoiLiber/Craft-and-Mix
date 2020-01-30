@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
-import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
 import { random, shuffle, slice } from 'lodash';
 import Carousel from "../../components/Carousel";
 import './style.scss';
@@ -9,71 +8,61 @@ import {setPhoto } from "../../store/actions/mainActions";
 
 class Mood extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            isPopUpPhoto: false,
-            popPhoto: '',
-        };
-    }
-
     popUp = item => {
         const { setPhoto } = this.props;
         setPhoto(item)
-        // this.setState({ isPopUpPhoto: !isPopUpPhoto, popPhoto: item })
     };
 
     delay = () => {
         return random(5000, 25000);
     };
 
-    // addCarousels = array => {
-    //     const { larger, large } = this.props;
-    //
-    //     if (larger) {
-    //         return <Fragment>
-    //             <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-    //             <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-    //         </Fragment>
-    //     } else if (large) {
-    //         return <Carousel carouselArray={array} popUp={this.popUp} delay={this.delay()}/>
-    //     }
-    // };
-
     render() {
-        const { popPhoto, isPopUpPhoto } = this.state;
-        const { mood, small, medium, large, larger } = this.props;
-        const eventsNum = small ? mood : slice(mood, 0, 3);
+        const { mood, large, larger } = this.props;
 
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart>
                 <div className={'mood_section'}>
-                    {eventsNum.map((item, index) => {
+                        <p>Some mood Photos from our Events</p>
+                    {mood.map((item, index) => {
                         const carouselArray = shuffle(item.photos);
+                        const eventName = item.eventName;
 
                         return <div key={index} className={'carousels_wrapper'}>
                             <div className={'carousel_wrapper'}>
-                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                                <Carousel
+                                    carouselArray={carouselArray}
+                                    popUp={this.popUp}
+                                    delay={this.delay()}
+                                    eventName={eventName}
+                                />
                             </div>
                             <div className={'carousel_wrapper'}>
-                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                                <Carousel
+                                    carouselArray={carouselArray}
+                                    popUp={this.popUp}
+                                    delay={this.delay()}
+                                    eventName={eventName}
+                                />
                             </div>
                             <div className={'carousel_wrapper'}>
-                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                                <Carousel
+                                    carouselArray={carouselArray}
+                                    popUp={this.popUp}
+                                    delay={this.delay()}
+                                    eventName={eventName}
+                                />
                             </div>
-                            {larger && <div className={'carousel_wrapper'}>
-                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                            {(large || larger) && <div className={'carousel_wrapper'}>
+                                <Carousel
+                                    carouselArray={carouselArray}
+                                    popUp={this.popUp}
+                                    delay={this.delay()}
+                                    eventName={eventName}
+                                />
                             </div>}
                         </div>
                     })}
-                    {/*<div className={'center_carousels'}>*/}
-                    {/*    <div className={'carousels_wrapper'}>*/}
-                    {/*        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>*/}
-                    {/*        {this.addCarousels(mood)}*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    {/*{isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}*/}
-                    {/*<div className={'clear_white'}/>*/}
                 </div>
             </Section>
         )

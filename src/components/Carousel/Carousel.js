@@ -51,14 +51,17 @@ class Carousel extends Component {
     };
 
     render() {
-        const { popUp, delay } = this.props;
+        const { popUp, delay, eventName } = this.props;
         const { activeCarousel, carouselItem } = this.state;
         const img = carouselItem.img;
-        // const event = carouselItem.event;
         const text = carouselItem.text;
+        const item = {
+            ...carouselItem,
+            event: eventName
+        };
 
         return (
-            <div className={`mood_carousel_wrapper`} onClick={() => popUp(carouselItem)}>
+            <div className={`mood_carousel_wrapper`} onClick={() => popUp(item)}>
                 <div className={'carousel_image_wrapper'}>
                     {activeCarousel && <Fade deley={delay}>
                         <img src={img} alt={text}
@@ -66,13 +69,6 @@ class Carousel extends Component {
                         />
                     </Fade>}
                 </div>
-                {/*<div className={`carousel_text`}>*/}
-                {/*    <div>*/}
-                {/*        <i className="fas fa-map-marker-alt"/>*/}
-                {/*        <span>{event}</span>*/}
-                {/*    </div>*/}
-                {/*    <Zoom deley={delay}><span>{text}</span></Zoom>*/}
-                {/*</div>*/}
             </div>
         )
     };

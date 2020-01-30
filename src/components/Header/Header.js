@@ -111,7 +111,7 @@ class Header extends Component {
                 <div className={'header_logo'}>
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                 </div>
-                <div className={'menu_button'} onClick={large ? null : () => this.toggleMenu()}>
+                <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`} onClick={large ? null : () => this.toggleMenu()}>
                     {large || larger
                         ?   menuList.map((item, index) => {
                                 return <Link
@@ -138,10 +138,10 @@ class Header extends Component {
                                         }
                                 </Link>
                         })
-                        :   <i className="fas fa-ellipsis-h"/>
+                        :   <i className={`fas fa-ellipsis-h`}/>
                     }
                 </div>
-                {(!large && !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu} moveToTop={shrinkHeader}/>}
+                {(!large && !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu}/>}
             </div>
         )
     };

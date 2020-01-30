@@ -8,14 +8,14 @@ import './style.scss';
 class Menu extends Component {
 
     render() {
-        const { menuList, openMenu, toggleMenu, moveToTop } = this.props;
+        const { menuList, openMenu, toggleMenu } = this.props;
 
         return (
             <Fragment>
             {
                 openMenu
                 ? <Slide right duration={1500}>
-                    <div className={moveToTop ? "menu moveToTop" : "menu"}>
+                    <div className={"menu"}>
                         {menuList.map((item, index) => {
                             return <Fade duration={2500} key={index}>
                                 <SectionHeadLine

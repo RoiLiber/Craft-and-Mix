@@ -23,8 +23,11 @@ div.header {
     & > div.header_logo {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-
+        width: 100%;
+        padding: 0 25px;
+        @include respond-to('large') {
+            justify-content: center;
+        }
         & > img {
             width: 70px;
             transition: 0.3s ease-in-out;
@@ -34,7 +37,7 @@ div.header {
         }
     }
     & > div.menu_button {
-        font-size: 20px;
+        font-size: 25px;
         color: $primary-gold;
         position: absolute;
         display: flex;
@@ -77,6 +80,9 @@ div.header {
             color: $primary-black;
         }
     }
+    & > div.menu_animation {
+        animation: menuAnimation 1s ease-in-out;
+    }
 }
 
 div.sm {
@@ -84,7 +90,7 @@ div.sm {
 
     & > div.header_logo {
         justify-content: flex-start;
-        padding-left: 25px;
+        padding-left: 15px;
         width: 100%;
 
         & > img {
@@ -95,6 +101,18 @@ div.sm {
 
 div.background {
     background-color: $primary-white;
+}
+
+@-webkit-keyframes menuAnimation {
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    100%{-webkit-transform:rotate(180deg);}
+}
+
+@keyframes menuAnimation {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(180deg);}
 }
 
 

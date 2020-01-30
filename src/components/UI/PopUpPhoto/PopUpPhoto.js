@@ -1,18 +1,27 @@
 import React, { Fragment } from 'react';
+import { Slide, Zoom } from "react-reveal";
 import './style.scss';
-import Zoom from "react-reveal";
 
 export default function Footer(props) {
-    const { photo } = props;
+    const { photoObj } = props;
 
     return (
         <Fragment>
-            <i className="far fa-times-circle"/>
-            <Zoom cascade delay={500}>
+            <Slide bottom duretion={500}>
                 <div className={'photo'}>
-                    <img src={photo} alt={'photo'}/>
+                    <img src={photoObj.img} alt={'photo'}/>
                 </div>
-            </Zoom>
+                <div className={`pop_up_text_wrapper`}>
+                    <div className={`pop_up_text`}>
+                        <div>
+                            <i className="fas fa-map-marker-alt"/>
+                            <p>{photoObj.event}</p>
+                        </div>
+                        <Zoom deley={200}><span>{photoObj.text}</span></Zoom>
+                    </div>
+                    <span className={'close_pop_up'}><i className="far fa-times-circle"/></span>
+                </div>
+            </Slide>
         </Fragment>
     );
 }
