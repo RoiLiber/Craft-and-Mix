@@ -8,7 +8,7 @@ div.mood_section {
   flex-direction: column;
   min-height: 65vh;
   z-index: 500;
-  background-color: $primary-white;
+  //background-color: $primary-white;
   justify-content: flex-end;
   @include respond-to('medium') {
     height: 60vh;
@@ -20,10 +20,11 @@ div.mood_section {
     justify-content: center;
     height: 5vh;
     font-size: 15px;
+    background-color: $primary-white;
+    @include respond-to('large') {
+      font-size: 20px;
+    }
   }
-  //& > div.clear_white {
-  //  width: 100%;
-  //}
 
   & > div.carousels_wrapper {
     width: 100%;
