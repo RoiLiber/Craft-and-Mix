@@ -152,10 +152,14 @@ class TopCarousel extends Component {
                 const selected = selectedCarouselItem === index;
 
                 return selected
-                    ? <div className="pulse-loader" onClick={() => this.forceCarouselItem(index)}/>
+                    ? <div key={index}
+                           className="pulse-loader"
+                           onClick={() => this.forceCarouselItem(index)}
+                    />
                     : <i key={index}
                          className={'far fa-dot-circle'}
-                         onClick={() => this.forceCarouselItem(index)}/>;
+                         onClick={() => this.forceCarouselItem(index)}
+                    />;
 
             })}
         </div>

@@ -34,6 +34,17 @@ div.top_layout {
             }
         }
     }
+    & > div.pop_up_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primary-black, 0.9);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1100;
+    }
 }
 
 

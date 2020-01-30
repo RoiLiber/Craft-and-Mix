@@ -22,7 +22,8 @@ const initialState = {
     openMenu: false,
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
-    mood: configs.mood
+    mood: configs.mood,
+    centerPhotoItem: ''
 };
 
 const authReducer = (state = initialState, action) => {
@@ -64,6 +65,14 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 windowHeight
+            };
+        }
+        case actionTypes.SET_PHOTO_AT_CENTER: {
+            const centerPhotoItem = action.payload;
+
+            return {
+                ...state,
+                centerPhotoItem
             };
         }
         default:

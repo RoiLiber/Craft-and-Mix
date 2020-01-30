@@ -17,9 +17,8 @@ class Menu extends Component {
                 ? <Slide right duration={1500}>
                     <div className={moveToTop ? "menu moveToTop" : "menu"}>
                         {menuList.map((item, index) => {
-                            return <Fade duration={2500}>
+                            return <Fade duration={2500} key={index}>
                                 <SectionHeadLine
-                                    key={index}
                                     toggleMenu={toggleMenu}
                                     text={item.text}
                                     textColor={'white'}

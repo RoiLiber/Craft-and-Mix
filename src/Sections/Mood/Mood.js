@@ -5,6 +5,7 @@ import { random, shuffle, slice } from 'lodash';
 import Carousel from "../../components/Carousel";
 import './style.scss';
 import Section from "../../components/Section";
+import {setPhoto } from "../../store/actions/mainActions";
 
 class Mood extends Component {
 
@@ -17,9 +18,9 @@ class Mood extends Component {
     }
 
     popUp = item => {
-        const { isPopUpPhoto } = this.state;
-
-        this.setState({ isPopUpPhoto: !isPopUpPhoto, popPhoto: item })
+        const { setPhoto } = this.props;
+        setPhoto(item)
+        // this.setState({ isPopUpPhoto: !isPopUpPhoto, popPhoto: item })
     };
 
     delay = () => {
@@ -71,7 +72,7 @@ class Mood extends Component {
                     {/*        {this.addCarousels(mood)}*/}
                     {/*    </div>*/}
                     {/*</div>*/}
-                    {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
+                    {/*{isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}*/}
                     {/*<div className={'clear_white'}/>*/}
                 </div>
             </Section>
@@ -92,4 +93,10 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps)(Mood);
+const mapDispatchToProps = dispatch => {
+    return {
+        setPhoto: photoObj => dispatch(setPhoto(photoObj)),
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Mood);
