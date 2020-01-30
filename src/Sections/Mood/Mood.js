@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from "react-redux";
 import PopUpImg from '../../components/UI/PopUpPhoto/PopUpPhoto';
-import backgroundImage from '../../assest/img/logos/G.png';
-import { random } from 'lodash';
+import { random, shuffle } from 'lodash';
 import Carousel from "../../components/Carousel";
 import './style.scss';
 import Section from "../../components/Section";
@@ -24,7 +23,7 @@ class Mood extends Component {
     };
 
     delay = () => {
-        return random(5000, 8000);
+        return random(5000, 25000);
     };
 
     addCarousels = array => {
@@ -47,14 +46,29 @@ class Mood extends Component {
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart>
                 <div className={'mood_section'}>
-                    <div className={'center_carousels'}>
-                        <div className={'carousels_wrapper'}>
-                            <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>
-                            {this.addCarousels(mood)}
+                    {mood.map((item, index) => {
+                        const carouselArray = shuffle(item.photos);
+
+                        return <div key={index} className={'carousels_wrapper'}>
+                            <div className={'carousel_wrapper'}>
+                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                            </div>
+                            <div className={'carousel_wrapper'}>
+                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                            </div>
+                            <div className={'carousel_wrapper'}>
+                                <Carousel carouselArray={carouselArray} popUp={this.popUp} delay={this.delay()}/>
+                            </div>
                         </div>
-                    </div>
-                    {isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}
-                    <div className={'clear_white'}/>
+                    })}
+                    {/*<div className={'center_carousels'}>*/}
+                    {/*    <div className={'carousels_wrapper'}>*/}
+                    {/*        <Carousel carouselArray={mood} popUp={this.popUp} delay={this.delay()}/>*/}
+                    {/*        {this.addCarousels(mood)}*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    {/*{isPopUpPhoto && <PopUpImg photo={popPhoto.img} onClick={() => this.popUp()}/>}*/}
+                    {/*<div className={'clear_white'}/>*/}
                 </div>
             </Section>
         )

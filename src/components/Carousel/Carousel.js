@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import { Zoom } from 'react-reveal';
+import React, { Component } from 'react';
+import { Fade } from 'react-reveal';
 import { findIndex } from 'lodash';
 import './style.scss';
 
@@ -54,26 +54,26 @@ class Carousel extends Component {
         const { popUp, delay } = this.props;
         const { activeCarousel, carouselItem } = this.state;
         const img = carouselItem.img;
-        const event = carouselItem.event;
+        // const event = carouselItem.event;
         const text = carouselItem.text;
 
         return (
             <div className={`mood_carousel_wrapper`}>
                 <div className={'carousel_image_wrapper'}>
-                    {activeCarousel && <Zoom deley={delay}>
+                    {activeCarousel && <Fade deley={delay}>
                         <img src={img} alt={text}
                              className={'carousel_img'}
                              onClick={() => popUp(carouselItem)}
                         />
-                    </Zoom>}
+                    </Fade>}
                 </div>
-                <div className={`carousel_text`}>
-                    <div>
-                        <i className="fas fa-map-marker-alt"/>
-                        <span>{event}</span>
-                    </div>
-                    <Zoom deley={delay}><span>{text}</span></Zoom>
-                </div>
+                {/*<div className={`carousel_text`}>*/}
+                {/*    <div>*/}
+                {/*        <i className="fas fa-map-marker-alt"/>*/}
+                {/*        <span>{event}</span>*/}
+                {/*    </div>*/}
+                {/*    <Zoom deley={delay}><span>{text}</span></Zoom>*/}
+                {/*</div>*/}
             </div>
         )
     };

@@ -14,7 +14,7 @@ class Menu extends Component {
             <Fragment>
             {
                 openMenu
-                ? <Slide right>
+                ? <Slide right duration={1500}>
                     <div className={moveToTop ? "menu moveToTop" : "menu"}>
                         {menuList.map((item, index) => {
                             return <Fade duration={2500}>
@@ -23,7 +23,7 @@ class Menu extends Component {
                                     toggleMenu={toggleMenu}
                                     text={item.text}
                                     textColor={'white'}
-                                    color={'black'}
+                                    color={'gold'}
                                     elementName={item.elementName}
                                     backgroundColorGold={true}
                                 />

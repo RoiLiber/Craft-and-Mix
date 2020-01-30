@@ -37,11 +37,60 @@ export const topCarousel = [
 ];
 
 export const mood = [
-    { text: 'Our team', event: 'google fun', img: imgMood7 },
-    { text: 'She know some shit', event: 'google fun', img: imgMood4 },
-    { text: 'Craft it', event: 'google fun', img: imgMood6 },
-    { text: 'Lime???', event: 'google fun', img: imgMood1 },
-    { text: 'Our Services Google event', event: 'google fun', img: imgMood3 },
-    { text: 'Our Services', event: 'google fun', img: imgMood2 },
-    { text: 'Mode', event: 'google fun', img: imgMood5 }
+    { eventName: 'google',
+        photos: [
+            { text: 'Our team', img: imgMood7 },
+            { text: 'She know some shit', img: imgMood4 },
+            { text: 'Craft it', img: imgMood6 },
+            { text: 'Lime???', img: imgMood1 },
+            { text: 'Our Services Google event', img: imgMood3 },
+            { text: 'Our Services', img: imgMood2 },
+            { text: 'Mode', img: imgMood5 }
+        ]
+    },
+    { eventName: 'audi',
+        photos: [
+            { text: 'Our team', img: imgMood7 },
+            { text: 'She know some shit', img: imgMood4 },
+            { text: 'Craft it', img: imgMood6 },
+            { text: 'Lime???', img: imgMood1 },
+            { text: 'Our Services Google event', img: imgMood3 },
+            { text: 'Our Services', img: imgMood2 },
+            { text: 'Mode', img: imgMood5 }
+        ]
+    },
+    { eventName: 'mobileye',
+        photos: [
+            { text: 'Our team', img: imgMood7 },
+            { text: 'She know some shit', img: imgMood4 },
+            { text: 'Craft it', img: imgMood6 },
+            { text: 'Lime???', img: imgMood1 },
+            { text: 'Our Services Google event', img: imgMood3 },
+            { text: 'Our Services', img: imgMood2 },
+            { text: 'Mode', img: imgMood5 }
+        ]
+    },
+    { eventName: 'mobileye',
+        photos: [
+            { text: 'Our team', img: imgMood7 },
+            { text: 'She know some shit', img: imgMood4 },
+            { text: 'Craft it', img: imgMood6 },
+            { text: 'Lime???', img: imgMood1 },
+            { text: 'Our Services Google event', img: imgMood3 },
+            { text: 'Our Services', img: imgMood2 },
+            { text: 'Mode', img: imgMood5 }
+        ]
+    },
+    { eventName: 'mobileye',
+        photos: [
+            { text: 'Our team', img: imgMood7 },
+            { text: 'She know some shit', img: imgMood4 },
+            { text: 'Craft it', img: imgMood6 },
+            { text: 'Lime???', img: imgMood1 },
+            { text: 'Our Services Google event', img: imgMood3 },
+            { text: 'Our Services', img: imgMood2 },
+            { text: 'Mode', img: imgMood5 }
+        ]
+    },
+
 ];

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { findIndex, split, includes, slice } from 'lodash';
 import { Slide, Flip, Fade } from "react-reveal";
 import Pulse from 'react-reveal/Pulse';
-import { Spring } from 'react-spring/renderprops';
+import { Spring, config } from 'react-spring/renderprops';
 import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
 
@@ -87,9 +87,12 @@ class TopCarousel extends Component {
                 return <p key={index}><span>{newText[0]}</span>{newText[1]}</p>
             } else if (goldLogo) {
                 return <Fragment>
-                        <Pulse forever duration={1200}>
-                            <img key={index} src={logo} alt={item}/>
-                        </Pulse >
+                        <div className="box">
+                            <img key={index} src={logo} alt={item} className={'hourglass'}/>
+                        </div>
+                        {/*<Pulse forever duration={1200}>*/}
+                        {/*    <img key={index} src={logo} alt={item}/>*/}
+                        {/*</Pulse >*/}
                         <p>Cocktail bar service</p>
                         <p>and much more</p>
                 </Fragment>
@@ -149,7 +152,7 @@ class TopCarousel extends Component {
                 const selected = selectedCarouselItem === index;
 
                 return selected
-                    ? <i key={index} className={'far fa-dot-circle gold'}/>
+                    ? <div className="pulse-loader" onClick={() => this.forceCarouselItem(index)}/>
                     : <i key={index}
                          className={'far fa-dot-circle'}
                          onClick={() => this.forceCarouselItem(index)}/>;
