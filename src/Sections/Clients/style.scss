@@ -9,62 +9,74 @@ div.clients {
   align-items: center;
   background-color: $primary-white;
   color: $primary-black;
-  padding: 0 20%;
+  padding: 0 50px;
   min-height: 25vh;
   z-index: 500;
 
   & > div.icon_wrapper {
     width: 100%;
+    max-width: 1300px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @include respond-to('large') {
-      flex-wrap: nowrap;
-    }
+
     & > span {
-      width: 200px;
+      width: 150px;
+      height: 100px;
       display: flex;
       justify-content: center;
-
+      align-items: center;
+      margin: 10px;
+      @include respond-to('medium') {
+        width: 300px;
+        height: 200px;
+      }
       & > img {
+        transition: 0.5s ease-in-out;
+      }
+
+      & > img.louisVuitton {
         width: 100px;
-        height: 70px;
-        margin: 20px 50px;
+        @include respond-to('medium') {
+          width: 150px;
+        }
+      }
+      & > img.morris, img.goose {
+        width: 120px;
+        @include respond-to('medium') {
+          width: 170px;
+        }
+      }
+      & > img.milk {
+        width: 50px;
+        @include respond-to('medium') {
+          width: 70px;
+        }
+      }
+      & > img.audi {
+        width: 80px;
+        @include respond-to('medium') {
+          width: 100px;
+        }
+      }
+      & > img.alfa {
+         width: 60px;
+        @include respond-to('medium') {
+          width: 80px;
+        }
+      }
+      & > img.mobileye {
+        width: 90px;
+        @include respond-to('medium') {
+          width: 120px;
+        }
       }
       & > img.google {
-        width: 120px;
-        height: 80px;
-      }
-      & > img.mobilaye {
-        width: 150px;
-        height: 80px;
-      }
-    }
-
-    & > i {
-      font-size: 70px;
-      color: $primary-gold;
-    }
-    & span {
-      font-size: 70px;
-      color: $primary-gold;
-      display: flex;
-      align-items: center;
-      & > i.one {
-        position: relative;
-        right: -16%;
-      }
-      & > i.two {
-        position: relative;
-        right: -5%;
-      }
-      & > i.three {
-        position: relative;
-        right: 5%;
-      }
-      & > i.four {
-        position: relative;
-        right: 16%;
+        width: 170px;
+        @include respond-to('medium') {
+          width: 200px;
+        }
       }
     }
   }

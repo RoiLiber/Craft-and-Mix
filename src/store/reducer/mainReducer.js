@@ -11,9 +11,9 @@ const scrollY = window.scrollY;
 
 const initialState = {
     windowWidthSize: {
-        small: width < small,
-        medium: width > small && width < medium,
-        large: width > large && width < larger,
+        small: width < medium,
+        medium: width > medium,
+        large: width > large,
         larger: width > larger,
     },
     windowWidth: width,
@@ -48,10 +48,10 @@ const authReducer = (state = initialState, action) => {
         case actionTypes.REPORT_WINDOW_WIDTH: {
             const windowWidth = action.payload;
             const windowWidthSize = {
-                small: windowWidth < small,
-                medium: windowWidth > medium && windowWidth < large,
-                large: windowWidth > large && windowWidth < larger,
-                larger: windowWidth > large,
+                small: windowWidth < medium,
+                medium: windowWidth > medium,
+                large: windowWidth > large,
+                larger: windowWidth > larger,
             };
 
             return {

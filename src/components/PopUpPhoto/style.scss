@@ -45,14 +45,17 @@ div.pop_up_wrapper {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      margin-left: 5px;
 
       & > div {
         width: 100%;
         display: flex;
+
         & > i {
           margin-right: 10px;
           font-size: 17px;
           color: $primary-gold;
+          margin-bottom: 5px;
         }
         & > p {
           width: 100%;
