@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.b1886759.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.374b1ee9.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.374b1ee9.chunk.js.map",
+    "main.css": "/Craft-and-Mix/static/css/main.883a7cb3.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.b1906d41.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.b1906d41.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
-    "static/js/2.04d12d1d.chunk.js": "/Craft-and-Mix/static/js/2.04d12d1d.chunk.js",
-    "static/js/2.04d12d1d.chunk.js.map": "/Craft-and-Mix/static/js/2.04d12d1d.chunk.js.map",
+    "static/js/2.bde943ae.chunk.js": "/Craft-and-Mix/static/js/2.bde943ae.chunk.js",
+    "static/js/2.bde943ae.chunk.js.map": "/Craft-and-Mix/static/js/2.bde943ae.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.d11149f28bdf4e2d9ad6129e492f250b.js": "/Craft-and-Mix/precache-manifest.d11149f28bdf4e2d9ad6129e492f250b.js",
+    "precache-manifest.94799f827b2e1c5239fa0afef03eb8ff.js": "/Craft-and-Mix/precache-manifest.94799f827b2e1c5239fa0afef03eb8ff.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.b1886759.chunk.css.map": "/Craft-and-Mix/static/css/main.b1886759.chunk.css.map",
-    "static/media/A.jpeg": "/Craft-and-Mix/static/media/A.1b02a294.jpeg",
+    "static/css/main.883a7cb3.chunk.css.map": "/Craft-and-Mix/static/css/main.883a7cb3.chunk.css.map",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
     "static/media/Crift & Mix_logo icon.svg": "/Craft-and-Mix/static/media/Crift & Mix_logo icon.4833bdd8.svg",
     "static/media/Crift&Mix-black logo.svg": "/Craft-and-Mix/static/media/Crift&Mix-black logo.4f9afe1f.svg",
@@ -26,7 +25,6 @@
     "static/media/WhatsApp Image 2020-01-17 at 21.54.03(1).jpeg": "/Craft-and-Mix/static/media/WhatsApp Image 2020-01-17 at 21.54.03(1).23f830a3.jpeg",
     "static/media/WhatsApp Image 2020-01-17 at 21.54.03.jpeg": "/Craft-and-Mix/static/media/WhatsApp Image 2020-01-17 at 21.54.03.448113b6.jpeg",
     "static/media/WhatsApp.jpg": "/Craft-and-Mix/static/media/WhatsApp.75363ad6.jpg",
-    "static/media/gold.PNG": "/Craft-and-Mix/static/media/gold.0ebaf998.PNG",
     "static/media/google.png": "/Craft-and-Mix/static/media/google.c1114b0a.png",
     "static/media/team_craft.jpeg": "/Craft-and-Mix/static/media/team_craft.ff428185.jpeg",
     "static/media/w.jpeg": "/Craft-and-Mix/static/media/w.05276934.jpeg",
@@ -34,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
-    "static/js/2.04d12d1d.chunk.js",
-    "static/css/main.b1886759.chunk.css",
-    "static/js/main.374b1ee9.chunk.js"
+    "static/js/2.bde943ae.chunk.js",
+    "static/css/main.883a7cb3.chunk.css",
+    "static/js/main.b1906d41.chunk.js"
   ]
 }

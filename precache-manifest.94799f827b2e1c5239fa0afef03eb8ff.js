@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "538b0995667cee8a84a3d8886b1d56d1",
+    "revision": "6a9689219a521f7bdc306c2ad5e8afa6",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "90c61c29b0eff18df3b6",
-    "url": "/Craft-and-Mix/static/css/main.b1886759.chunk.css"
+    "revision": "227ad9e74d0a0c375be8",
+    "url": "/Craft-and-Mix/static/css/main.883a7cb3.chunk.css"
   },
   {
-    "revision": "a875e2356b7be7d53ac3",
-    "url": "/Craft-and-Mix/static/js/2.04d12d1d.chunk.js"
+    "revision": "63dbbbcb6b369c47e762",
+    "url": "/Craft-and-Mix/static/js/2.bde943ae.chunk.js"
   },
   {
-    "revision": "90c61c29b0eff18df3b6",
-    "url": "/Craft-and-Mix/static/js/main.374b1ee9.chunk.js"
+    "revision": "227ad9e74d0a0c375be8",
+    "url": "/Craft-and-Mix/static/js/main.b1906d41.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
     "url": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js"
-  },
-  {
-    "revision": "1b02a294874468a4501061b23d3b0471",
-    "url": "/Craft-and-Mix/static/media/A.1b02a294.jpeg"
   },
   {
     "revision": "c718425a424ac1947f840143daa231d6",
@@ -78,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "75363ad687bb63b6247855463ffdbd73",
     "url": "/Craft-and-Mix/static/media/WhatsApp.75363ad6.jpg"
-  },
-  {
-    "revision": "0ebaf998301c1e9b4a82941c0bd68f57",
-    "url": "/Craft-and-Mix/static/media/gold.0ebaf998.PNG"
   },
   {
     "revision": "c1114b0a304b655329b7306c901a9380",
