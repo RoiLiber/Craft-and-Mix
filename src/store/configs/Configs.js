@@ -14,7 +14,6 @@ import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 export const menuList = [
     { text: 'Our Services', elementName: 'OurServices' },
     { text: 'Mood', elementName: 'mood' },
-    // { text: 'On the Menu', elementName: 'onTheMenu' },
     { text: 'Happy Clients', elementName: 'clients' },
     { text: 'Contact us', elementName: 'contactUs' },
 ];

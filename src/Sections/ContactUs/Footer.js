@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from "../../components/Section";
 import { Fade } from "react-reveal";
-import Logo from "../../components/UI/Logo/Logo";
 import { useSpring, animated } from 'react-spring';
 import logo from '../../assest/icon/Crift&Mix-black logo.svg';
 import './style.scss';

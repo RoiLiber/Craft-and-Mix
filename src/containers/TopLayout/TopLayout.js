@@ -8,7 +8,7 @@ import { setPhoto } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
 import photo2 from '../../assest/img/logos/wsd.jpg';
 import photo from '../../assest/img/logos/WhatsApp.jpg';
-import PopUpImg from "../../components/UI/PopUpPhoto/PopUpPhoto";
+import PopUpImg from "../../components/PopUpPhoto";
 import './style.scss';
 import { Slide } from "react-reveal";
 
