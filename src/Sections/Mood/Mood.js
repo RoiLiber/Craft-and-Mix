@@ -14,7 +14,7 @@ class Mood extends Component {
     };
 
     delay = () => {
-        return random(5000, 25000);
+        return random(5000, 35000);
     };
 
     carousel = (carousel, eventName) => {
