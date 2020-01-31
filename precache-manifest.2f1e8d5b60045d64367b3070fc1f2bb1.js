@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bd6de902ad4a920bc3c47cdfd260f73",
+    "revision": "b0e5359ffd670c3ff0c15afb30ea4111",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "b95d6d68d4ad35e60424",
-    "url": "/Craft-and-Mix/static/css/main.7e84ea08.chunk.css"
+    "revision": "1c46e862507c1299a36e",
+    "url": "/Craft-and-Mix/static/css/main.38030f5a.chunk.css"
   },
   {
-    "revision": "790c2650ac2686b953dc",
-    "url": "/Craft-and-Mix/static/js/2.c34a0934.chunk.js"
+    "revision": "635366e48d5031383759",
+    "url": "/Craft-and-Mix/static/js/2.4985f1d1.chunk.js"
   },
   {
-    "revision": "b95d6d68d4ad35e60424",
-    "url": "/Craft-and-Mix/static/js/main.c9fd3859.chunk.js"
+    "revision": "1c46e862507c1299a36e",
+    "url": "/Craft-and-Mix/static/js/main.44080724.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -60,16 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/audi-logo.52c67e2e.png"
   },
   {
-    "revision": "ce2d73d7fdaabfc72eed428cb0bc3e63",
-    "url": "/Craft-and-Mix/static/media/backPhoto1.ce2d73d7.jpg"
+    "revision": "3fa44a9ec049b967e0e582f052f71554",
+    "url": "/Craft-and-Mix/static/media/crop1.3fa44a9e.jpg"
   },
   {
-    "revision": "75363ad687bb63b6247855463ffdbd73",
-    "url": "/Craft-and-Mix/static/media/backPhoto2.75363ad6.jpg"
-  },
-  {
-    "revision": "5888af4ab47c597bdc35d809bd479e02",
-    "url": "/Craft-and-Mix/static/media/cocktail-icon.5888af4a.png"
+    "revision": "c422fbf52705b924d7aa4f534be8508b",
+    "url": "/Craft-and-Mix/static/media/crop2.c422fbf5.jpg"
   },
   {
     "revision": "f92c8d1d3af7fce6956a71762d570fd5",
@@ -180,8 +176,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/m&h.a138f2a8.png"
   },
   {
-    "revision": "c21e83fc2be6c1e8172bb10b0dadffe1",
-    "url": "/Craft-and-Mix/static/media/menu-icon.c21e83fc.png"
+    "revision": "452b391106d79d297745be700d7c0d62",
+    "url": "/Craft-and-Mix/static/media/menu-icon.452b3911.png"
   },
   {
     "revision": "f14fbfeff262432d52783e4a7d1a88e4",
