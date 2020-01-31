@@ -12,7 +12,7 @@ div.footer_wrapper {
   color: $primary-black;
   padding-bottom: 5vh;
   background: radial-gradient(ellipse at bottom, $primary-white 20%, $primary-white 90%);
-  //box-shadow: 25px 20px 15px 30px $primary-gold;
+  box-shadow: inset 0 15px 30px 5px rgba($primary-gold, 0.8);
   overflow: hidden;
 
   & > div.contact_wrapper {

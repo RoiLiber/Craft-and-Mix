@@ -45,6 +45,7 @@ div.header {
         right: 25px;
         height: 100%;
         z-index: 1200;
+        cursor: pointer;
         @include respond-to('medium') {
             bottom: 0;
         }
