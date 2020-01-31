@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.3dc36855.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.a4c627a8.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.a4c627a8.chunk.js.map",
+    "main.css": "/Craft-and-Mix/static/css/main.3eec341c.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.1416212a.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.1416212a.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
     "static/js/2.df258daa.chunk.js": "/Craft-and-Mix/static/js/2.df258daa.chunk.js",
     "static/js/2.df258daa.chunk.js.map": "/Craft-and-Mix/static/js/2.df258daa.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.cf64ecfdee394f8e70e1326c44862273.js": "/Craft-and-Mix/precache-manifest.cf64ecfdee394f8e70e1326c44862273.js",
+    "precache-manifest.1959b6102897bc68f2f7c1c4346ac4e7.js": "/Craft-and-Mix/precache-manifest.1959b6102897bc68f2f7c1c4346ac4e7.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.3dc36855.chunk.css.map": "/Craft-and-Mix/static/css/main.3dc36855.chunk.css.map",
+    "static/css/main.3eec341c.chunk.css.map": "/Craft-and-Mix/static/css/main.3eec341c.chunk.css.map",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
     "static/media/Crift & Mix_logo icon.svg": "/Craft-and-Mix/static/media/Crift & Mix_logo icon.4833bdd8.svg",
     "static/media/Crift&Mix-black logo.svg": "/Craft-and-Mix/static/media/Crift&Mix-black logo.4f9afe1f.svg",
@@ -19,12 +19,12 @@
     "static/media/On the Menu.jpeg": "/Craft-and-Mix/static/media/On the Menu.5fd669cc.jpeg",
     "static/media/Our Services.jpeg": "/Craft-and-Mix/static/media/Our Services.83a59f4b.jpeg",
     "static/media/alfa.png": "/Craft-and-Mix/static/media/alfa.9569d6e2.png",
-    "static/media/audi-logo.png": "/Craft-and-Mix/static/media/audi-logo.5f39c407.png",
+    "static/media/audi-logo.png": "/Craft-and-Mix/static/media/audi-logo.52c67e2e.png",
     "static/media/backPhoto1.jpg": "/Craft-and-Mix/static/media/backPhoto1.ce2d73d7.jpg",
     "static/media/backPhoto2.jpg": "/Craft-and-Mix/static/media/backPhoto2.75363ad6.jpg",
     "static/media/style.scss": "/Craft-and-Mix/static/media/background.505fe7e0.png",
-    "static/media/google.png": "/Craft-and-Mix/static/media/google.eb895026.png",
-    "static/media/greyGoose.png": "/Craft-and-Mix/static/media/greyGoose.041ef44d.png",
+    "static/media/google.png": "/Craft-and-Mix/static/media/google.f92c8d1d.png",
+    "static/media/greyGoose.png": "/Craft-and-Mix/static/media/greyGoose.c104a5d6.png",
     "static/media/img1.jpeg": "/Craft-and-Mix/static/media/img1.c718425a.jpeg",
     "static/media/img10.jpeg": "/Craft-and-Mix/static/media/img10.b02c71c6.jpeg",
     "static/media/img11.jpeg": "/Craft-and-Mix/static/media/img11.808599fb.jpeg",
@@ -37,15 +37,15 @@
     "static/media/img7.jpeg": "/Craft-and-Mix/static/media/img7.ff428185.jpeg",
     "static/media/img8.jpeg": "/Craft-and-Mix/static/media/img8.81b10632.jpeg",
     "static/media/img9.jpeg": "/Craft-and-Mix/static/media/img9.dc8e8c82.jpeg",
-    "static/media/louisVuitton.png": "/Craft-and-Mix/static/media/louisVuitton.7db1023d.png",
-    "static/media/m&h.png": "/Craft-and-Mix/static/media/m&h.486c8ce1.png",
-    "static/media/mobileye.svg.png": "/Craft-and-Mix/static/media/mobileye.svg.8f60c43e.png",
-    "static/media/morris.png": "/Craft-and-Mix/static/media/morris.77ab872f.png"
+    "static/media/louisVuitton.png": "/Craft-and-Mix/static/media/louisVuitton.006c7527.png",
+    "static/media/m&h.png": "/Craft-and-Mix/static/media/m&h.a138f2a8.png",
+    "static/media/mobileye.svg.png": "/Craft-and-Mix/static/media/mobileye.svg.f14fbfef.png",
+    "static/media/morris.png": "/Craft-and-Mix/static/media/morris.cdc9af40.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
     "static/js/2.df258daa.chunk.js",
-    "static/css/main.3dc36855.chunk.css",
-    "static/js/main.a4c627a8.chunk.js"
+    "static/css/main.3eec341c.chunk.css",
+    "static/js/main.1416212a.chunk.js"
   ]
 }
