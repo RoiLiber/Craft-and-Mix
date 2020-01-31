@@ -22,6 +22,22 @@ div.footer_wrapper {
     justify-content: center;
     height: 100%;
 
+    & > a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > p {
+        font-size: 25px;
+        margin: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
     & > p {
       font-size: 25px;
       margin: 15px;

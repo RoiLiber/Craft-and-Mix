@@ -5,12 +5,11 @@ div.services {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 10px;
-  //font-size: 15px;
+  padding-top: 20px;
   justify-content: center;
   background-color: $primary-white;
   color: $primary-black;
-  min-height: 25vh;
+  min-height: 35vh;
   z-index: 500;
   @include respond-to('large') {
     flex-wrap: nowrap;
@@ -28,36 +27,26 @@ div.services {
     height: 20vh;
     position: relative;
 
-    & > p {
-      transition: 0.2s ease-in-out;
-      color: $primary-black;
-      font-size: 20px;
-      padding: 5px;
-      width: 100%;
-    }
-    & > img {
-      width: 70px;
-      height: 70px;
-    }
-    & > i {
-      font-size: 45px;
-      padding: 20px;
-      width: 100%;
-      color: $primary-black;
-      transition: 0.7s ease-in-out;
-      background: linear-gradient(0deg, rgba($primary-black, 0.8) 50%, rgba($primary-gold, 1) 60%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      @include respond-to('large') {
-        font-size: 55px;
-      }
+    & > div.wrap_service {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
 
-    }
-    & > i:hover {
-      color: $primary-gold;
-      background: linear-gradient(15deg, rgba($primary-gold, 0.8) 50%, rgba($primary-black, 1) 70%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      & > p {
+        transition: 0.2s ease-in-out;
+        color: $primary-black;
+        font-size: 20px;
+        padding: 5px;
+        width: 100%;
+        position: relative;
+      }
+      & > img {
+        width: 70px;
+        height: 70px;
+        position: relative;
+      }
     }
   }
 }

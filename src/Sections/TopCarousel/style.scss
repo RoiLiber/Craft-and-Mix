@@ -145,6 +145,7 @@ div.carousel_section {
             align-items: center;
             transition: 0.7s ease-in-out;
             margin: 10px;
+            cursor: pointer;
         }
         & > i.gold {
             color: $primary-gold;

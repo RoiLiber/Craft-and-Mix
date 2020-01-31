@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Fade } from 'react-reveal';
+import { Fade, Slide } from 'react-reveal';
 import { findIndex } from 'lodash';
 import './style.scss';
 
@@ -22,7 +22,7 @@ class Carousel extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         const { activeCarousel, carouselNextItem } = this.state;
         const { carouselArray,delay } = this.props;
-        const index = findIndex(carouselArray, { text: carouselNextItem.text });
+        const index = carouselNextItem && findIndex(carouselArray, { text: carouselNextItem.text });
 
         if (prevState.activeCarousel !== activeCarousel && activeCarousel) {
             setTimeout(() => {
@@ -53,8 +53,8 @@ class Carousel extends Component {
     render() {
         const { popUp, delay, eventName } = this.props;
         const { activeCarousel, carouselItem } = this.state;
-        const img = carouselItem.img;
-        const text = carouselItem.text;
+        const img = carouselItem && carouselItem.img;
+        const text = carouselItem && carouselItem.text;
         const item = {
             ...carouselItem,
             event: eventName
@@ -63,11 +63,10 @@ class Carousel extends Component {
         return (
             <div className={`mood_carousel_wrapper`} onClick={() => popUp(item)}>
                 <div className={'carousel_image_wrapper'}>
-                    {activeCarousel && <Fade deley={delay}>
-                        <img src={img} alt={text}
-                             className={'carousel_img'}
-                        />
-                    </Fade>}
+                    {activeCarousel && <Slide top deley={delay}>
+                        <img src={img} alt={text} className={'carousel_img'}/>
+                        <i className="fab fa-wpexplorer"/>
+                    </Slide>}
                 </div>
             </div>
         )

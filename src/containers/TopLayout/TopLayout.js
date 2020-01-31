@@ -6,8 +6,8 @@ import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import { setPhoto } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
-import backPhoto1 from '../../assest/img/background/backPhoto1.jpg';
-import backPhoto2 from '../../assest/img/background/backPhoto2.jpg';
+import backPhoto1 from '../../assest/img/background/crop1.jpg';
+import backPhoto2 from '../../assest/img/background/crop2.jpg';
 import PopUpImg from "../../components/PopUpPhoto";
 import { Slide } from "react-reveal";
 import './style.scss';
@@ -24,16 +24,15 @@ class TopLayout extends Component {
                 {!carouselExit && <TopCarousel topCarousel={topCarousel}/>}
                 <OurServices/>
                 <div className={'photo'}>
-                    <img src={backPhoto1} alt={'backPhoto'}/>
+                    <img src={backPhoto1} alt={'backPhoto'} className={'backPhoto1'}/>
                 </div>
                 <Mood/>
                 <div className={'clear'}/>
                 <Clients clients={clients}/>
                 <div className={'photo'}>
-                    <img src={backPhoto2} alt={'backPhoto'}/>
+                    <img src={backPhoto2} alt={'backPhoto'} className={'backPhoto2'}/>
                 </div>
-                {centerPhotoItem &&
-                <Slide bottom duretion={500}>
+                {centerPhotoItem && <Slide bottom duretion={500}>
                     <div className={'pop_up_wrapper'} onClick={() => setPhoto(false)}>
                         <PopUpImg photoObj={centerPhotoItem}/>
                     </div>

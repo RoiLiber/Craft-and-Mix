@@ -70,7 +70,7 @@ import google from '../../assest/icon/google.png';
 //=============================================================
 
 export const menuList = [
-    { text: 'Our Services', elementName: 'OurServices' },
+    { text: 'Our Services', elementName: 'ourServices' },
     { text: 'Mood', elementName: 'mood' },
     { text: 'Happy Clients', elementName: 'clients' },
     { text: 'Contact us', elementName: 'contactUs' },
@@ -161,12 +161,12 @@ export const mood = [
 ];
 
 export const clients = [
-    { name: 'louisVuitton', logo: louisVuitton, delay: 500 },
-    { name: 'morris', logo: morris, delay: 600 },
-    { name: 'goose', logo: goose, delay: 700 },
-    { name: 'milk', logo: milk, delay: 800 },
-    { name: 'audi', logo: audi, delay: 900 },
-    { name: 'alfa', logo: alfa, delay: 1000 },
-    { name: 'mobileye', logo: mobileye, delay: 1100 },
-    { name: 'google', logo: google, delay: 1200 },
+    { name: 'louisVuitton', logo: louisVuitton, delay: 200 },
+    { name: 'morris', logo: morris, delay: 300 },
+    { name: 'goose', logo: goose, delay: 400 },
+    { name: 'milk', logo: milk, delay: 500 },
+    { name: 'audi', logo: audi, delay: 600 },
+    { name: 'alfa', logo: alfa, delay: 700 },
+    { name: 'mobileye', logo: mobileye, delay: 800 },
+    { name: 'google', logo: google, delay: 900 },
 ];

@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import { Fade } from "react-reveal";
 import { useSpring, animated } from 'react-spring';
 import logo from '../../assest/icon/Crift&Mix-black logo.svg';
+import { Link } from "react-scroll";
 import './style.scss';
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -21,7 +22,16 @@ export default function Footer() {
                     <div id='stars3'/>
                 </div>
                 <div className={'contact_wrapper'}>
-                    <p>GET IN TOUCH</p>
+                    <Link
+                        activeClass="active"
+                        to={'contactUs'}
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={900}
+                    >
+                        <p>GET IN TOUCH</p>
+                    </Link>
                     <div className={'contact'}>
                             <span className={'phone_number'}>
                                 <a className={'phone'} href={'tel:0525730004'}>052 5730004</a>

@@ -45,14 +45,15 @@ class Header extends Component {
         const { large, larger, windowHeight, windowScrollY, reportWindowScrollTopY } = this.props;
         const { clickedSection } = this.state;
         let height10vh = windowHeight / 10;
+        const height50vh = windowHeight / 2 - height10vh * 2;
 
-        const selectedSection = windowScrollY >= 375 && windowScrollY < 720
-            ? 'OurServices'
-            : windowScrollY >= 720 && windowScrollY < 1326
+        const selectedSection = windowScrollY >= height50vh && windowScrollY < height50vh * 3
+            ? 'ourServices'
+            : windowScrollY >= height50vh * 3 && windowScrollY < height50vh * 6
                 ? 'mood'
-                : windowScrollY >= 1326 && windowScrollY < 1700
+                : windowScrollY >= height50vh * 6 && windowScrollY < height50vh * 8.5
                     ? 'clients'
-                    : windowScrollY >= 1700 && windowScrollY < 2070
+                    : windowScrollY >= height50vh * 8.5
                         ? 'contactUs'
                         : '';
 
@@ -71,7 +72,7 @@ class Header extends Component {
 
         switch (index) {
             case 0: {
-                selectedSection = 'OurServices';
+                selectedSection = 'ourServices';
                 break
             }
             case 1: {
@@ -91,7 +92,7 @@ class Header extends Component {
             }
         }
         this.setState({ clickedSection: true });
-        setPhoto(false)
+        setPhoto(false);
         setTimeout(() => {
             this.setState({ clickedSection: false, selectedSection });
         }, 1000)
@@ -128,7 +129,7 @@ class Header extends Component {
                                     to={item.elementName}
                                     spy={true}
                                     smooth={true}
-                                    offset={clients ? 570 : contact ? 570 : small ? -35 : -80}
+                                    offset={small ? -20 : -60}
                                     duration={900}
                                     onClick={() => this.clickedSection(index)}
                                     onSetActive={() => {}}
