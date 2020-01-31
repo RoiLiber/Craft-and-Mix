@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b0c79caffa8df5d53cf2dc8274405ea",
+    "revision": "865a21a75cf36bd334230e0b3e4eea51",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "6e518f42a56a1949cb65",
-    "url": "/Craft-and-Mix/static/css/main.96dee6dd.chunk.css"
+    "revision": "76c6c06d5258ee3e9ae2",
+    "url": "/Craft-and-Mix/static/css/main.c991e7fe.chunk.css"
   },
   {
     "revision": "a3f1c1cc6d49e25e9831",
     "url": "/Craft-and-Mix/static/js/2.df258daa.chunk.js"
   },
   {
-    "revision": "6e518f42a56a1949cb65",
-    "url": "/Craft-and-Mix/static/js/main.94dd870f.chunk.js"
+    "revision": "76c6c06d5258ee3e9ae2",
+    "url": "/Craft-and-Mix/static/js/main.9953bb71.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/Our Services.83a59f4b.jpeg"
   },
   {
-    "revision": "8686c0e75af270eb9beb8a32e3146e1a",
-    "url": "/Craft-and-Mix/static/media/alfa.8686c0e7.png"
+    "revision": "a10e069d171bc2016aaf8d66c0523ae7",
+    "url": "/Craft-and-Mix/static/media/alfa.a10e069d.png"
   },
   {
-    "revision": "7fbda8b5c9ddcbe36b48038c1fbf92cd",
-    "url": "/Craft-and-Mix/static/media/audi-logo.7fbda8b5.png"
+    "revision": "5f39c40707474074fedd2cb859bfd6ae",
+    "url": "/Craft-and-Mix/static/media/audi-logo.5f39c407.png"
   },
   {
     "revision": "ce2d73d7fdaabfc72eed428cb0bc3e63",
@@ -72,8 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/background.505fe7e0.png"
   },
   {
-    "revision": "35dbc7879221bc807a5a2b303ed36d91",
-    "url": "/Craft-and-Mix/static/media/greyGoose.35dbc787.png"
+    "revision": "7488cd4480fcc9b7566ff9184117285a",
+    "url": "/Craft-and-Mix/static/media/greyGoose.7488cd44.png"
   },
   {
     "revision": "5234f9444bbb6eac6bfed8bd925157c7",
@@ -168,19 +168,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/img9.dc8e8c82.jpeg"
   },
   {
-    "revision": "442ff0266297324f70fa1b53a9dc7241",
-    "url": "/Craft-and-Mix/static/media/louisVuitton.442ff026.png"
+    "revision": "d014beba1aa4c80f4e3d312f0b7ac740",
+    "url": "/Craft-and-Mix/static/media/louisVuitton.d014beba.png"
   },
   {
-    "revision": "163b5e744d279a6eea05c429c1d5d5e6",
-    "url": "/Craft-and-Mix/static/media/m&h.163b5e74.png"
+    "revision": "1de0c10c2d4f32d8d2952baade46cd8d",
+    "url": "/Craft-and-Mix/static/media/m&h.1de0c10c.png"
   },
   {
-    "revision": "617dd2ed38b85035cfec5b5bd20bec8b",
-    "url": "/Craft-and-Mix/static/media/mobileye.svg.617dd2ed.png"
+    "revision": "c34d371e1d196c2781f8b26291ac0251",
+    "url": "/Craft-and-Mix/static/media/mobileye.svg.c34d371e.png"
   },
   {
-    "revision": "6da1728ee70ae4713b308827ccde2f9a",
-    "url": "/Craft-and-Mix/static/media/morris.6da1728e.png"
+    "revision": "57b84516abb5b8f0e6d46b6774261e1c",
+    "url": "/Craft-and-Mix/static/media/morris.57b84516.png"
   }
 ]);
