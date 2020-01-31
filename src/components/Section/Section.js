@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import './style.scss';
 import { Element } from 'react-scroll';
 import SectionHeadLine from '../SectionHeadLine';
+import './style.scss';
 
 class Section extends Component {
 
     render() {
-        const { elementName, text, textColor, color, children, position, addHeart, noHeadLine } = this.props;
+        const { elementName, text, textColor, color, children, position, noHeadLine } = this.props;
 
         return (
             <Element name={elementName} className={'element'}>

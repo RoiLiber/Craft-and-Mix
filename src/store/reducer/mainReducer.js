@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 import * as configs from '../configs/Configs';
 
-const small = 767;
+//const small = 767;
 const medium = 992;
 const large = 1200;
 const larger = 1500;
@@ -23,7 +23,8 @@ const initialState = {
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
     mood: configs.mood,
-    centerPhotoItem: false
+    centerPhotoItem: false,
+    clients: configs.clients
 };
 
 const authReducer = (state = initialState, action) => {

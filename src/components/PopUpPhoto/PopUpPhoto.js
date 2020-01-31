@@ -9,7 +9,7 @@ export default function Footer(props) {
         <Fragment>
             <Slide bottom duretion={500}>
                 <div className={'photo'}>
-                    <img src={photoObj.img} alt={'photo'}/>
+                    <img src={photoObj.img} alt={photoObj.text}/>
                 </div>
                 <div className={`pop_up_text_wrapper`}>
                     <div className={`pop_up_text`}>

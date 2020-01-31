@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { connect } from "react-redux";
-import { findIndex, split, includes, slice } from 'lodash';
-import { Slide, Flip, Fade } from "react-reveal";
-import Pulse from 'react-reveal/Pulse';
-import { Spring, config } from 'react-spring/renderprops';
+import { findIndex, split, includes } from 'lodash';
+import { Slide } from "react-reveal";
 import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
 
@@ -163,12 +160,4 @@ class TopCarousel extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    const { topCarousel } = state.mainReducer;
-
-    return {
-        topCarousel
-    };
-};
-
-export default connect(mapStateToProps)(TopCarousel);
+export default TopCarousel;

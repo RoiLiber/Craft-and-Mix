@@ -6,31 +6,31 @@ import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import { setPhoto } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
-import photo2 from '../../assest/img/logos/wsd.jpg';
-import photo from '../../assest/img/logos/WhatsApp.jpg';
+import backPhoto1 from '../../assest/img/background/backPhoto1.jpg';
+import backPhoto2 from '../../assest/img/background/backPhoto2.jpg';
 import PopUpImg from "../../components/PopUpPhoto";
-import './style.scss';
 import { Slide } from "react-reveal";
+import './style.scss';
 
 class TopLayout extends Component {
 
     render() {
-        const { windowHeight, windowScrollY, centerPhotoItem, setPhoto } = this.props;
+        const { windowHeight, windowScrollY, centerPhotoItem, setPhoto, clients, topCarousel } = this.props;
         let height10vh = windowHeight / 10;
         const carouselExit = windowScrollY > (windowHeight - height10vh * 2.5);
 
         return (
             <div className="top_layout">
-                {!carouselExit && <TopCarousel/>}
+                {!carouselExit && <TopCarousel topCarousel={topCarousel}/>}
                 <OurServices/>
                 <div className={'photo'}>
-                    <img src={photo2} alt={'photo'}/>
+                    <img src={backPhoto1} alt={'backPhoto'}/>
                 </div>
                 <Mood/>
                 <div className={'clear'}/>
-                <Clients/>
+                <Clients clients={clients}/>
                 <div className={'photo'}>
-                    <img src={photo} alt={'photo'}/>
+                    <img src={backPhoto2} alt={'backPhoto'}/>
                 </div>
                 {centerPhotoItem &&
                 <Slide bottom duretion={500}>
@@ -45,12 +45,14 @@ class TopLayout extends Component {
 }
 
 const mapStateToProps = state => {
-    const { windowScrollY, windowHeight, centerPhotoItem } = state.mainReducer;
+    const { windowScrollY, windowHeight, centerPhotoItem, topCarousel, clients } = state.mainReducer;
 
     return {
         windowScrollY,
         windowHeight,
-        centerPhotoItem
+        centerPhotoItem,
+        topCarousel,
+        clients
     };
 };
 

@@ -9,7 +9,7 @@ div.clients {
   align-items: center;
   background-color: $primary-white;
   color: $primary-black;
-  padding: 0 50px;
+  padding: 0 30px;
   min-height: 25vh;
   z-index: 500;
 
@@ -22,7 +22,7 @@ div.clients {
     justify-content: center;
 
     & > span {
-      width: 150px;
+      width: 130px;
       height: 100px;
       display: flex;
       justify-content: center;

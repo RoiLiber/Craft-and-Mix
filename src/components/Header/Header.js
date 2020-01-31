@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logo from '../../assest/icon/Crift&Mix-black logo.svg';
 import logoOneLine from '../../assest/icon/Crift&Mix-black logo_v2.svg';
+import { Slide } from 'react-reveal';
+import Menu from '../../components/Menu';
+import { Link } from "react-scroll";
 import {
     toggleMenu,
     setWindowWidth,
     setWindowHeight,
     reportWindowScrollTopY
 } from '../../store/actions/mainActions';
-import { Slide } from 'react-reveal';
-import Menu from '../../components/Menu';
-import { Link } from "react-scroll";
 import './style.scss';
 
 class Header extends Component {
