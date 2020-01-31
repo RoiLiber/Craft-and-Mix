@@ -73,9 +73,9 @@ div.clients {
         }
       }
       & > img.google {
-        width: 170px;
+        width: 100px;
         @include respond-to('medium') {
-          width: 200px;
+          width: 130px;
         }
       }
     }

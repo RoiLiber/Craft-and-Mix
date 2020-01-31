@@ -66,7 +66,7 @@ import milk from '../../assest/icon/m&h.png';
 import audi from '../../assest/icon/audi-logo.png';
 import alfa from '../../assest/icon/alfa.png';
 import mobileye from '../../assest/icon/mobileye.svg.png';
-import google from '../../assest/icon/Google.svg';
+import google from '../../assest/icon/google.png';
 //=============================================================
 
 export const menuList = [
