@@ -37,37 +37,43 @@ div.clients {
       }
 
       & > img.louisVuitton {
-        width: 100px;
+        width: 60px;
+        @include respond-to('medium') {
+          width: 75px;
+        }
+      }
+      & > img.morris {
+        width: 120px;
         @include respond-to('medium') {
           width: 150px;
         }
       }
-      & > img.morris, img.goose {
-        width: 120px;
+      & > img.goose {
+        width: 100px;
         @include respond-to('medium') {
-          width: 170px;
+          width: 130px;
         }
       }
       & > img.milk {
-        width: 50px;
+        width: 60px;
         @include respond-to('medium') {
-          width: 70px;
+          width: 80px;
         }
       }
       & > img.audi {
         width: 80px;
         @include respond-to('medium') {
-          width: 100px;
+          width: 110px;
         }
       }
       & > img.alfa {
-         width: 60px;
+         width: 65px;
         @include respond-to('medium') {
-          width: 80px;
+          width: 90px;
         }
       }
       & > img.mobileye {
-        width: 90px;
+        width: 80px;
         @include respond-to('medium') {
           width: 120px;
         }
