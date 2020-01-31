@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Fade } from "react-reveal";
 import Section from "../../components/Section";
+import cocktailIcon from '../../assest/icon/cocktail-icon.png';
+import menuIcon from '../../assest/icon/menu-icon.png';
 import './style.scss';
 
 class OurServices extends Component {
@@ -12,7 +14,8 @@ class OurServices extends Component {
                 <div className={'services'}>
                     <div className={'service'}>
                         <Fade bottom delay={300}>
-                            <i className="fas fa-glass-martini-alt"/>
+                            <img src={cocktailIcon} alt={'icon'}/>
+                            {/*<i className="fas fa-glass-martini-alt"/>*/}
                         </Fade>
                         <Fade bottom delay={500}>
                             <p>Bar & Cocktails services</p>
@@ -21,7 +24,8 @@ class OurServices extends Component {
                     </div>
                     <div className={'service'}>
                         <Fade bottom delay={600}>
-                            <i className="far fa-edit"/>
+                            <img src={menuIcon} alt={'icon'}/>
+                            {/*<i className="far fa-edit"/>*/}
                         </Fade>
                         <Fade bottom delay={800}>
                             <p>Bar & Cocktail's menu</p>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logo from '../../assest/icon/Crift&Mix-black logo.svg';
 import logoOneLine from '../../assest/icon/Crift&Mix-black logo_v2.svg';
+import { setPhoto } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
 import Menu from '../../components/Menu';
 import { Link } from "react-scroll";
@@ -65,6 +66,7 @@ class Header extends Component {
     };
 
     clickedSection = index => {
+        const { setPhoto } = this.props;
         let  selectedSection = '';
 
         switch (index) {
@@ -89,6 +91,7 @@ class Header extends Component {
             }
         }
         this.setState({ clickedSection: true });
+        setPhoto(false)
         setTimeout(() => {
             this.setState({ clickedSection: false, selectedSection });
         }, 1000)
@@ -168,6 +171,7 @@ const mapDispatchToProps = dispatch => {
         setWindowWidth: width => dispatch(setWindowWidth(width)),
         setWindowHeight: height => dispatch(setWindowHeight(height)),
         reportWindowScrollTopY: scroll => dispatch(reportWindowScrollTopY(scroll)),
+        setPhoto: bool => dispatch(setPhoto(bool)),
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
