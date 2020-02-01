@@ -13,7 +13,7 @@ div.header {
     height: 10vh;
     color: $primary-black;
     z-index: 999;
-    background-color: rgba($primary-white, 0);
+    background-color: $primary-white;
     transition: 0.3s ease-in-out;
     @include respond-to('large') {
         flex-wrap: nowrap;
@@ -88,6 +88,7 @@ div.header {
 
 div.sm {
     justify-content: flex-start;
+    background-color: rgba($primary-white, 0);
 
     & > div.header_logo {
         justify-content: flex-start;

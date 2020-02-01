@@ -2,8 +2,8 @@
 @import "../../styles/mixins";
 
 div.carousel_section {
-    position: fixed;
-    z-index: 100;
+    //position: relative;
+    z-index: 500;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -11,7 +11,6 @@ div.carousel_section {
     @include respond-to('large') {
         flex-wrap: nowrap;
         height: 80vh;
-        top: 10vh;
     }
 
     & > img.logo {

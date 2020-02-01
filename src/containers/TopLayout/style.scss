@@ -9,8 +9,28 @@ div.top_layout {
     z-index: 700;
     position: relative;
     top: 10vh;
-    //background-image: url("../../assets/img/background/background.png");
 
+    & > div.white_cover {
+        width: 100%;
+        background-color: $primary-white;
+        z-index: 500;
+        display: flex;
+        flex-wrap: wrap;
+        height: 75vh;
+        @include respond-to('large') {
+            flex-wrap: nowrap;
+            height: 80vh;
+        }
+    }
+
+    & > .parallax_carousel {
+        width: 100%;
+        background-color: $primary-white;
+        position: relative;
+        & > div {
+            width: 100%;
+        }
+    }
     & > div.clear {
         height: 5vh;
         width: 100%;
@@ -21,8 +41,6 @@ div.top_layout {
     & > div.photo {
         height: 10vh;
         width: 100%;
-        position: relative;
-        top: 75vh;
         z-index: 100;
         display: flex;
         align-items: center;
