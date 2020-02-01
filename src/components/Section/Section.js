@@ -6,11 +6,11 @@ import './style.scss';
 class Section extends Component {
 
     render() {
-        const { elementName, text, textColor, color, children, position, noHeadLine } = this.props;
+        const { elementName, text, textColor, color, children, noHeadLine } = this.props;
 
         return (
             <Element name={elementName} className={'element'}>
-                <div className={`section_Wrapper ${position}`}>
+                <div className={`section_Wrapper`}>
                     {!noHeadLine && <SectionHeadLine
                         text={text}
                         textColor={textColor}

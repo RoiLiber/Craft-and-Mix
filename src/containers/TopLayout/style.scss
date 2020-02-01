@@ -8,7 +8,10 @@ div.top_layout {
     justify-content: center;
     z-index: 700;
     position: relative;
-    top: 10vh;
+    @include respond-to('large') {
+        top: 10vh;
+    }
+
 
     & > div.white_cover {
         width: 100%;
@@ -27,8 +30,14 @@ div.top_layout {
         width: 100%;
         background-color: $primary-white;
         position: relative;
+
         & > div {
             width: 100%;
+            position: relative;
+            bottom: 38px;
+            @include respond-to('large') {
+                bottom: 0;
+            }
         }
     }
     & > div.clear {

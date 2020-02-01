@@ -4,7 +4,6 @@
 div.element {
   width: 100%;
   position: relative;
-  //top: 75vh;
 
   .section_Wrapper {
     display: flex;
@@ -13,54 +12,6 @@ div.element {
     justify-content: center;
     width: 100%;
     z-index: 500;
-  }
-  .position10 {
-    position: relative;
-    top: 10vh
-  }
-  .position20 {
-    position: relative;
-    top: 10vh
-  }
-  .position30 {
-    position: relative;
-    top: 10vh
-  }
-  .position40 {
-    position: relative;
-    top: 10vh
-  }
-  .position50 {
-    position: relative;
-    top: 10vh
-  }
-  .position60 {
-    position: relative;
-    top: 10vh
-  }
-  .position70 {
-    position: relative;
-    top: 70vh;
-    @include respond-to('large') {
-      top: 65vh;
-    }
-    @include respond-to('medium') {
-      top: 65vh;
-    }
-  }
-  .position75 {
-    position: relative;
-    top: 75vh
-  }
-  .position80 {
-    position: relative;
-    top: 80vh;
-    @include respond-to('large') {
-      top: 70vh;
-    }
-    @include respond-to('medium') {
-       top: 68vh;
-     }
   }
 }
 

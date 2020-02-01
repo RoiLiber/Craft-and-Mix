@@ -14,7 +14,7 @@ class Menu extends Component {
             <Fragment>
             {
                 openMenu
-                ? <Slide right duration={1500}>
+                ? <Slide right duration={1100}>
                     <div className={"menu"}>
                         {menuList.map((item, index) => {
                             return <Fade duration={2500} key={index}>

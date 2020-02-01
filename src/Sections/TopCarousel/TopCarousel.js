@@ -113,8 +113,8 @@ class TopCarousel extends Component {
         const nextText = carouselNextItem.text;
         const nextBackgroundColor = carouselNextItem.backgroundColor;
         const selected = isEven
-            ? selectedCarouselItem === 0 || selectedCarouselItem === 2
-            : selectedCarouselItem === 1 || selectedCarouselItem === 3;
+            ? selectedCarouselItem === 1 || selectedCarouselItem === 3
+            : selectedCarouselItem === 0 || selectedCarouselItem === 2;
 
         return <div className={`carousel_wrapper`} onClick={() => this.forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>

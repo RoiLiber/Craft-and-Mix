@@ -22,18 +22,14 @@ class TopLayout extends Component {
     };
 
     render() {
-        const { windowHeight, windowScrollY, centerPhotoItem, setPhoto, clients, topCarousel, small } = this.props;
-        let height10vh = windowHeight / 10;
-        const carouselExit = windowScrollY > (windowHeight - height10vh * 2.5);
+        const { centerPhotoItem, setPhoto, clients, topCarousel } = this.props;
 
         return (
             <ParallaxProvider>
                 <div className="top_layout">
-                    {!carouselExit
-                        ? <Parallax className="parallax_carousel" y={[-30, 30]} tagOuter="figure">
-                            <TopCarousel topCarousel={topCarousel}/>
-                        </Parallax>
-                        : <div className={'white_cover'}/>}
+                    <Parallax className="parallax_carousel" y={[-60, 60]} tagOuter="figure">
+                        <TopCarousel topCarousel={topCarousel}/>
+                    </Parallax>
                     <OurServices/>
                     <div className={'photo'}>
                         {this.parallax(backPhoto1)}

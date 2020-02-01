@@ -13,7 +13,6 @@ div.header {
     height: 10vh;
     color: $primary-black;
     z-index: 999;
-    background-color: $primary-white;
     transition: 0.3s ease-in-out;
     @include respond-to('large') {
         flex-wrap: nowrap;
@@ -24,16 +23,13 @@ div.header {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        padding: 0 25px;
+        padding: 0 35px;
         @include respond-to('large') {
             justify-content: center;
         }
         & > img {
-            width: 60px;
+            width: 75px;
             transition: 0.3s ease-in-out;
-            @include respond-to('large') {
-                width: 75px;
-            }
         }
     }
     & > div.menu_button {

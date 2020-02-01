@@ -15,7 +15,7 @@ class SectionHeadLine extends Component {
                 to={elementName}
                 spy={true}
                 smooth={true}
-                offset={small ? -20 : -60}
+                offset={small ? -10 : -60}
                 duration={900}
                 onClick={toggleMenu ? () => toggleMenu() : null}
                 onSetActive={() => {}}

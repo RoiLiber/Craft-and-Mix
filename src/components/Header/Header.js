@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logo from '../../assets/icon/Crift&Mix-black logo.svg';
+import logoWhite from '../../assets/icon/Crift&Mix_W.svg';
 import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
 import { setPhoto } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
@@ -58,7 +59,7 @@ class Header extends Component {
                         : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (windowScrollY > (windowHeight - height10vh * 2.5) && (!large && !larger)) {
+        if (windowScrollY > (windowHeight - height10vh * 2) && (!large && !larger)) {
             this.setState({ shrinkHeader: true });
         } else {
             this.setState({ shrinkHeader: false });
@@ -109,36 +110,36 @@ class Header extends Component {
         const { menuList, large, larger, small, openMenu } = this.props;
 
         return (
-            <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
+            <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : openMenu ? 'header background': 'header'}>
                 <div className={'header_logo'}>
-                    <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
+                    <img src={shrinkHeader ? logoOneLine : large || openMenu ? logo : logoWhite} alt={'logo'}/>
                 </div>
                 <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`} onClick={large ? null : () => this.toggleMenu()}>
                     {large || larger
                         ?   menuList.map((item, index) => {
-                                return <Link
-                                    key={index}
-                                    className={
-                                        `element_link 
-                                        menu_list_item 
-                                        ${selectedSection === item.elementName ? 'selected' : ''}`
+                            return <Link
+                                key={index}
+                                className={
+                                    `element_link 
+                                    menu_list_item 
+                                    ${selectedSection === item.elementName ? 'selected' : ''}`
+                                }
+                                activeClass="active"
+                                to={item.elementName}
+                                spy={true}
+                                smooth={true}
+                                offset={small ? -10 : -60}
+                                duration={900}
+                                onClick={() => this.clickedSection(index)}
+                                onSetActive={() => {}}
+                            >
+                                <span className={'menu_list_item_text'}>{item.text}</span>
+                                    {selectedSection === item.elementName &&
+                                    <Slide left duration={700}>
+                                        <span className={'menu_list_item_line'}/>
+                                    </Slide>
                                     }
-                                    activeClass="active"
-                                    to={item.elementName}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={small ? -20 : -60}
-                                    duration={900}
-                                    onClick={() => this.clickedSection(index)}
-                                    onSetActive={() => {}}
-                                >
-                                    <span className={'menu_list_item_text'}>{item.text}</span>
-                                        {selectedSection === item.elementName &&
-                                        <Slide left duration={700}>
-                                            <span className={'menu_list_item_line'}/>
-                                        </Slide>
-                                        }
-                                </Link>
+                            </Link>
                         })
                         :   <i className={`fas fa-ellipsis-h`}/>
                     }
@@ -150,7 +151,7 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => {
-    const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY } = state.mainReducer;
+    const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY, medium } = state.mainReducer;
     const { large, larger, small } = windowWidthSize;
 
     return {
@@ -158,6 +159,7 @@ const mapStateToProps = state => {
         large,
         larger,
         small,
+        medium,
         menuList,
         windowHeight,
         windowScrollY
