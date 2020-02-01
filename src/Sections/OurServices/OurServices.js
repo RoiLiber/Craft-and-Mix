@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Fade } from "react-reveal";
 import Section from "../../components/Section";
-import cocktailIcon from '../../assest/icon/cocktail-icon.png';
-import menuIcon from '../../assest/icon/menu-icon.png';
+import cocktailIcon from '../../assets/icon/cocktail-icon.png';
+import menuIcon from '../../assets/icon/menu-icon.png';
 import './style.scss';
 
 class OurServices extends Component {

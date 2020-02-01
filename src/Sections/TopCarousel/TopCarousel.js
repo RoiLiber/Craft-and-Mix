@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { findIndex, split, includes } from 'lodash';
 import { Slide } from "react-reveal";
-import logo from '../../assest/icon/Crift & Mix_logo icon.svg';
+import logo from '../../assets/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
 
 class TopCarousel extends Component {

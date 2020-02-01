@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import logo from '../../assest/icon/Crift&Mix-black logo.svg';
-import logoOneLine from '../../assest/icon/Crift&Mix-black logo_v2.svg';
+import logo from '../../assets/icon/Crift&Mix-black logo.svg';
+import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
 import { setPhoto } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
 import Menu from '../../components/Menu';
