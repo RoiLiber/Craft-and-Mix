@@ -7,8 +7,6 @@ class SectionHeadLine extends Component {
 
     render() {
         const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart, addHeartTop, small } = this.props;
-        const clients = elementName === 'clients';
-        const contact = elementName === 'contactUs';
 
         return (
             <Link

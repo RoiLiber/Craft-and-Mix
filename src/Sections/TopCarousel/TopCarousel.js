@@ -123,7 +123,6 @@ class TopCarousel extends Component {
                     :   <div>{this.textBreak(text)}</div>}
             </div>
             {activeCarousel && <Slide
-                opposite
                 left={!isEven}
                 right={isEven}
                 delay={5000}

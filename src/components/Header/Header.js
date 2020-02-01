@@ -107,8 +107,6 @@ class Header extends Component {
     render() {
         const { shrinkHeader, selectedSection } = this.state;
         const { menuList, large, larger, small, openMenu } = this.props;
-        const clients = selectedSection === 'clients';
-        const contact = selectedSection === 'contactUs';
 
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>

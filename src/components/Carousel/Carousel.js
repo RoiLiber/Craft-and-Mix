@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Fade, Slide } from 'react-reveal';
+import { Slide } from 'react-reveal';
 import { findIndex } from 'lodash';
 import './style.scss';
 
@@ -63,7 +63,7 @@ class Carousel extends Component {
         return (
             <div className={`mood_carousel_wrapper`} onClick={() => popUp(item)}>
                 <div className={'carousel_image_wrapper'}>
-                    {activeCarousel && <Slide top deley={delay}>
+                    {activeCarousel && <Slide top duration={2000} deley={delay}>
                         <img src={img} alt={text} className={'carousel_img'}/>
                         <i className="fab fa-wpexplorer"/>
                     </Slide>}
