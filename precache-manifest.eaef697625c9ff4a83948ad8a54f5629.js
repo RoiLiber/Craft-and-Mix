@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "548288f2ad5b5e458411b24640b34f87",
+    "revision": "2c9c1a54d30db55b3a091d76fb8a927f",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "0156fb5ed82d6786d0d2",
-    "url": "/Craft-and-Mix/static/css/main.01a6222a.chunk.css"
+    "revision": "a7b60ad06f3d92e24f03",
+    "url": "/Craft-and-Mix/static/css/main.9fafa73e.chunk.css"
   },
   {
-    "revision": "635366e48d5031383759",
-    "url": "/Craft-and-Mix/static/js/2.4985f1d1.chunk.js"
+    "revision": "b6aac598e18e4d4aac01",
+    "url": "/Craft-and-Mix/static/js/2.9cfd43d9.chunk.js"
   },
   {
-    "revision": "0156fb5ed82d6786d0d2",
-    "url": "/Craft-and-Mix/static/js/main.4dc2588a.chunk.js"
+    "revision": "a7b60ad06f3d92e24f03",
+    "url": "/Craft-and-Mix/static/js/main.b7907991.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -60,12 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/audi-logo.52c67e2e.png"
   },
   {
-    "revision": "3fa44a9ec049b967e0e582f052f71554",
-    "url": "/Craft-and-Mix/static/media/crop1.3fa44a9e.jpg"
+    "revision": "052769340f1a3fadbfe1a8e143e8d99d",
+    "url": "/Craft-and-Mix/static/media/backPhoto1.05276934.jpeg"
   },
   {
-    "revision": "c422fbf52705b924d7aa4f534be8508b",
-    "url": "/Craft-and-Mix/static/media/crop2.c422fbf5.jpg"
+    "revision": "23f830a343cc739affd547f938f2041e",
+    "url": "/Craft-and-Mix/static/media/backPhoto2.23f830a3.jpeg"
   },
   {
     "revision": "f92c8d1d3af7fce6956a71762d570fd5",

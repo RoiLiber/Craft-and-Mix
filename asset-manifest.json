@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.01a6222a.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.4dc2588a.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.4dc2588a.chunk.js.map",
+    "main.css": "/Craft-and-Mix/static/css/main.9fafa73e.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.b7907991.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.b7907991.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
-    "static/js/2.4985f1d1.chunk.js": "/Craft-and-Mix/static/js/2.4985f1d1.chunk.js",
-    "static/js/2.4985f1d1.chunk.js.map": "/Craft-and-Mix/static/js/2.4985f1d1.chunk.js.map",
+    "static/js/2.9cfd43d9.chunk.js": "/Craft-and-Mix/static/js/2.9cfd43d9.chunk.js",
+    "static/js/2.9cfd43d9.chunk.js.map": "/Craft-and-Mix/static/js/2.9cfd43d9.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.5b5033dd238fe951f93bb08ab15223d0.js": "/Craft-and-Mix/precache-manifest.5b5033dd238fe951f93bb08ab15223d0.js",
+    "precache-manifest.eaef697625c9ff4a83948ad8a54f5629.js": "/Craft-and-Mix/precache-manifest.eaef697625c9ff4a83948ad8a54f5629.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.01a6222a.chunk.css.map": "/Craft-and-Mix/static/css/main.01a6222a.chunk.css.map",
+    "static/css/main.9fafa73e.chunk.css.map": "/Craft-and-Mix/static/css/main.9fafa73e.chunk.css.map",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
     "static/media/Crift & Mix_logo icon.svg": "/Craft-and-Mix/static/media/Crift & Mix_logo icon.4833bdd8.svg",
     "static/media/Crift&Mix-black logo.svg": "/Craft-and-Mix/static/media/Crift&Mix-black logo.4f9afe1f.svg",
@@ -21,8 +21,8 @@
     "static/media/Our Services.jpeg": "/Craft-and-Mix/static/media/Our Services.83a59f4b.jpeg",
     "static/media/alfa.png": "/Craft-and-Mix/static/media/alfa.9569d6e2.png",
     "static/media/audi-logo.png": "/Craft-and-Mix/static/media/audi-logo.52c67e2e.png",
-    "static/media/crop1.jpg": "/Craft-and-Mix/static/media/crop1.3fa44a9e.jpg",
-    "static/media/crop2.jpg": "/Craft-and-Mix/static/media/crop2.c422fbf5.jpg",
+    "static/media/backPhoto1.jpeg": "/Craft-and-Mix/static/media/backPhoto1.05276934.jpeg",
+    "static/media/backPhoto2.jpeg": "/Craft-and-Mix/static/media/backPhoto2.23f830a3.jpeg",
     "static/media/google.png": "/Craft-and-Mix/static/media/google.f92c8d1d.png",
     "static/media/greyGoose.png": "/Craft-and-Mix/static/media/greyGoose.c104a5d6.png",
     "static/media/img1.jpeg": "/Craft-and-Mix/static/media/img1.c718425a.jpeg",
@@ -45,8 +45,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
-    "static/js/2.4985f1d1.chunk.js",
-    "static/css/main.01a6222a.chunk.css",
-    "static/js/main.4dc2588a.chunk.js"
+    "static/js/2.9cfd43d9.chunk.js",
+    "static/css/main.9fafa73e.chunk.css",
+    "static/js/main.b7907991.chunk.js"
   ]
 }
