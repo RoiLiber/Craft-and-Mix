@@ -29,19 +29,18 @@ div.top_layout {
         @include respond-to('medium') {
             height: 20vh;
         }
-        & > img {
+        & > .parallax {
             width: 100%;
-            height: 200%;
-            position: relative;
-        }
-        & > img.backPhoto1 {
-            @include respond-to('medium') {
-                height: 150%;
-            }
-        }
-        & > img.backPhoto2 {
-            @include respond-to('large') {
-                height: 250%;
+            & > div {
+                height: 50vh;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    z-index: 100;
+                }
             }
         }
     }
@@ -59,7 +58,6 @@ div.top_layout {
         z-index: 1100;
     }
 }
-
 
 
 
