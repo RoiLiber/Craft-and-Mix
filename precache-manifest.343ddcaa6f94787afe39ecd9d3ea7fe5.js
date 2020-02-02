@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7eb919568ef5fbddb15dd9203fee813",
+    "revision": "f6ed39159593205ff8219d0758b83d55",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "ff78bb9236cc02de5126",
-    "url": "/Craft-and-Mix/static/css/main.9ec92563.chunk.css"
+    "revision": "57c788d24ce74a786446",
+    "url": "/Craft-and-Mix/static/css/main.f6f19c31.chunk.css"
   },
   {
     "revision": "f95e71fd8a6ad70a0820",
     "url": "/Craft-and-Mix/static/js/2.83079577.chunk.js"
   },
   {
-    "revision": "ff78bb9236cc02de5126",
-    "url": "/Craft-and-Mix/static/js/main.b2ed052a.chunk.js"
+    "revision": "57c788d24ce74a786446",
+    "url": "/Craft-and-Mix/static/js/main.d2e74f48.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -168,8 +168,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/m&h.a138f2a8.png"
   },
   {
-    "revision": "452b391106d79d297745be700d7c0d62",
-    "url": "/Craft-and-Mix/static/media/menu-icon.452b3911.png"
+    "revision": "86e51795febe7e3c6bb0941b72bd94ca",
+    "url": "/Craft-and-Mix/static/media/menu-icon.86e51795.png"
   },
   {
     "revision": "f14fbfeff262432d52783e4a7d1a88e4",
