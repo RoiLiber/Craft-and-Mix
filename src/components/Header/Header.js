@@ -127,7 +127,7 @@ class Header extends Component {
                                 to={item.elementName}
                                 spy={true}
                                 smooth={true}
-                                offset={small ? -10 : -60}
+                                offset={small ? -20 : -60}
                                 duration={900}
                                 onClick={() => this.clickedSection(index)}
                                 onSetActive={() => {}}

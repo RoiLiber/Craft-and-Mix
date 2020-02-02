@@ -15,9 +15,20 @@ import './style.scss';
 class TopLayout extends Component {
 
     parallax = photo => {
-        return <Parallax className="parallax" y={[-30, 30]} tagOuter="figure">
-            <img src={photo} alt={'backPhoto'}/>
-        </Parallax>
+        return <div className={'photo'}>
+            <Parallax className="parallax" y={[-30, 30]} tagOuter="figure">
+                <img src={photo} alt={'backPhoto'}/>
+            </Parallax>
+        </div>
+    };
+
+    parallaxBackground = photo => {
+        return <div className={'mood_parallax_wrapper'}>
+            <Parallax className="parallax_wrapper" y={[-30, 30]} tagOuter="figure">
+                <img src={photo} alt={'backPhoto'}/>
+            </Parallax>
+            <Mood/>
+        </div>
     };
 
     render() {
@@ -32,15 +43,11 @@ class TopLayout extends Component {
                         {carouselExit ? <div className={'clear_carousel'}/> : <TopCarousel topCarousel={topCarousel}/>}
                     </Parallax>
                     <OurServices/>
-                    <div className={'photo'}>
-                        {this.parallax(backPhoto)}
-                    </div>
-                    <Mood/>
+                    {this.parallax(backPhoto)}
+                    {this.parallaxBackground(backPhoto)}
                     <div className={'clear'}/>
                     <Clients clients={clients}/>
-                    <div className={'photo'}>
-                        {this.parallax(backPhoto)}
-                    </div>
+                    {this.parallax(backPhoto)}
                     {centerPhotoItem && <Slide bottom duretion={500}>
                         <div className={'pop_up_wrapper'} onClick={() => setPhoto(false)}>
                             <PopUpImg photoObj={centerPhotoItem}/>

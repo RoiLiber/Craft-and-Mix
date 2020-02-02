@@ -10,19 +10,6 @@ div.top_layout {
     position: relative;
     top: 10vh;
 
-    & > div.white_cover {
-        width: 100%;
-        background-color: $primary-white;
-        z-index: 500;
-        display: flex;
-        flex-wrap: wrap;
-        height: 75vh;
-        @include respond-to('large') {
-            flex-wrap: nowrap;
-            height: 80vh;
-        }
-    }
-
     & > .parallax_carousel {
         width: 100%;
         background-color: $primary-white;
@@ -71,6 +58,18 @@ div.top_layout {
                     z-index: 100;
                 }
             }
+        }
+    }
+    & > div.mood_parallax_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+
+        & > .parallax_wrapper {
+            width: 100%;
+            position: absolute;
+            min-height: 65vh;
         }
     }
     & > div.pop_up_wrapper {

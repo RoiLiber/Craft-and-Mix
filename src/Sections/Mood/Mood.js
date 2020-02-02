@@ -30,7 +30,7 @@ class Mood extends Component {
         const { mood, large } = this.props;
 
         return (
-            <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'} addHeart>
+            <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'}>
                 <div className={'mood_section'}>
                     <p>Some mood Photos from our Events</p>
                     {mood.map((item, index) => {

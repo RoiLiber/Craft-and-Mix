@@ -6,7 +6,7 @@ import './style.scss';
 class SectionHeadLine extends Component {
 
     render() {
-        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, addHeart, addHeartTop, small } = this.props;
+        const { text, textColor, color, elementName, backgroundColorGold, toggleMenu, small } = this.props;
 
         return (
             <Link
@@ -15,7 +15,7 @@ class SectionHeadLine extends Component {
                 to={elementName}
                 spy={true}
                 smooth={true}
-                offset={small ? -10 : -60}
+                offset={small ? -20 : -60}
                 duration={900}
                 onClick={toggleMenu ? () => toggleMenu() : null}
                 onSetActive={() => {}}
@@ -26,9 +26,9 @@ class SectionHeadLine extends Component {
                         <p className={textColor}>{text}</p>
                         <span className={color}/>
                     </div>
-                    {(addHeart && !addHeartTop) && <i className="far fa-heart"/>}
+                    <i className="far fa-heart"/>
                     <div className={'arrow_down'}>
-                        {addHeartTop ? <i className="far fa-heart"/> : <i className={`fas fa-angle-down ${color}`}/>}
+                        <i className={`fas fa-angle-down ${color}`}/>
                     </div>
                 </div>
             </Link>
