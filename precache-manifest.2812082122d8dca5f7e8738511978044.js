@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c337f92b1e7a60625f970b7bda24e7e4",
+    "revision": "026d6cf1528a7e80b9d0cbb850490f85",
     "url": "/Craft-and-Mix/index.html"
   },
   {
-    "revision": "9a0e8a8c9390e75217de",
-    "url": "/Craft-and-Mix/static/css/main.0366443d.chunk.css"
+    "revision": "f6574cf4ede647041fd8",
+    "url": "/Craft-and-Mix/static/css/main.f0c1bbd6.chunk.css"
   },
   {
-    "revision": "bbd4e12a6f84a9eb8659",
-    "url": "/Craft-and-Mix/static/js/2.d86ac2d6.chunk.js"
+    "revision": "6dc0d27bc75359a5261a",
+    "url": "/Craft-and-Mix/static/js/2.d57b8f0b.chunk.js"
   },
   {
-    "revision": "9a0e8a8c9390e75217de",
-    "url": "/Craft-and-Mix/static/js/main.f9f12c7b.chunk.js"
+    "revision": "f6574cf4ede647041fd8",
+    "url": "/Craft-and-Mix/static/js/main.12bcc1ba.chunk.js"
   },
   {
     "revision": "63fc250a2c7e822c53ba",
@@ -40,10 +40,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Craft-and-Mix/static/media/Crift&Mix-pattern.c9b7da16.png"
   },
   {
-    "revision": "ad2ae668d9802f0956d3754a43f2933b",
-    "url": "/Craft-and-Mix/static/media/Crift&Mix_W.ad2ae668.svg"
-  },
-  {
     "revision": "5234f9444bbb6eac6bfed8bd925157c7",
     "url": "/Craft-and-Mix/static/media/Mode.5234f944.jpeg"
   },
@@ -62,14 +58,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "52c67e2e2b2f7e9355c56046ed73ba78",
     "url": "/Craft-and-Mix/static/media/audi-logo.52c67e2e.png"
-  },
-  {
-    "revision": "052769340f1a3fadbfe1a8e143e8d99d",
-    "url": "/Craft-and-Mix/static/media/backPhoto1.05276934.jpeg"
-  },
-  {
-    "revision": "23f830a343cc739affd547f938f2041e",
-    "url": "/Craft-and-Mix/static/media/backPhoto2.23f830a3.jpeg"
   },
   {
     "revision": "f92c8d1d3af7fce6956a71762d570fd5",
