@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logo from '../../assets/icon/Crift&Mix-black logo.svg';
-import logoWhite from '../../assets/icon/Crift&Mix_W.svg';
 import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
 import { setPhoto } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
@@ -59,7 +58,7 @@ class Header extends Component {
                         : '';
 
         !clickedSection && this.setState({ selectedSection });
-        if (windowScrollY > (windowHeight - height10vh * 2) && (!large && !larger)) {
+        if (windowScrollY > (windowHeight - height10vh * 2.5) && (!large && !larger)) {
             this.setState({ shrinkHeader: true });
         } else {
             this.setState({ shrinkHeader: false });
@@ -110,9 +109,9 @@ class Header extends Component {
         const { menuList, large, larger, small, openMenu } = this.props;
 
         return (
-            <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : openMenu ? 'header background': 'header'}>
+            <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
                 <div className={'header_logo'}>
-                    <img src={shrinkHeader ? logoOneLine : large || openMenu ? logo : logoWhite} alt={'logo'}/>
+                    <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                 </div>
                 <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`} onClick={large ? null : () => this.toggleMenu()}>
                     {large || larger

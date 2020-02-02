@@ -6,8 +6,7 @@ import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import { setPhoto } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
-import backPhoto1 from '../../assets/img/background/backPhoto1.jpeg';
-import backPhoto2 from '../../assets/img/background/backPhoto2.jpeg';
+import backPhoto from '../../assets/img/background/Crift&Mix-pattern.png';
 import PopUpImg from "../../components/PopUpPhoto";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { Slide } from "react-reveal";
@@ -22,23 +21,25 @@ class TopLayout extends Component {
     };
 
     render() {
-        const { centerPhotoItem, setPhoto, clients, topCarousel } = this.props;
+        const { centerPhotoItem, setPhoto, clients, topCarousel, windowHeight, small, medium, windowScrollY } = this.props;
+        let height10vh = windowHeight / 10;
+        let carouselExit = windowScrollY > (windowHeight - height10vh * 2.5) && (small || medium);
 
         return (
             <ParallaxProvider>
                 <div className="top_layout">
                     <Parallax className="parallax_carousel" y={[-60, 60]} tagOuter="figure">
-                        <TopCarousel topCarousel={topCarousel}/>
+                        {carouselExit ? <div className={'clear_carousel'}/> : <TopCarousel topCarousel={topCarousel}/>}
                     </Parallax>
                     <OurServices/>
                     <div className={'photo'}>
-                        {this.parallax(backPhoto1)}
+                        {this.parallax(backPhoto)}
                     </div>
                     <Mood/>
                     <div className={'clear'}/>
                     <Clients clients={clients}/>
                     <div className={'photo'}>
-                        {this.parallax(backPhoto2)}
+                        {this.parallax(backPhoto)}
                     </div>
                     {centerPhotoItem && <Slide bottom duretion={500}>
                         <div className={'pop_up_wrapper'} onClick={() => setPhoto(false)}>
@@ -53,7 +54,8 @@ class TopLayout extends Component {
 }
 
 const mapStateToProps = state => {
-    const { windowScrollY, windowHeight, centerPhotoItem, topCarousel, clients, small } = state.mainReducer;
+    const { windowScrollY, windowHeight, centerPhotoItem, topCarousel, clients, windowWidthSize } = state.mainReducer;
+    const { small, medium } = windowWidthSize;
 
     return {
         windowScrollY,
@@ -61,7 +63,8 @@ const mapStateToProps = state => {
         centerPhotoItem,
         topCarousel,
         clients,
-        small
+        small,
+        medium
     };
 };
 

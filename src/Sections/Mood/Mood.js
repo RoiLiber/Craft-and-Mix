@@ -14,14 +14,14 @@ class Mood extends Component {
     };
 
     delay = () => {
-        return random(5000, 35000);
+        // return random(5000, 35000);
     };
 
-    carousel = (carousel, eventName) => {
+    carousel = (carousel, eventName, i) => {
         return <Carousel
             carouselArray={carousel}
             popUp={this.popUp}
-            delay={this.delay()}
+            delay={5500 + i * 150}
             eventName={eventName}
         />
     };
@@ -50,7 +50,7 @@ class Mood extends Component {
                         return <div key={index} className={'carousels_wrapper'}>
                             {numberOfCarousels.map((carousel, i) => {
                                 return <div key={i} className={'carousel_wrapper'}>
-                                    {this.carousel(carousel, eventName)}
+                                    {this.carousel(carousel, eventName, i)}
                                 </div>
                             })}
                         </div>

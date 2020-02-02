@@ -5,7 +5,7 @@ div.element {
   width: 100%;
   position: relative;
 
-  .section_Wrapper {
+  & > div.section_Wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

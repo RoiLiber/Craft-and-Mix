@@ -83,8 +83,8 @@ class TopCarousel extends Component {
             } else if (goldTextForCraft) {
                 return <p key={index}><span>{newText[0]}</span>{newText[1]}</p>
             } else if (goldLogo) {
-                return <Fragment>
-                        <div className="box" key={index}>
+                return <Fragment key={index}>
+                        <div className="box">
                             <img key={index} src={logo} alt={item} className={'hourglass'}/>
                         </div>
                         <p>Cocktail bar service</p>
@@ -113,8 +113,8 @@ class TopCarousel extends Component {
         const nextText = carouselNextItem.text;
         const nextBackgroundColor = carouselNextItem.backgroundColor;
         const selected = isEven
-            ? selectedCarouselItem === 1 || selectedCarouselItem === 3
-            : selectedCarouselItem === 0 || selectedCarouselItem === 2;
+            ? selectedCarouselItem === 0 || selectedCarouselItem === 2
+            : selectedCarouselItem === 1 || selectedCarouselItem === 3;
 
         return <div className={`carousel_wrapper`} onClick={() => this.forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>
