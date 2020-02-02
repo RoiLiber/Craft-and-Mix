@@ -85,7 +85,7 @@ class TopCarousel extends Component {
             } else if (goldLogo) {
                 return <Fragment key={index}>
                         <div className="box">
-                            <img key={index} src={logo} alt={item} className={'hourglass'}/>
+                            <img src={logo} alt={item} className={'hourglass'}/>
                         </div>
                         <p>Cocktail bar service</p>
                         <p>and much more</p>

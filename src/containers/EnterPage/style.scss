@@ -1,0 +1,78 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.enter_page_wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-black;
+    color: $primary-white;
+    text-align: center;
+
+    & > div.enter_page {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 50vh;
+
+        & > div.enter_page_logo_img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        & > div.enter_page_spin_logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            & > div.logo_box {
+                display: flex;
+                transition: all 0.2s ease;
+                align-items: center;
+                border-radius: 50%;
+                border: 3px solid $primary-white;
+                margin: 10px;
+                @include respond-to('large') {
+                    margin: 25px;
+                }
+
+                & > .hourglass {
+                    position: relative;
+                    height: 85px;
+                    width: 85px;
+                    padding: 15px;
+                    -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    -webkit-animation: hourglass 3s ease-in-out infinite;
+                    animation: hourglass 3s ease-in-out infinite;
+                    @include respond-to('large') {
+                        height: 120px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+
+        & > p {
+            margin: 5px;
+            width: 100%;
+            & > span {
+                color: $primary-black;
+            }
+        }
+    }
+}
+@-webkit-keyframes hourglass{
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes hourglass{
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
