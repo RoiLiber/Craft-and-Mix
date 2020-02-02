@@ -11,12 +11,12 @@ div.pop_up_wrapper {
     position: relative;
     height: 55vh;
     width: 90%;
+    top: 5vh;
     @include respond-to('medium') {
       height: 70vh;
     }
     @include respond-to('large') {
       width: 80%;
-      top: 5vh;
     }
 
     & > img {
@@ -34,9 +34,7 @@ div.pop_up_wrapper {
     color: $primary-white;
     padding: 10px;
     position: relative;
-    @include respond-to('large') {
-      top: 5vh;
-    }
+    top: 5vh;
     @include respond-to('large') {
       width: 80%;
     }
