@@ -16,10 +16,8 @@ class Section extends Component {
                         textColor={textColor}
                         color={color}
                         elementName={elementName}
-                        addHeart
                     />
                     }
-
                     {children}
                 </div>
             </Element>

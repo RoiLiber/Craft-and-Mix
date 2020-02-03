@@ -15,11 +15,12 @@ div.pop_photos_wrapper {
     height: 55vh;
     width: 100%;
     @include respond-to('medium') {
-      height: 60vh;
-      width: 90%;
+      height: 55vh;
+      width: 80%;
     }
     @include respond-to('large') {
-      width: 80%;
+      height: 60vh;
+      width: 75%;
     }
 
     & > img {
@@ -37,10 +38,10 @@ div.pop_photos_wrapper {
     padding: 10px 0 10px 10px;
     margin-bottom: 7vh;
     @include respond-to('medium') {
-      width: 90%;
+      width: 80%;
     }
     @include respond-to('large') {
-      width: 80%;
+      width: 75%;
     }
     & > div.pop_up_text {
       width: 100%;

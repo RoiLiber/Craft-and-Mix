@@ -94,10 +94,10 @@ div.top_layout {
         height: 98vh;
         position: fixed;
         overflow: hidden;
-        padding-top: 22vh;
+        padding-top: 20vh;
         bottom: 0;
         z-index: 1100;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             padding-top: 15vh;
         }
     }

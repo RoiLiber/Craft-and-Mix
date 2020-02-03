@@ -4,13 +4,11 @@
 
 * {
   box-sizing: border-box;
-  //transition: 0.3s ease-in-out;
 }
 
-.App {
+div.App {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  //background-color: $primary-white;
   font-family: Caviar Dreams;
 }

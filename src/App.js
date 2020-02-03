@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { Fade } from 'react-reveal';
 import Header from "./components/Header";
 import TopLayout from "./containers/TopLayout";
 import EnterPage from "./containers/EnterPage";
-import { Fade } from 'react-reveal';
+import ScrollLock from 'react-scrolllock';
 import './reset.scss';
 import './App.scss';
+
+
 
 class App extends Component {
 
@@ -22,10 +26,12 @@ class App extends Component {
     }
 
     render() {
+        const { openMenu, centerPhotoItem } = this.props;
         const { enterPage } = this.state;
         return (
-            <div className="App">
+            <div className={'App'}>
                 <EnterPage/>
+                <ScrollLock isActive={openMenu || centerPhotoItem}/>
                 {!enterPage && <Fade bottom>
                     <div>
                         <Header/>
@@ -36,5 +42,13 @@ class App extends Component {
         )
     }
 }
+const mapStateToProps = state => {
+    const { openMenu, centerPhotoItem } = state.mainReducer;
 
-export default App;
+    return {
+        openMenu,
+        centerPhotoItem
+    };
+};
+
+export default connect(mapStateToProps)(App);

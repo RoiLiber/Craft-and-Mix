@@ -38,6 +38,7 @@ div.header {
         }
     }
     & > div.menu_button {
+        outline: none;
         font-size: 25px;
         color: $primary-gold;
         position: absolute;
