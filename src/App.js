@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Header from "./components/Header";
 import TopLayout from "./containers/TopLayout";
 import EnterPage from "./containers/EnterPage";
@@ -26,7 +26,7 @@ class App extends Component {
         return (
             <div className="App">
                 <EnterPage/>
-                {!enterPage && <Fade bottom duration={1500}>
+                {!enterPage && <Fade bottom>
                     <div>
                         <Header/>
                         <TopLayout/>

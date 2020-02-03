@@ -4,12 +4,12 @@ import Footer from "../../sections/ContactUs";
 import OurServices from "../../sections/OurServices";
 import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
-import { setPhoto } from '../../store/actions/mainActions';
+import { setPhotos } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
 import backPhoto from '../../assets/img/background/Crift&Mix-pattern.png';
 import PopUpImg from "../../components/PopUpPhoto";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { Slide } from "react-reveal";
+import { Slide, Fade } from "react-reveal";
 import './style.scss';
 
 class TopLayout extends Component {
@@ -32,9 +32,9 @@ class TopLayout extends Component {
     };
 
     render() {
-        const { centerPhotoItem, setPhoto, clients, topCarousel, windowHeight, small, medium, windowScrollY } = this.props;
+        const { centerPhotoItem, setPhotos, clients, topCarousel, windowHeight, large, windowScrollY } = this.props;
         let height10vh = windowHeight / 10;
-        let carouselExit = windowScrollY > (windowHeight - height10vh * 2.5) && (small || medium);
+        let carouselExit = windowScrollY > (windowHeight - height10vh * 2.5) && (!large);
 
         return (
             <ParallaxProvider>
@@ -49,8 +49,8 @@ class TopLayout extends Component {
                     <Clients clients={clients}/>
                     {this.parallax(backPhoto)}
                     {centerPhotoItem && <Slide bottom duretion={500}>
-                        <div className={'pop_up_wrapper'} onClick={() => setPhoto(false)}>
-                            <PopUpImg photoObj={centerPhotoItem}/>
+                        <div className={'pop_up_wrapper'} onClick={() => setPhotos(false)}>
+                            <PopUpImg photosObj={centerPhotoItem}/>
                         </div>
                     </Slide>}
                     <Footer/>
@@ -62,7 +62,7 @@ class TopLayout extends Component {
 
 const mapStateToProps = state => {
     const { windowScrollY, windowHeight, centerPhotoItem, topCarousel, clients, windowWidthSize } = state.mainReducer;
-    const { small, medium } = windowWidthSize;
+    const { large } = windowWidthSize;
 
     return {
         windowScrollY,
@@ -70,14 +70,13 @@ const mapStateToProps = state => {
         centerPhotoItem,
         topCarousel,
         clients,
-        small,
-        medium
+        large
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        setPhoto: photoObj => dispatch(setPhoto(photoObj)),
+        setPhotos: photoObj => dispatch(setPhotos(photoObj)),
     }
 };
 

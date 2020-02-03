@@ -5,58 +5,37 @@ import ourServices from "../../assets/img/carousel/Our Services.jpeg";
 import ourMood from "../../assets/img/carousel/Mode.jpeg";
 import onTheMenu from "../../assets/img/carousel/On the Menu.jpeg";
 
-//=====MOOD=====================================================
-import roof1 from "../../assets/img/event-roof/img1.jpeg";
-import roof2 from "../../assets/img/event-roof/img2.jpeg";
-import roof3 from "../../assets/img/event-roof/img3.jpeg";
-import roof4 from "../../assets/img/event-roof/img4.jpeg";
-import roof5 from "../../assets/img/event-roof/img5.jpeg";
-import roof6 from "../../assets/img/event-roof/img6.jpeg";
-import roof7 from "../../assets/img/event-roof/img7.jpeg";
-import roof8 from "../../assets/img/event-roof/img8.jpeg";
-import roof9 from "../../assets/img/event-roof/img9.jpeg";
-import roof10 from "../../assets/img/event-roof/img10.jpeg";
-import roof11 from "../../assets/img/event-roof/img11.jpeg";
-import roof12 from "../../assets/img/event-roof/img12.jpeg";
-//===============================================================
-import google1 from "../../assets/img/event-roof/img1.jpeg";
-import google2 from "../../assets/img/event-google/img2.jpeg";
-import google3 from "../../assets/img/event-google/img3.jpeg";
-import google4 from "../../assets/img/event-google/img4.jpeg";
-import google5 from "../../assets/img/event-google/img5.jpeg";
-import google6 from "../../assets/img/event-google/img6.jpeg";
-import google7 from "../../assets/img/event-google/img7.jpeg";
-import google8 from "../../assets/img/event-google/img8.jpeg";
-import google9 from "../../assets/img/event-google/img9.jpeg";
-import google10 from "../../assets/img/event-google/img10.jpeg";
-import google11 from "../../assets/img/event-google/img11.jpeg";
-import google12 from "../../assets/img/event-google/img12.jpeg";
-//===============================================================
-import milk1 from "../../assets/img/event-milk/img1.jpeg";
-import milk2 from "../../assets/img/event-milk/img2.jpeg";
-import milk3 from "../../assets/img/event-milk/img3.jpeg";
-import milk4 from "../../assets/img/event-milk/img4.jpeg";
-import milk5 from "../../assets/img/event-milk/img5.jpeg";
-import milk6 from "../../assets/img/event-milk/img6.jpeg";
-import milk7 from "../../assets/img/event-milk/img7.jpeg";
-import milk8 from "../../assets/img/event-milk/img8.jpeg";
-import milk9 from "../../assets/img/event-milk/img9.jpeg";
-import milk10 from "../../assets/img/event-milk/img10.jpeg";
-import milk11 from "../../assets/img/event-milk/img11.jpeg";
-import milk12 from "../../assets/img/event-milk/img12.jpeg";
-//===============================================================
-import newYearsEve1 from "../../assets/img/event-milk/img1.jpeg";
-import newYearsEve2 from "../../assets/img/event-milk/img2.jpeg";
-import newYearsEve3 from "../../assets/img/event-milk/img3.jpeg";
-import newYearsEve4 from "../../assets/img/event-milk/img4.jpeg";
-import newYearsEve5 from "../../assets/img/event-milk/img5.jpeg";
-import newYearsEve6 from "../../assets/img/event-milk/img6.jpeg";
-import newYearsEve7 from "../../assets/img/event-milk/img7.jpeg";
-import newYearsEve8 from "../../assets/img/event-milk/img8.jpeg";
-import newYearsEve9 from "../../assets/img/event-milk/img9.jpeg";
-import newYearsEve10 from "../../assets/img/event-milk/img10.jpeg";
-import newYearsEve11 from "../../assets/img/event-milk/img11.jpeg";
-import newYearsEve12 from "../../assets/img/event-milk/img12.jpeg";
+//==== MOOD PHOTOS ============================================
+import photo1 from '../../assets/img/all photos/photo1.jpeg';
+import photo2 from '../../assets/img/all photos/photo2.jpeg';
+import photo3 from '../../assets/img/all photos/photo3.jpeg';
+import photo4 from '../../assets/img/all photos/photo4.jpeg';
+import photo5 from '../../assets/img/all photos/photo5.jpeg';
+import photo6 from '../../assets/img/all photos/photo6.jpeg';
+import photo7 from '../../assets/img/all photos/photo7.jpeg';
+import photo8 from '../../assets/img/all photos/photo8.jpeg';
+import photo9 from '../../assets/img/all photos/photo9.jpeg';
+import photo10 from '../../assets/img/all photos/photo10.jpeg';
+import photo11 from '../../assets/img/all photos/photo11.jpeg';
+import photo12 from '../../assets/img/all photos/photo12.jpeg';
+import photo13 from '../../assets/img/all photos/photo13.jpeg';
+import photo14 from '../../assets/img/all photos/photo14.jpeg';
+import photo15 from '../../assets/img/all photos/photo15.jpeg';
+import photo16 from '../../assets/img/all photos/photo16.jpeg';
+import photo17 from '../../assets/img/all photos/photo17.jpeg';
+import photo18 from '../../assets/img/all photos/photo18.jpeg';
+import photo19 from '../../assets/img/all photos/photo19.jpeg';
+import photo20 from '../../assets/img/all photos/photo20.jpeg';
+import photo21 from '../../assets/img/all photos/photo21.jpeg';
+import photo22 from '../../assets/img/all photos/photo22.jpeg';
+import photo23 from '../../assets/img/all photos/photo23.jpeg';
+import photo24 from '../../assets/img/all photos/photo24.jpeg';
+import photo25 from '../../assets/img/all photos/photo25.jpeg';
+import photo26 from '../../assets/img/all photos/photo26.jpeg';
+import photo27 from '../../assets/img/all photos/photo27.jpeg';
+import photo28 from '../../assets/img/all photos/photo28.jpeg';
+import photo29 from '../../assets/img/all photos/photo29.jpeg';
+import photo30 from '../../assets/img/all photos/photo30.jpeg';
 
 //==== CLIENTS ================================================
 import louisVuitton from '../../assets/icon/louisVuitton.png';
@@ -93,80 +72,100 @@ export const topCarousel = [
     { text: logo, img: onTheMenu, backgroundColor: 'black' }
 ];
 
-export const mood = [
-    { eventName: 'Event: On the Roof',
+export const moodPhotos = [
+    { location: 'Purim holiday fun',
         photos: [
-            { text: 'On the Roof1', img: roof1 },
-            { text: 'On the Roof2', img: roof2 },
-            { text: 'On the Roof3', img: roof3 },
-            { text: 'On the Roof4', img: roof4 },
-            { text: 'On the Roof5', img: roof5 },
-            { text: 'On the Roof6', img: roof6 },
-            { text: 'On the Roof7', img: roof7 },
-            { text: 'On the Roof8', img: roof8 },
-            { text: 'On the Roof9', img: roof9 },
-            { text: 'On the Roof10', img: roof10 },
-            { text: 'On the Roof11', img: roof11 },
-            { text: 'On the Roof12', img: roof12 }
+            { text: 'On the Roof1', img: photo1 },
+            { text: 'On the Roof2', img: photo2 },
         ]
     },
-    { eventName: 'Event: Google',
+    { location: 'We believe only in 1st. Mezcal compassion',
         photos: [
-            { text: 'Google1', img: google1 },
-            { text: 'Google2', img: google2 },
-            { text: 'Google3', img: google3 },
-            { text: 'Google4', img: google4 },
-            { text: 'Google5', img: google5 },
-            { text: 'Google6', img: google6 },
-            { text: 'Google7', img: google7 },
-            { text: 'Google8', img: google8 },
-            { text: 'Google9', img: google9 },
-            { text: 'Google10', img: google10 },
-            { text: 'Google11', img: google11 },
-            { text: 'Google12', img: google12 }
+            { text: 'On the Roof1', img: photo3 },
+            { text: 'On the Roof2', img: photo4 },
+            { text: 'On the Roof1', img: photo5 },
+            { text: 'On the Roof2', img: photo6 },
         ]
     },
-    { eventName: 'Event: Milk & Honey',
+    { location: 'Google event',
         photos: [
-            { text: 'Milk & Honey 1', img: milk1 },
-            { text: 'Milk & Honey 2', img: milk2 },
-            { text: 'Milk & Honey 3', img: milk3 },
-            { text: 'Milk & Honey 4', img: milk4 },
-            { text: 'Milk & Honey 5', img: milk5 },
-            { text: 'Milk & Honey 6', img: milk6 },
-            { text: 'Milk & Honey 7', img: milk7 },
-            { text: 'Milk & Honey 8', img: milk8 },
-            { text: 'Milk & Honey 9', img: milk9 },
-            { text: 'Milk & Honey 10', img: milk10 },
-            { text: 'Milk & Honey 11', img: milk11 },
-            { text: 'Milk & Honey 12', img: milk12 }
+            { text: 'On the Roof1', img: photo7 },
+            { text: 'On the Roof2', img: photo8 },
         ]
     },
-    { eventName: 'Event: New Years Eve',
+    { location: 'Code & Cocktails. Cyber company event',
         photos: [
-            { text: 'New Years Eve 1', img: newYearsEve1 },
-            { text: 'New Years Eve 2', img: newYearsEve2 },
-            { text: 'New Years Eve 3', img: newYearsEve3 },
-            { text: 'New Years Eve 4', img: newYearsEve4 },
-            { text: 'New Years Eve 5', img: newYearsEve5 },
-            { text: 'New Years Eve 6', img: newYearsEve6 },
-            { text: 'New Years Eve 7', img: newYearsEve7 },
-            { text: 'New Years Eve 8', img: newYearsEve8 },
-            { text: 'New Years Eve 9', img: newYearsEve9 },
-            { text: 'New Years Eve 10', img: newYearsEve10 },
-            { text: 'New Years Eve 11', img: newYearsEve11 },
-            { text: 'New Years Eve 12', img: newYearsEve12 }
+            { text: 'On the Roof1', img: photo9 },
+            { text: 'On the Roof2', img: photo10 },
+            { text: 'On the Roof2', img: photo11 },
+        ]
+    },
+    { location: 'King David hotel. Fun at a family event',
+        photos: [
+            { text: 'On the Roof1', img: photo12 },
+            { text: 'On the Roof2', img: photo13 },
+        ]
+    },
+    { location: 'On the roof top at noon, Rothschild boulevard 1',
+        photos: [
+            { text: 'On the Roof1', img: photo15 },
+            { text: 'On the Roof2', img: photo16 },
+        ]
+    },
+    { location: 'On the roof top at night, Rothschild boulevard 1',
+        photos: [
+            { text: 'On the Roof1', img: photo21 },
+            { text: 'On the Roof2', img: photo25 },
+        ]
+    },
+    { location: 'On the roof top',
+        photos: [
+            { text: 'On the Roof1', img: photo14 },
+        ]
+    },
+    { location: 'On the roof top. Business event at Rothschild boulevard 1',
+        photos: [
+            { text: 'On the Roof2', img: photo23 },
+            { text: 'On the Roof2', img: photo23 },
+            { text: 'On the Roof2', img: photo23 },
+            { text: 'On the Roof2', img: photo23 },
+            { text: 'On the Roof2', img: photo23 },
+            { text: 'On the Roof2', img: photo23 },
+
+        ]
+    },
+    { location: 'We love making good shit like...',
+        photos: [
+            { text: 'On the Roof2', img: photo22 },
+        ]
+    },
+    { location: 'New years eve by Grey Goose',
+        photos: [
+            { text: 'On the Roof1', img: photo17 },
+            { text: 'On the Roof2', img: photo18 },
+            { text: 'On the Roof1', img: photo19 },
+            { text: 'On the Roof2', img: photo20 },
+        ]
+    },
+    { location: 'Event: Yafo, Anglo & Nina',
+        photos: [
+            { text: 'On the Roof1', img: photo24 },
+            { text: 'On the Roof1', img: photo26 },
+            { text: 'On the Roof2', img: photo27 },
+            { text: 'On the Roof2', img: photo28 },
+            { text: 'On the Roof2', img: photo29 },
+            { text: 'On the Roof2', img: photo30 },
         ]
     },
 ];
 
 export const clients = [
-    { name: 'louisVuitton', logo: louisVuitton, delay: 200 },
-    { name: 'morris', logo: morris, delay: 300 },
-    { name: 'goose', logo: goose, delay: 400 },
-    { name: 'milk', logo: milk, delay: 500 },
-    { name: 'audi', logo: audi, delay: 600 },
-    { name: 'alfa', logo: alfa, delay: 700 },
-    { name: 'mobileye', logo: mobileye, delay: 800 },
-    { name: 'google', logo: google, delay: 900 },
+    { name: 'louisVuitton', logo: louisVuitton, delay: 100 },
+    { name: 'morris', logo: morris, delay: 200 },
+    { name: 'goose', logo: goose, delay: 300 },
+    { name: 'milk', logo: milk, delay: 400 },
+    { name: 'audi', logo: audi, delay: 500 },
+    { name: 'alfa', logo: alfa, delay: 600 },
+    { name: 'mobileye', logo: mobileye, delay: 700 },
+    { name: 'google', logo: google, delay: 800 },
 ];

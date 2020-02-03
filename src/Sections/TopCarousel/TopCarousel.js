@@ -3,6 +3,7 @@ import { findIndex, split, includes } from 'lodash';
 import { Slide } from "react-reveal";
 import logo from '../../assets/icon/Crift & Mix_logo icon.svg';
 import './style.scss';
+import SpinLogo from "../../components/UI/SpinLogo";
 
 class TopCarousel extends Component {
 
@@ -19,7 +20,9 @@ class TopCarousel extends Component {
     }
 
     componentDidMount() {
-        this.toggleCarousel(true)
+        setTimeout(() => {
+            this.toggleCarousel(true)
+        }, 5000)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -83,13 +86,7 @@ class TopCarousel extends Component {
             } else if (goldTextForCraft) {
                 return <p key={index}><span>{newText[0]}</span>{newText[1]}</p>
             } else if (goldLogo) {
-                return <Fragment key={index}>
-                        <div className="box">
-                            <img src={logo} alt={`logo${index}`} className={'hourglass'}/>
-                        </div>
-                        <p>Cocktail bar service</p>
-                        <p>and much more</p>
-                </Fragment>
+                return <SpinLogo key={index}/>
             } else {
                 return <p key={index}>{item}</p>
             }
@@ -119,7 +116,7 @@ class TopCarousel extends Component {
         return <div className={`carousel_wrapper`} onClick={() => this.forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>
                 {selected
-                    ?   <img src={img} alt={text}/>
+                    ?   <img src={img} alt={'photo'}/>
                     :   <div>{this.textBreak(text)}</div>}
             </div>
             {activeCarousel && <Slide
@@ -129,7 +126,7 @@ class TopCarousel extends Component {
             >
                 <div className={`carousel_background ${nextBackgroundColor}`}>
                     {activeCarousel && !selected
-                        ?   <img src={nextImg} alt={nextText} className={'carousel_img'}/>
+                        ?   <img src={nextImg} alt={'photo'} className={'carousel_img'}/>
                         :   <div className={`carousel_img ${nextBackgroundColor}`}>{this.textBreak(nextText)}</div>}
                 </div>
 

@@ -36,7 +36,7 @@ export const setWindowHeight = windowHeight => {
     }
 };
 
-export const setPhoto = photo => {
+export const setPhotos = photo => {
     return (dispatch) => {
         dispatch({
             type: actionTypes.SET_PHOTO_AT_CENTER,

@@ -1,27 +1,27 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Slide, Zoom } from "react-reveal";
 import './style.scss';
 
 export default function Footer(props) {
-    const { photoObj } = props;
+    const { photosObj } = props;
 
-    return (
-        <Fragment>
-            <Slide bottom duretion={500}>
+    return <div className={'pop_photos_wrapper'}>
+        {photosObj.photos.map((photo, index) => {
+            return <Slide bottom duretion={500}>
                 <div className={'photo'}>
-                    <img src={photoObj.img} alt={photoObj.text}/>
+                    <img src={photo.img} alt={`photo${index}`}/>
                 </div>
                 <div className={`pop_up_text_wrapper`}>
                     <div className={`pop_up_text`}>
                         <div>
                             <i className="fas fa-map-marker-alt"/>
-                            <p>{photoObj.event}</p>
+                            <p>{photosObj.location}</p>
                         </div>
-                        <Zoom deley={200}><span>{photoObj.text}</span></Zoom>
+                        <Zoom deley={200}><span>{photo.text}</span></Zoom>
                     </div>
                     <span className={'close_pop_up'}><i className="far fa-times-circle"/></span>
                 </div>
             </Slide>
-        </Fragment>
-    );
+        })}
+    </div>
 }

@@ -22,7 +22,8 @@ const initialState = {
     openMenu: false,
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
-    mood: configs.mood,
+    mood: [],
+    moodPhotos: configs.moodPhotos,
     centerPhotoItem: false,
     clients: configs.clients
 };
