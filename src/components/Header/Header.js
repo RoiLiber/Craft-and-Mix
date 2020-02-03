@@ -35,8 +35,10 @@ class Header extends Component {
     }
 
     reportWindowSize = () => {
+        const { large, openMenu } = this.props;
         const { setWindowWidth, setWindowHeight } = this.props;
 
+        large && openMenu && this.toggleMenu();
         setWindowWidth(window.innerWidth);
         setWindowHeight(window.innerHeight)
     };

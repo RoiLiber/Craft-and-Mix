@@ -12,14 +12,12 @@ div.header {
     width: 100%;
     height: 10vh;
     color: $primary-black;
-    //background-color: rgba($primary-white, 0.55);
     background-color: $primary-white;
     z-index: 999;
     transition: 0.3s ease-in-out;
     @include respond-to('large') {
         flex-wrap: nowrap;
         padding: 0 20px;
-        //background-color: $primary-white;
     }
     & > div.header_logo {
         display: flex;
@@ -38,7 +36,6 @@ div.header {
         }
     }
     & > div.menu_button {
-        outline: none;
         font-size: 25px;
         color: $primary-gold;
         position: absolute;

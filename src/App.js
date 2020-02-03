@@ -8,8 +8,6 @@ import ScrollLock from 'react-scrolllock';
 import './reset.scss';
 import './App.scss';
 
-
-
 class App extends Component {
 
     constructor(props) {

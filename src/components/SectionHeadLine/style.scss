@@ -5,6 +5,7 @@ a.element_link {
   width: 100%;
   cursor: pointer;
   z-index: 500;
+  outline: none;
 
   & > div.head_line {
     width: 100%;
