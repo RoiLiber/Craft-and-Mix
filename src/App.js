@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Header from "./components/Header";
 import TopLayout from "./containers/TopLayout";
 import EnterPage from "./containers/EnterPage";
+import { Fade } from 'react-reveal';
 import './reset.scss';
 import './App.scss';
 
@@ -24,12 +25,13 @@ class App extends Component {
         const { enterPage } = this.state;
         return (
             <div className="App">
-                {enterPage
-                    ? <EnterPage/>
-                    : <Fragment>
+                <EnterPage/>
+                {!enterPage && <Fade bottom duration={1500}>
+                    <div>
                         <Header/>
                         <TopLayout/>
-                    </Fragment>}
+                    </div>
+                </Fade>}
             </div>
         )
     }
