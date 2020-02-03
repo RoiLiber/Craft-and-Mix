@@ -2,10 +2,11 @@ import React from 'react';
 import { Slide, Zoom } from "react-reveal";
 import './style.scss';
 
-export default function Footer(props) {
+export default function PopUpPhoto(props) {
     const { photosObj } = props;
+    const popUpRef = React.createRef();
 
-    return <div className={'pop_photos_wrapper'}>
+    return <div className={'pop_photos_wrapper'} ref={popUpRef} >
         {photosObj.photos.map((photo, index) => {
             return <Slide bottom duretion={500}>
                 <div className={'photo'}>
