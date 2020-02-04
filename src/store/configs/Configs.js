@@ -6,36 +6,60 @@ import ourMood from "../../assets/img/carousel/Mode.jpeg";
 import onTheMenu from "../../assets/img/carousel/On the Menu.jpeg";
 
 //==== MOOD PHOTOS ============================================
-import photo1 from '../../assets/img/all photos/photo1.jpeg';
-import photo2 from '../../assets/img/all photos/photo2.jpeg';
-import photo3 from '../../assets/img/all photos/photo3.jpeg';
-import photo4 from '../../assets/img/all photos/photo4.jpeg';
-import photo5 from '../../assets/img/all photos/photo5.jpeg';
-import photo6 from '../../assets/img/all photos/photo6.jpeg';
-import photo7 from '../../assets/img/all photos/photo7.jpeg';
-import photo8 from '../../assets/img/all photos/photo8.jpeg';
-import photo9 from '../../assets/img/all photos/photo9.jpeg';
-import photo10 from '../../assets/img/all photos/photo10.jpeg';
-import photo11 from '../../assets/img/all photos/photo11.jpeg';
-import photo12 from '../../assets/img/all photos/photo12.jpeg';
-import photo13 from '../../assets/img/all photos/photo13.jpeg';
-import photo14 from '../../assets/img/all photos/photo14.jpeg';
-import photo15 from '../../assets/img/all photos/photo15.jpeg';
-import photo16 from '../../assets/img/all photos/photo16.jpeg';
-import photo17 from '../../assets/img/all photos/photo17.jpeg';
-import photo18 from '../../assets/img/all photos/photo18.jpeg';
-import photo19 from '../../assets/img/all photos/photo19.jpeg';
-import photo20 from '../../assets/img/all photos/photo20.jpeg';
-import photo21 from '../../assets/img/all photos/photo21.jpeg';
-import photo22 from '../../assets/img/all photos/photo22.jpeg';
-import photo23 from '../../assets/img/all photos/photo23.jpeg';
-import photo24 from '../../assets/img/all photos/photo24.jpeg';
-import photo25 from '../../assets/img/all photos/photo25.jpeg';
-import photo26 from '../../assets/img/all photos/photo26.jpeg';
-import photo27 from '../../assets/img/all photos/photo27.jpeg';
-import photo28 from '../../assets/img/all photos/photo28.jpeg';
-import photo29 from '../../assets/img/all photos/photo29.jpeg';
-import photo30 from '../../assets/img/all photos/photo30.jpeg';
+import porim1 from '../../assets/img/mood/porim p&p/photo1.jpeg';
+import porim2 from '../../assets/img/mood/porim p&p/photo2.jpeg';
+import milk1 from '../../assets/img/mood/milk/photo1.jpeg';
+import milk2 from '../../assets/img/mood/milk/photo2.jpeg';
+import kingDavid1 from '../../assets/img/mood/king-david/photo1.jpeg';
+import kingDavid2 from '../../assets/img/mood/king-david/photo2.jpeg';
+import google1 from '../../assets/img/mood/google/photo1.jpeg';
+import google2 from '../../assets/img/mood/google/photo2.jpeg';
+import iDontKnow1 from '../../assets/img/mood/at i dont know/photo1.jpeg';
+import iDontKnow2 from '../../assets/img/mood/at i dont know/photo2.jpeg';
+import iDontKnow3 from '../../assets/img/mood/at i dont know/photo3.jpeg';
+import bachelorette1  from '../../assets/img/mood/bachelorette cocktail vila/photo1.jpeg';
+import bachelorette2  from '../../assets/img/mood/bachelorette cocktail vila/photo2.jpeg';
+import bachelorette3  from '../../assets/img/mood/bachelorette cocktail vila/photo3.jpeg';
+import bachelorette4  from '../../assets/img/mood/bachelorette cocktail vila/photo4.jpeg';
+import bachelorette5  from '../../assets/img/mood/bachelorette cocktail vila/photo5.jpeg';
+import martini1 from '../../assets/img/mood/martini on the roof/photo1.jpeg';
+import mezcal1 from '../../assets/img/mood/mezcal compassion/photo1.jpeg';
+import mezcal2 from '../../assets/img/mood/mezcal compassion/photo2.jpeg';
+import mezcal3 from '../../assets/img/mood/mezcal compassion/photo3.jpeg';
+import mezcal4 from '../../assets/img/mood/mezcal compassion/photo4.jpeg';
+import mezcal5 from '../../assets/img/mood/mezcal compassion/photo5.jpeg';
+import mezcal6 from '../../assets/img/mood/mezcal compassion/photo6.jpeg';
+import greyGoose1 from '../../assets/img/mood/grey-goose/photo1.jpeg';
+import greyGoose2 from '../../assets/img/mood/grey-goose/photo2.jpeg';
+import greyGoose3 from '../../assets/img/mood/grey-goose/photo3.jpeg';
+import greyGoose4 from '../../assets/img/mood/grey-goose/photo4.jpeg';
+import greyGoose5 from '../../assets/img/mood/grey-goose/photo5.jpeg';
+import greyGoose6 from '../../assets/img/mood/grey-goose/photo6.jpeg';
+import greyGoose7 from '../../assets/img/mood/grey-goose/photo7.jpeg';
+import greyGoose8 from '../../assets/img/mood/grey-goose/photo8.jpeg';
+import greyGoose9 from '../../assets/img/mood/grey-goose/photo9.jpeg';
+import makingGoodShit1 from '../../assets/img/mood/we love making good shit/photo1.jpeg';
+import makingGoodShit2 from '../../assets/img/mood/we love making good shit/photo2.jpeg';
+import noon1 from '../../assets/img/mood/on the roof top noon/photo1.jpeg';
+import noon2 from '../../assets/img/mood/on the roof top noon/photo2.jpeg';
+import night1 from '../../assets/img/mood/on the roof top night/photo1.jpeg';
+import night2 from '../../assets/img/mood/on the roof top night/photo2.jpeg';
+import night3 from '../../assets/img/mood/on the roof top night/photo3.jpeg';
+import night4 from '../../assets/img/mood/on the roof top night/photo4.jpeg';
+import night5 from '../../assets/img/mood/on the roof top night/photo5.jpeg';
+import night6 from '../../assets/img/mood/on the roof top night/photo6.jpeg';
+import mood1 from '../../assets/img/mood/mood/photo1.jpeg';
+import mood2 from '../../assets/img/mood/mood/photo2.jpeg';
+import mood3 from '../../assets/img/mood/mood/photo3.jpeg';
+import mood4 from '../../assets/img/mood/mood/photo4.jpeg';
+import mood5 from '../../assets/img/mood/mood/photo5.jpeg';
+import nina1 from '../../assets/img/mood/anglo & nina/photo1.jpeg';
+import nina2 from '../../assets/img/mood/anglo & nina/photo2.jpeg';
+import nina3 from '../../assets/img/mood/anglo & nina/photo3.jpeg';
+import nina4 from '../../assets/img/mood/anglo & nina/photo4.jpeg';
+import nina5 from '../../assets/img/mood/anglo & nina/photo5.jpeg';
+import nina6 from '../../assets/img/mood/anglo & nina/photo6.jpeg';
+import orange1 from '../../assets/img/mood/orange/photo1.jpeg';
 
 //==== CLIENTS ================================================
 import louisVuitton from '../../assets/icon/louisVuitton.png';
@@ -73,113 +97,118 @@ export const topCarousel = [
 ];
 
 export const moodPhotos = [
-    { location: 'Purim holiday fun',
+    { location: 'Triple Orange love',
         photos: [
-            { text: 'On the Roof1', img: photo1 },
-            { text: 'On the Roof2', img: photo2 },
+            { text: 'On the Roof1', img: orange1 },
         ]
     },
-    { location: 'We believe only in 1st. Mezcal compassion',
+    { location: 'We love Anglo&Nina and Jaffa more',
         photos: [
-            { text: 'On the Roof1', img: photo3 },
-            { text: 'On the Roof2', img: photo4 },
-            { text: 'On the Roof1', img: photo5 },
-            { text: 'On the Roof2', img: photo6 },
+            { text: 'On the Roof1', img: nina1 },
+            { text: 'On the Roof2', img: nina2 },
+            { text: 'On the Roof1', img: nina3 },
+            { text: 'On the Roof2', img: nina4 },
+            { text: 'On the Roof1', img: nina5 },
+            { text: 'On the Roof2', img: nina6 },
         ]
     },
-    { location: 'Google event',
+    { location: 'Rothschild Mood at night',
         photos: [
-            { text: 'On the Roof1', img: photo7 },
-            { text: 'On the Roof2', img: photo8 },
+            { text: 'On the Roof1', img: mood1 },
+            { text: 'On the Roof2', img: mood2 },
+            { text: 'On the Roof1', img: mood3 },
+            { text: 'On the Roof2', img: mood4 },
+            { text: 'On the Roof1', img: mood5 },
         ]
     },
-    { location: 'Code & Cocktails. Cyber company event',
+    { location: 'but Rothschild is Beautiful at night',
         photos: [
-            { text: 'On the Roof1', img: photo9 },
-            { text: 'On the Roof2', img: photo10 },
-            { text: 'On the Roof2', img: photo11 },
+            { text: 'On the Roof1', img: night1 },
+            { text: 'On the Roof2', img: night2 },
+            { text: 'On the Roof2', img: night3 },
+            { text: 'On the Roof1', img: night4 },
+            { text: 'On the Roof2', img: night5 },
+            { text: 'On the Roof2', img: night6 },
         ]
     },
-    { location: 'King David hotel. Fun at a family event',
+    { location: 'Rothschild is nice from the roof at noon',
         photos: [
-            { text: 'On the Roof1', img: photo12 },
-            { text: 'On the Roof2', img: photo13 },
+            { text: 'On the Roof1', img: noon1 },
+            { text: 'On the Roof2', img: noon2 },
         ]
     },
-    { location: 'On the roof top at noon, Rothschild boulevard 1',
+    { location: 'We just make good shit like',
         photos: [
-            { text: 'On the Roof1', img: photo15 },
-            { text: 'On the Roof2', img: photo16 },
+            { text: 'On the Roof1', img: makingGoodShit1 },
+            { text: 'On the Roof2', img: makingGoodShit2 },
         ]
     },
-    { location: 'On the roof top at night, Rothschild boulevard 1',
+    { location: 'New Goose eve',
         photos: [
-            { text: 'On the Roof1', img: photo21 },
-            { text: 'On the Roof2', img: photo25 },
+            { text: 'On the Roof1', img: greyGoose1 },
+            { text: 'On the Roof2', img: greyGoose2 },
+            { text: 'On the Roof1', img: greyGoose3 },
+            { text: 'On the Roof2', img: greyGoose4 },
+            { text: 'On the Roof1', img: greyGoose5 },
+            { text: 'On the Roof2', img: greyGoose6 },
+            { text: 'On the Roof1', img: greyGoose7 },
+            { text: 'On the Roof2', img: greyGoose8 },
+            { text: 'On the Roof1', img: greyGoose9 },
         ]
     },
-    { location: 'On the roof top',
+    { location: 'Mezcal compassion',
         photos: [
-            { text: 'On the Roof1', img: photo14 },
+            { text: 'On the Roof1', img: mezcal1 },
+            { text: 'On the Roof1', img: mezcal2 },
+            { text: 'On the Roof1', img: mezcal3 },
+            { text: 'On the Roof1', img: mezcal4 },
+            { text: 'On the Roof1', img: mezcal5 },
+            { text: 'On the Roof1', img: mezcal6 },
         ]
     },
-    { location: 'On the roof top. Business event at Rothschild boulevard 1',
+    { location: 'Martini1 Tlv',
         photos: [
-            { text: 'On the Roof2', img: photo23 },
-            { text: 'On the Roof2', img: photo23 },
-            { text: 'On the Roof2', img: photo23 },
-            { text: 'On the Roof2', img: photo23 },
-            { text: 'On the Roof2', img: photo23 },
-            { text: 'On the Roof2', img: photo23 },
-
+            { text: 'On the Roof2', img: martini1 },
         ]
     },
-    { location: 'We love making good shit like...',
+    { location: 'Bachelorette & Cocktails, We think you know her',
         photos: [
-            { text: 'On the Roof2', img: photo22 },
+            { text: 'On the Roof2', img: bachelorette1 },
+            { text: 'On the Roof2', img: bachelorette2 },
+            { text: 'On the Roof2', img: bachelorette3 },
+            { text: 'On the Roof2', img: bachelorette4 },
+            { text: 'On the Roof2', img: bachelorette5 },
         ]
     },
-    { location: 'New years eve by Grey Goose',
+    { location: 'I Dont Know',
         photos: [
-            { text: 'On the Roof1', img: photo17 },
-            { text: 'On the Roof2', img: photo18 },
-            { text: 'On the Roof1', img: photo19 },
-            { text: 'On the Roof2', img: photo20 },
+            { text: 'On the Roof1', img: iDontKnow1 },
+            { text: 'On the Roof2', img: iDontKnow2 },
+            { text: 'On the Roof1', img: iDontKnow3 },
         ]
     },
-    { location: 'Event: Yafo, Anglo & Nina',
+    { location: 'A Cloud with a taste, Google',
         photos: [
-            { text: 'On the Roof1', img: photo24 },
-            { text: 'On the Roof1', img: photo26 },
-            { text: 'On the Roof2', img: photo27 },
-            { text: 'On the Roof2', img: photo28 },
-            { text: 'On the Roof2', img: photo29 },
-            { text: 'On the Roof2', img: photo30 },
+            { text: 'On the Roof1', img: google1 },
+            { text: 'On the Roof1', img: google2 },
         ]
     },
-    { location: 'Event: Yafo, Anglo & Nina',
+    { location: 'King David family event',
         photos: [
-            { text: 'On the Roof1', img: photo24 },
-            { text: 'On the Roof1', img: photo26 },
-            { text: 'On the Roof2', img: photo27 },
-            { text: 'On the Roof2', img: photo28 },
-            { text: 'On the Roof2', img: photo29 },
-            { text: 'On the Roof2', img: photo30 },
+            { text: 'On the Roof1', img: kingDavid1 },
+            { text: 'On the Roof1', img: kingDavid2 },
         ]
     },
-    { location: 'Event: Yafo, Anglo & Nina',
+    { location: 'Milk & Honey event',
         photos: [
-            { text: 'On the Roof1', img: photo24 },
-            { text: 'On the Roof1', img: photo26 },
-            { text: 'On the Roof2', img: photo27 },
-            { text: 'On the Roof2', img: photo28 },
-            { text: 'On the Roof2', img: photo29 },
-            { text: 'On the Roof2', img: photo30 },
+            { text: 'On the Roof1', img: milk1 },
+            { text: 'On the Roof1', img: milk2 },
         ]
     },
-    { location: 'We love making good shit like...',
+    { location: 'Porim p&p',
         photos: [
-            { text: 'On the Roof2', img: photo29 },
+            { text: 'On the Roof2', img: porim1 },
+            { text: 'On the Roof2', img: porim2 },
         ]
     },
 ];

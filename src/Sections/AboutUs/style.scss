@@ -5,14 +5,14 @@ div.about_us {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 15px;
   justify-content: center;
   align-items: center;
   z-index: 500;
   color: $primary-white;
   height: 100%;
   @include respond-to('medium') {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   & > a {
@@ -28,11 +28,9 @@ div.about_us {
     bottom: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding-bottom: 5vh;
-    @include respond-to('medium') {
-      align-items: center;
-    }
 
     & > div.about_us_text {
       margin-bottom: 10px;

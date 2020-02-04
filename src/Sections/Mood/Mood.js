@@ -18,10 +18,10 @@ class Mood extends Component {
 
     render() {
         const { larger, moodPhotos, setPhotos } = this.props;
-        const shuffleMood = shuffle(moodPhotos);
+        // const shuffleMood = shuffle(moodPhotos);
         const numberOfPhotos = larger
-            ? slice(shuffleMood, 0, 15)
-            : slice(shuffleMood, 0, 12);
+            ? slice(moodPhotos, 0, 15)
+            : slice(moodPhotos, 0, 12);
 
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'}>
