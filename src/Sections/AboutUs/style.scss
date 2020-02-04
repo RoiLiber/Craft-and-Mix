@@ -33,13 +33,12 @@ div.about_us {
     padding-bottom: 10vh;
 
     & > div.about_us_text {
-      margin: 10px;
       width: 100%;
       text-align: center;
       max-width: 350px;
 
       & > p  {
-        margin: 10px 0;
+        margin: 7px 0;
         width: 100%;
         & > span.gold_color {
           color: $primary-gold;
