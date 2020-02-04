@@ -8,7 +8,7 @@ export default function PopUpPhoto(props) {
 
     return <div className={'pop_photos_wrapper'} ref={targetRef}>
         {photosObj.photos.map((photo, index) => {
-            return <Slide bottom duretion={500}>
+            return <Slide bottom duretion={500} key={index}>
                 <div className={'photo'}>
                     <img src={photo.img} alt={`photo${index}`}/>
                 </div>

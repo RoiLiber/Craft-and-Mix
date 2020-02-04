@@ -112,7 +112,7 @@ class Header extends Component {
 
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
-                {windowScrollY > 2400 ? '' : <div className={'header_logo'}>
+                {windowScrollY > 2050 ? '' : <div className={'header_logo'}>
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                 </div>}
                 <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`}>
@@ -142,7 +142,7 @@ class Header extends Component {
                                     }
                             </Link>
                         })
-                        :   windowScrollY > 2400
+                        :   windowScrollY > 2050
                             ? <span className={'up'} onClick={() => scroll.scrollToTop()}>
                                 <Pulse forever>
                                     <i className="fas fa-angle-up"/>
