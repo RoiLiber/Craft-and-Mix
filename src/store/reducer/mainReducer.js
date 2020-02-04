@@ -4,7 +4,7 @@ import * as configs from '../configs/Configs';
 //const small = 767;
 const medium = 992;
 const large = 1200;
-const larger = 1500;
+const larger = 1400;
 const width = window.innerWidth;
 const height = window.innerHeight;
 const scrollY = window.scrollY;
@@ -22,7 +22,6 @@ const initialState = {
     openMenu: false,
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
-    mood: [],
     moodPhotos: configs.moodPhotos,
     centerPhotoItem: false,
     clients: configs.clients

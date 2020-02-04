@@ -157,6 +157,36 @@ export const moodPhotos = [
             { text: 'On the Roof2', img: photo30 },
         ]
     },
+    { location: 'Event: Yafo, Anglo & Nina',
+        photos: [
+            { text: 'On the Roof1', img: photo24 },
+            { text: 'On the Roof1', img: photo26 },
+            { text: 'On the Roof2', img: photo27 },
+            { text: 'On the Roof2', img: photo28 },
+            { text: 'On the Roof2', img: photo29 },
+            { text: 'On the Roof2', img: photo30 },
+        ]
+    },
+    { location: 'Event: Yafo, Anglo & Nina',
+        photos: [
+            { text: 'On the Roof1', img: photo24 },
+            { text: 'On the Roof1', img: photo26 },
+            { text: 'On the Roof2', img: photo27 },
+            { text: 'On the Roof2', img: photo28 },
+            { text: 'On the Roof2', img: photo29 },
+            { text: 'On the Roof2', img: photo30 },
+        ]
+    },
+    { location: 'Event: Yafo, Anglo & Nina',
+        photos: [
+            { text: 'On the Roof1', img: photo24 },
+            { text: 'On the Roof1', img: photo26 },
+            { text: 'On the Roof2', img: photo27 },
+            { text: 'On the Roof2', img: photo28 },
+            { text: 'On the Roof2', img: photo29 },
+            { text: 'On the Roof2', img: photo30 },
+        ]
+    },
 ];
 
 export const clients = [

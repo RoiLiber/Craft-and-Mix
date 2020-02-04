@@ -17,13 +17,17 @@ class Mood extends Component {
     };
 
     render() {
-        const { large, moodPhotos, setPhotos } = this.props;
+        const { large, larger, moodPhotos, setPhotos } = this.props;
+        const shuffleMood = shuffle(moodPhotos);
+        const numberOfPhotos = larger
+            ? slice(shuffleMood, 0, 15)
+            : slice(shuffleMood, 0, 12);
 
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'}>
                 <div className={'mood_section'}>
                     <p>Some mood Photos from our Events</p>
-                    {moodPhotos.map((photos, index) => {
+                    {numberOfPhotos.map((photos, index) => {
                         const location = photos.location;
                         const shufflePhotos = shuffle(photos.photos);
                         const photo = shufflePhotos[0].img;
@@ -40,10 +44,11 @@ class Mood extends Component {
 
 const mapStateToProps = state => {
     const { windowWidthSize, moodPhotos } = state.mainReducer;
-    const { large } = windowWidthSize;
+    const { large, larger } = windowWidthSize;
 
     return {
         large,
+        larger,
         moodPhotos
     };
 };

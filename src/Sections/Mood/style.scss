@@ -26,6 +26,18 @@ div.mood_section {
     width: calc( 100% / 3 );
     height: 15vh;
     border: thin solid $primary-white;
+    @include respond-to('medium') {
+      width: calc( 100% / 4 );
+      height: 20vh;
+    }
+    @include respond-to('large') {
+      width: calc( 100% / 4 );
+      height: 20vh;
+    }
+    @include respond-to('larger') {
+      width: calc( 100% / 5 );
+      height: 20vh;
+    }
 
     & > img {
       width: 100%;
