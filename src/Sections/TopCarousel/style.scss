@@ -24,16 +24,19 @@ div.carousel_section {
 
         & > span.go_back {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
             font-size: 20px;
             position: absolute;
-            top: 9vh;
-            left: 45px;
+            top: 8.5vh;
+            left: 35px;
             color: $primary-white;
             z-index: 700;
             cursor: pointer;
             transition: 0.5s ease-in-out;
             @include respond-to('medium') {
-                top: 4vh;
                 font-size: 25px;
             }
         }

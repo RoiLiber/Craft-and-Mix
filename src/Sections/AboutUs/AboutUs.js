@@ -8,7 +8,7 @@ class AboutUs extends Component {
         return (
             <div className={'about_us'}>
                 <SectionHeadLine
-                    to={''}
+                    to={null}
                     text={'About us'}
                     textColor={'white'}
                     color={'gold'}
