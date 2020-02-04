@@ -8,7 +8,7 @@ class AboutUs extends Component {
         return (
             <div className={'about_us'}>
                 <SectionHeadLine
-                    to={null}
+                    elementName={''}
                     text={'About us'}
                     textColor={'white'}
                     color={'gold'}
@@ -19,7 +19,8 @@ class AboutUs extends Component {
                         <p>Created by <span className={'gold_color'}>Asaf Amir</span>,</p>
                         <p><span className={'gold_color'}>CRAFT & MIX</span> is set to give you</p>
                         <p>the best cocktail and bar</p>
-                        <p>experience you can get!</p>
+                        <p>experience you can get</p>
+                        <p>for any event!</p>
                     </div>
                     <div className={'about_us_text'}>
                         <p>Our top priority is</p>
