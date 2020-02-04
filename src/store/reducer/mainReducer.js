@@ -37,8 +37,7 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 openMenu,
-                centerPhotoItem: false,
-                aboutUs: false
+                centerPhotoItem: false
             };
         }
         case actionTypes.REPORT_SCROLL_TOP_Y: {

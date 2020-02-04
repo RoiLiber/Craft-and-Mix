@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Slide } from "react-reveal";
 import './style.scss';
 import SectionHeadLine from "../../components/SectionHeadLine/SectionHeadLine";
 

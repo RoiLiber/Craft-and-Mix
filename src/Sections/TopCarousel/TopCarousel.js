@@ -6,6 +6,8 @@ import SpinLogo from "../../components/UI/SpinLogo";
 import AboutUs from "../AboutUs";
 import { openAboutUsSection } from '../../store/actions/mainActions';
 import './style.scss';
+import {animateScroll as scroll} from "react-scroll";
+import Pulse from "react-reveal/Pulse";
 
 class TopCarousel extends Component {
 
@@ -105,7 +107,12 @@ class TopCarousel extends Component {
                 {this.carouselDots()}
                 <span className={aboutUs ? 'about_clicked' : ''} onClick={() => openAboutUsSection(true)}>read more</span>
                 {aboutUs && <Slide left duration={1100}>
-                    <div className={'about_in'} onClick={() => openAboutUsSection(false)}>
+                    <div className={'about_in'}>
+                        <span className={'go_back'} onClick={() => openAboutUsSection(false)}>
+                            <Pulse forever>
+                                <i className="fas fa-angle-left"/>
+                            </Pulse>
+                        </span>
                     <AboutUs/>
                 </div>
                 </Slide>}

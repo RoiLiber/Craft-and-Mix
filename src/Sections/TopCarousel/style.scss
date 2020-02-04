@@ -21,6 +21,17 @@ div.carousel_section {
         height: 100%;
         display: flex;
         background-color: rgba($primary-black, 0.95);
+
+        & > span.go_back {
+            display: flex;
+            font-size: 30px;
+            position: absolute;
+            top: 4vh;
+            right: 30px;
+            color: $primary-white;
+            z-index: 700;
+            cursor: pointer;
+        }
     }
 
     & > span {
