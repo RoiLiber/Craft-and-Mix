@@ -32,14 +32,20 @@ div.carousel_section {
         align-items: center;
         background-color: $primary-gold;
         border: thin solid $primary-white;
-        width: 150px;
-        height: 50px;
+        width: 120px;
+        height: 36px;
         position: absolute;
-        bottom: calc( 50% - 25px );
-        left: calc( 50% - 75px );
+        bottom: calc( 50% - 18px );
+        left: calc( 50% - 60px );
         z-index: 500;
         transition: 0.3s ease-in-out;
         box-shadow: 0 05px 10px 5px rgba($primary-black, 0.5);
+        @include respond-to('medium') {
+            width: 150px;
+            height: 50px;
+            left: calc( 50% - 75px );
+            font-size: 20px;
+        }
         @include respond-to('large') {
             bottom: 5vh;
         }
@@ -47,8 +53,11 @@ div.carousel_section {
     & > span:hover {
         background-color: $primary-white;
         color: $primary-gold;
-        font-size: 18px;
+        font-size: 17px;
         box-shadow: 0 15px 20px 5px rgba($primary-black, 0.8);
+        @include respond-to('medium') {
+            font-size: 22px;
+        }
     }
     & > span.about_clicked {
         background-color: $primary-gold;
