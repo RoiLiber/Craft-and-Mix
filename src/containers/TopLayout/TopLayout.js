@@ -9,7 +9,7 @@ import Mood from "../../sections/Mood/Mood";
 import backPhoto from '../../assets/img/background/Crift&Mix-pattern.png';
 import PopUpImg from "../../components/PopUpPhoto";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { Slide, Fade } from "react-reveal";
+import { Slide } from "react-reveal";
 import './style.scss';
 
 class TopLayout extends Component {
@@ -31,8 +31,18 @@ class TopLayout extends Component {
         </div>
     };
 
+    setPopUp = photos => {
+        const { setPhotos } = this.props;
+
+        return <Slide bottom duretion={500}>
+            <div className={'pop_up_wrapper'} onClick={() => setPhotos(false)}>
+                <PopUpImg photosObj={photos}/>
+            </div>
+        </Slide>
+    };
+
     render() {
-        const { centerPhotoItem, setPhotos, clients, topCarousel, windowHeight, large, windowScrollY } = this.props;
+        const { centerPhotoItem, clients, topCarousel, windowHeight, large, windowScrollY } = this.props;
         let height10vh = windowHeight / 10;
         let carouselExit = windowScrollY > (windowHeight - height10vh * 2.5) && (!large);
 
@@ -48,11 +58,7 @@ class TopLayout extends Component {
                     <div className={'clear'}/>
                     <Clients clients={clients}/>
                     {this.parallax(backPhoto)}
-                    {centerPhotoItem && <Slide bottom duretion={500}>
-                        <div className={'pop_up_wrapper'} onClick={() => setPhotos(false)}>
-                            <PopUpImg photosObj={centerPhotoItem}/>
-                        </div>
-                    </Slide>}
+                    {centerPhotoItem && this.setPopUp(centerPhotoItem)}
                     <Footer/>
                 </div>
             </ParallaxProvider>

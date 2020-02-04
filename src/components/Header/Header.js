@@ -4,8 +4,9 @@ import logo from '../../assets/icon/Crift&Mix-black logo.svg';
 import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
 import { setPhotos } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
+import Pulse from 'react-reveal/Pulse';
 import Menu from '../../components/Menu';
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import {
     toggleMenu,
     setWindowWidth,
@@ -48,7 +49,6 @@ class Header extends Component {
         const { clickedSection } = this.state;
         let height10vh = windowHeight / 10;
         const height50vh = windowHeight / 2 - height10vh * 2;
-
         const selectedSection = windowScrollY >= height50vh && windowScrollY < height50vh * 3
             ? 'ourServices'
             : windowScrollY >= height50vh * 3 && windowScrollY < height50vh * 6
@@ -108,14 +108,14 @@ class Header extends Component {
 
     render() {
         const { shrinkHeader, selectedSection } = this.state;
-        const { menuList, large, larger, small, openMenu } = this.props;
+        const { menuList, large, larger, small, openMenu, windowScrollY } = this.props;
 
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
-                <div className={'header_logo'}>
+                {windowScrollY > 2400 ? '' : <div className={'header_logo'}>
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
-                </div>
-                <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`} onClick={large ? null : () => this.toggleMenu()}>
+                </div>}
+                <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`}>
                     {large || larger
                         ?   menuList.map((item, index) => {
                             return <Link
@@ -142,7 +142,13 @@ class Header extends Component {
                                     }
                             </Link>
                         })
-                        :   <i className={`fas fa-ellipsis-h`}/>
+                        :   windowScrollY > 2400
+                            ? <span className={'up'} onClick={() => scroll.scrollToTop()}>
+                                <Pulse forever>
+                                    <i className="fas fa-angle-up"/>
+                                </Pulse>
+                            </span>
+                            : <i className={`fas fa-ellipsis-h`} onClick={() => this.toggleMenu()}/>
                     }
                 </div>
                 {(!large && !larger) && <Menu className={shrinkHeader ? 'menu sm' : 'menu'} toggleMenu={this.toggleMenu}/>}

@@ -4,9 +4,9 @@ import './style.scss';
 
 export default function PopUpPhoto(props) {
     const { photosObj } = props;
-    const popUpRef = React.createRef();
+    const targetRef = React.createRef();
 
-    return <div className={'pop_photos_wrapper'} ref={popUpRef} >
+    return <div className={'pop_photos_wrapper'} ref={targetRef}>
         {photosObj.photos.map((photo, index) => {
             return <Slide bottom duretion={500}>
                 <div className={'photo'}>

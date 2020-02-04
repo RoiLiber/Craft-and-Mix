@@ -49,6 +49,10 @@ div.header {
             bottom: 0;
         }
 
+        & > span i {
+            font-size: 30px;
+        }
+
         & > a.menu_list_item {
             display: flex;
             flex-wrap: wrap;
