@@ -34,6 +34,7 @@ class Mood extends Component {
 
                         return <div key={index} className={'photo_wrapper'} onClick={() => setPhotos(photos)}>
                             {this.setPhoto(photo, location)}
+                                {photos.photos.length > 1 ? <i className="fas fa-images"/> : null}
                         </div>
                     })}
                 </div>
