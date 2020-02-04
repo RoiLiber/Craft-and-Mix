@@ -4,7 +4,7 @@ import * as configs from '../configs/Configs';
 //const small = 767;
 const medium = 992;
 const large = 1200;
-const larger = 1400;
+const larger = 1500;
 const width = window.innerWidth;
 const height = window.innerHeight;
 const scrollY = window.scrollY;

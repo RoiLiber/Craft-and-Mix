@@ -6,7 +6,6 @@ div.mood_section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  //flex-direction: column;
   min-height: 65vh;
   z-index: 500;
 
@@ -21,7 +20,6 @@ div.mood_section {
       font-size: 20px;
     }
   }
-
   & > div.photo_wrapper {
     width: calc( 100% / 3 );
     height: 15vh;
@@ -44,6 +42,7 @@ div.mood_section {
       width: 100%;
       height: 100%;
     }
+
     & > i {
       position: absolute;
       top: 5px;
@@ -57,7 +56,6 @@ div.mood_section {
       }
     }
   }
-
   & > div.carousels_wrapper {
     width: 100%;
     height: 100%;
@@ -70,7 +68,6 @@ div.mood_section {
       border: thin solid $primary-white;
     }
   }
-
   & > div.pop_up_wrapper {
     height: 100%;
   }

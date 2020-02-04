@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { shuffle, slice } from 'lodash';
 import Section from "../../components/Section";
-import {setPhotos } from "../../store/actions/mainActions";
+import { setPhotos } from "../../store/actions/mainActions";
 import './style.scss';
 
 class Mood extends Component {
@@ -17,7 +17,7 @@ class Mood extends Component {
     };
 
     render() {
-        const { large, larger, moodPhotos, setPhotos } = this.props;
+        const { larger, moodPhotos, setPhotos } = this.props;
         const shuffleMood = shuffle(moodPhotos);
         const numberOfPhotos = larger
             ? slice(shuffleMood, 0, 15)
@@ -45,10 +45,9 @@ class Mood extends Component {
 
 const mapStateToProps = state => {
     const { windowWidthSize, moodPhotos } = state.mainReducer;
-    const { large, larger } = windowWidthSize;
+    const { larger } = windowWidthSize;
 
     return {
-        large,
         larger,
         moodPhotos
     };

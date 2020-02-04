@@ -6,30 +6,13 @@ import Clients from "../../sections/Clients";
 import TopCarousel from "../../sections/TopCarousel/TopCarousel";
 import { setPhotos } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
-import backPhoto from '../../assets/img/background/Crift&Mix-pattern.png';
 import PopUpImg from "../../components/PopUpPhoto";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import ParallaxPattern from "../../components/ParallaxPattern";
 import { Slide } from "react-reveal";
 import './style.scss';
 
 class TopLayout extends Component {
-
-    parallax = photo => {
-        return <div className={'photo'}>
-            <Parallax className="parallax" y={[-30, 30]} tagOuter="figure">
-                <img src={photo} alt={'backPhoto'}/>
-            </Parallax>
-        </div>
-    };
-
-    parallaxBackground = photo => {
-        return <div className={'mood_parallax_wrapper'}>
-            <Parallax className="parallax_wrapper" y={[-30, 30]} tagOuter="figure">
-                <img src={photo} alt={'backPhoto'}/>
-            </Parallax>
-            <Mood/>
-        </div>
-    };
 
     setPopUp = photos => {
         const { setPhotos } = this.props;
@@ -53,11 +36,11 @@ class TopLayout extends Component {
                         {carouselExit ? <div className={'clear_carousel'}/> : <TopCarousel topCarousel={topCarousel}/>}
                     </Parallax>
                     <OurServices/>
-                    {this.parallax(backPhoto)}
-                    {this.parallaxBackground(backPhoto)}
-                    <div className={'clear'}/>
+                    <ParallaxPattern/>
+                    <Mood/>
+                    <ParallaxPattern/>
                     <Clients clients={clients}/>
-                    {this.parallax(backPhoto)}
+                    <ParallaxPattern/>
                     {centerPhotoItem && this.setPopUp(centerPhotoItem)}
                     <Footer/>
                 </div>

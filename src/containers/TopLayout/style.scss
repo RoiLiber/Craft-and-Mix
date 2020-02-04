@@ -30,37 +30,6 @@ div.top_layout {
             }
         }
     }
-    & > div.clear {
-        height: 5vh;
-        width: 100%;
-        position: relative;
-        top: 70vh;
-    }
-
-    & > div.photo {
-        height: 5vh;
-        width: 100%;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        background-color: $primary-white;
-
-        & > .parallax {
-            width: 100%;
-            & > div {
-                height: 40vh;
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-                & > img {
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    bottom: 10vh;
-                }
-            }
-        }
-    }
     & > div.mood_parallax_wrapper {
         display: flex;
         flex-wrap: wrap;
