@@ -14,6 +14,42 @@ div.carousel_section {
         height: 80vh;
     }
 
+    & > div.about_in {
+        position: absolute;
+        z-index: 700;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    & > span {
+        font-size: 20px;
+        cursor: pointer;
+        color: $primary-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-gold;
+        border: thin solid $primary-white;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        bottom: calc( 50% - 25px );
+        left: calc( 50% - 100px );
+        z-index: 500;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 05px 10px 5px rgba($primary-black, 0.5);
+        @include respond-to('large') {
+            bottom: 5vh;
+        }
+    }
+    & > span:hover {
+        background-color: $primary-white;
+        color: $primary-gold;
+        font-size: 22px;
+        box-shadow: 0 15px 20px 5px rgba($primary-black, 0.8);
+    }
+
     & > img.logo {
         position: absolute;
         top: calc( 50% - 27px);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logo from '../../assets/icon/Crift&Mix-black logo.svg';
 import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
-import { setPhotos } from '../../store/actions/mainActions';
+import { openAboutUsSection, setPhotos } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
 import Pulse from 'react-reveal/Pulse';
 import Menu from '../../components/Menu';
@@ -45,7 +45,7 @@ class Header extends Component {
     };
 
     handleScroll = () => {
-        const { large, larger, windowHeight, windowScrollY, reportWindowScrollTopY } = this.props;
+        const { large, larger, windowHeight, windowScrollY, reportWindowScrollTopY, openAboutUsSection } = this.props;
         const { clickedSection } = this.state;
         let height10vh = windowHeight / 10;
         const height50vh = windowHeight / 2 - height10vh * 2;
@@ -65,6 +65,7 @@ class Header extends Component {
         } else {
             this.setState({ shrinkHeader: false });
         }
+        windowScrollY > (windowHeight - height10vh * 2.5) && openAboutUsSection(false);
         reportWindowScrollTopY(window.scrollY)
     };
 
@@ -179,6 +180,7 @@ const mapDispatchToProps = dispatch => {
         setWindowWidth: width => dispatch(setWindowWidth(width)),
         setWindowHeight: height => dispatch(setWindowHeight(height)),
         reportWindowScrollTopY: scroll => dispatch(reportWindowScrollTopY(scroll)),
+        openAboutUsSection: boll => dispatch(openAboutUsSection(boll)),
         setPhotos: bool => dispatch(setPhotos(bool)),
     }
 };

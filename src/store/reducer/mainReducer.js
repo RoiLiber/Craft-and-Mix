@@ -19,12 +19,14 @@ const initialState = {
     windowWidth: width,
     windowHeight: height,
     windowScrollY: scrollY,
-    openMenu: false,
     menuList: configs.menuList,
     topCarousel: configs.topCarousel,
     moodPhotos: configs.moodPhotos,
+    clients: configs.clients,
+    openMenu: false,
     centerPhotoItem: false,
-    clients: configs.clients
+    aboutUs: false
+
 };
 
 const authReducer = (state = initialState, action) => {
@@ -35,7 +37,8 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 openMenu,
-                centerPhotoItem: false
+                centerPhotoItem: false,
+                aboutUs: false
             };
         }
         case actionTypes.REPORT_SCROLL_TOP_Y: {
@@ -74,7 +77,16 @@ const authReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                centerPhotoItem
+                centerPhotoItem,
+                aboutUs: false
+            };
+        }
+        case actionTypes.OPEN_ABOUT_US_SECTION: {
+            const boll = action.payload;
+
+            return {
+                ...state,
+                aboutUs: boll
             };
         }
         default:

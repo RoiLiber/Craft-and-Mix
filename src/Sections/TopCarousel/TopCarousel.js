@@ -1,9 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
 import { findIndex, split, includes } from 'lodash';
 import { Slide } from "react-reveal";
-import logo from '../../assets/icon/Crift & Mix_logo icon.svg';
-import './style.scss';
 import SpinLogo from "../../components/UI/SpinLogo";
+import AboutUs from "../AboutUs";
+import { openAboutUsSection } from '../../store/actions/mainActions';
+import './style.scss';
 
 class TopCarousel extends Component {
 
@@ -94,11 +96,17 @@ class TopCarousel extends Component {
     };
 
     render() {
+        const { aboutUs, openAboutUsSection } = this.props;
+
         return (
             <div className={'carousel_section'}>
                 {this.carousel(false)}
                 {this.carousel(true)}
                 {this.carouselDots()}
+                <span onClick={() => openAboutUsSection(true)}>read more</span>
+                {aboutUs && <div className={'about_in'} onClick={() => openAboutUsSection(false)}>
+                    <AboutUs/>
+                </div>}
             </div>
         )
     };
@@ -156,4 +164,18 @@ class TopCarousel extends Component {
     }
 }
 
-export default TopCarousel;
+const mapStateToProps = state => {
+    const { aboutUs } = state.mainReducer;
+
+    return {
+        aboutUs
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        openAboutUsSection: boll => dispatch(openAboutUsSection(boll)),
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopCarousel);

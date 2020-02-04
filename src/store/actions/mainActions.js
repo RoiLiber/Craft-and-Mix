@@ -45,4 +45,13 @@ export const setPhotos = photo => {
     }
 };
 
+export const openAboutUsSection = boll => {
+    return (dispatch) => {
+        dispatch({
+            type: actionTypes.OPEN_ABOUT_US_SECTION,
+            payload: boll
+        })
+    }
+};
+
 
