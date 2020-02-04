@@ -103,7 +103,7 @@ class TopCarousel extends Component {
                 {this.carousel(false)}
                 {this.carousel(true)}
                 {this.carouselDots()}
-                <span onClick={() => openAboutUsSection(true)}>read more</span>
+                <span className={aboutUs ? 'about_clicked' : ''} onClick={() => openAboutUsSection(true)}>read more</span>
                 {aboutUs && <div className={'about_in'} onClick={() => openAboutUsSection(false)}>
                     <AboutUs/>
                 </div>}
