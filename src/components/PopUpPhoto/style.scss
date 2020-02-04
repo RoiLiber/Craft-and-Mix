@@ -7,6 +7,15 @@ div.pop_photos_wrapper {
   width: 100%;
   overflow-y: scroll;
   justify-content: center;
+  padding: 15vh 0;
+  border-radius: 25px 25px 0 0 ;
+  @include respond-to('medium') {
+    width: 80%;
+  }
+  @include respond-to('large') {
+    padding: 5vh 0;
+    width: 75%;
+  }
 
   & > div.photo {
     font-size: 15px;
@@ -16,11 +25,9 @@ div.pop_photos_wrapper {
     width: 100%;
     @include respond-to('medium') {
       height: 55vh;
-      width: 80%;
     }
     @include respond-to('large') {
       height: 60vh;
-      width: 75%;
     }
 
     & > img {
@@ -37,12 +44,7 @@ div.pop_photos_wrapper {
     color: $primary-white;
     padding: 10px 0 10px 10px;
     margin-bottom: 7vh;
-    @include respond-to('medium') {
-      width: 80%;
-    }
-    @include respond-to('large') {
-      width: 75%;
-    }
+
     & > div.pop_up_text {
       width: 100%;
       display: flex;
