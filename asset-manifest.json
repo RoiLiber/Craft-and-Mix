@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Craft-and-Mix/static/css/main.ad0d99a1.chunk.css",
-    "main.js": "/Craft-and-Mix/static/js/main.bf1f93cb.chunk.js",
-    "main.js.map": "/Craft-and-Mix/static/js/main.bf1f93cb.chunk.js.map",
+    "main.css": "/Craft-and-Mix/static/css/main.fdb4bab3.chunk.css",
+    "main.js": "/Craft-and-Mix/static/js/main.32ac5d93.chunk.js",
+    "main.js.map": "/Craft-and-Mix/static/js/main.32ac5d93.chunk.js.map",
     "runtime-main.js": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js",
     "runtime-main.js.map": "/Craft-and-Mix/static/js/runtime-main.d8daa51c.js.map",
-    "static/js/2.1f2edd44.chunk.js": "/Craft-and-Mix/static/js/2.1f2edd44.chunk.js",
-    "static/js/2.1f2edd44.chunk.js.map": "/Craft-and-Mix/static/js/2.1f2edd44.chunk.js.map",
+    "static/js/2.37f6957a.chunk.js": "/Craft-and-Mix/static/js/2.37f6957a.chunk.js",
+    "static/js/2.37f6957a.chunk.js.map": "/Craft-and-Mix/static/js/2.37f6957a.chunk.js.map",
     "index.html": "/Craft-and-Mix/index.html",
-    "precache-manifest.c7ca6c318540f5b890fc00b544aaeed9.js": "/Craft-and-Mix/precache-manifest.c7ca6c318540f5b890fc00b544aaeed9.js",
+    "precache-manifest.dcb5f1e47e3d390d67809f4394b4855b.js": "/Craft-and-Mix/precache-manifest.dcb5f1e47e3d390d67809f4394b4855b.js",
     "service-worker.js": "/Craft-and-Mix/service-worker.js",
-    "static/css/main.ad0d99a1.chunk.css.map": "/Craft-and-Mix/static/css/main.ad0d99a1.chunk.css.map",
+    "static/css/main.fdb4bab3.chunk.css.map": "/Craft-and-Mix/static/css/main.fdb4bab3.chunk.css.map",
     "static/media/About us.jpeg": "/Craft-and-Mix/static/media/About us.c718425a.jpeg",
     "static/media/Crift & Mix_logo icon.svg": "/Craft-and-Mix/static/media/Crift & Mix_logo icon.4833bdd8.svg",
     "static/media/Crift&Mix-black logo.svg": "/Craft-and-Mix/static/media/Crift&Mix-black logo.4f9afe1f.svg",
@@ -30,9 +30,9 @@
     "static/media/morris.png": "/Craft-and-Mix/static/media/morris.cdc9af40.png",
     "static/media/photo1.jpeg": "/Craft-and-Mix/static/media/photo1.ff428185.jpeg",
     "static/media/photo2.jpeg": "/Craft-and-Mix/static/media/photo2.e6e01973.jpeg",
-    "static/media/photo3.jpeg": "/Craft-and-Mix/static/media/photo3.c718425a.jpeg",
+    "static/media/photo3.jpeg": "/Craft-and-Mix/static/media/photo3.e1456595.jpeg",
     "static/media/photo4.jpeg": "/Craft-and-Mix/static/media/photo4.ecf9d3cb.jpeg",
-    "static/media/photo5.jpeg": "/Craft-and-Mix/static/media/photo5.d2a1f53b.jpeg",
+    "static/media/photo5.jpeg": "/Craft-and-Mix/static/media/photo5.9901fe9b.jpeg",
     "static/media/photo6.jpeg": "/Craft-and-Mix/static/media/photo6.a451e0fc.jpeg",
     "static/media/photo7.jpeg": "/Craft-and-Mix/static/media/photo7.e7797186.jpeg",
     "static/media/photo8.jpeg": "/Craft-and-Mix/static/media/photo8.55911593.jpeg",
@@ -40,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d8daa51c.js",
-    "static/js/2.1f2edd44.chunk.js",
-    "static/css/main.ad0d99a1.chunk.css",
-    "static/js/main.bf1f93cb.chunk.js"
+    "static/js/2.37f6957a.chunk.js",
+    "static/css/main.fdb4bab3.chunk.css",
+    "static/js/main.32ac5d93.chunk.js"
   ]
 }
