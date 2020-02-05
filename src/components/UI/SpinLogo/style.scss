@@ -34,7 +34,7 @@ div.spin_wrapper {
     width: 100%;
     color: $primary-gold;
     font-size: 20px;
-    margin: 15px;
+    margin: 10px 0 5px 0;
     @include respond-to('medium') {
       margin: 25px;
       font-size: 25px;

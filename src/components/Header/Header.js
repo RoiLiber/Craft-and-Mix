@@ -109,11 +109,12 @@ class Header extends Component {
 
     render() {
         const { shrinkHeader, selectedSection } = this.state;
-        const { menuList, large, larger, small, openMenu, windowScrollY } = this.props;
+        const { menuList, large, larger, small, openMenu, windowScrollY, windowHeight, iPhone8ScrollEnd, iPhoneXScrollEnd } = this.props;
+        const scrollEnd = windowHeight < 700 ? iPhone8ScrollEnd : iPhoneXScrollEnd;
 
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
-                {windowScrollY > 2050 ? '' : <div className={'header_logo'}>
+                {windowScrollY > scrollEnd ? '' : <div className={'header_logo'}>
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                 </div>}
                 <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`}>
@@ -143,7 +144,7 @@ class Header extends Component {
                                     }
                             </Link>
                         })
-                        :   windowScrollY > 2050
+                        :   windowScrollY > scrollEnd
                             ? <span className={'up'} onClick={() => scroll.scrollToTop()}>
                                 <Pulse forever>
                                     <i className="fas fa-angle-up"/>
@@ -159,7 +160,7 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => {
-    const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY, medium } = state.mainReducer;
+    const { openMenu, menuList, windowHeight, windowWidthSize, windowScrollY, medium, iPhone8ScrollEnd, iPhoneXScrollEnd } = state.mainReducer;
     const { large, larger, small } = windowWidthSize;
 
     return {
@@ -170,7 +171,9 @@ const mapStateToProps = state => {
         medium,
         menuList,
         windowHeight,
-        windowScrollY
+        windowScrollY,
+        iPhone8ScrollEnd,
+        iPhoneXScrollEnd
     };
 };
 

@@ -8,8 +8,12 @@ const larger = 1500;
 const width = window.innerWidth;
 const height = window.innerHeight;
 const scrollY = window.scrollY;
+const iPhone8ScrollEnd = 2000;
+const iPhoneXScrollEnd = 2300;
 
 const initialState = {
+    iPhone8ScrollEnd,
+    iPhoneXScrollEnd,
     windowWidthSize: {
         small: width < medium,
         medium: width > medium,
