@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../../assets/icon/Crift & Mix_logo icon.svg";
+import logo from "../../../assets/icon/logos/Crift & Mix_logo icon.svg";
 import './style.scss';
 
 export default function SpinLogo() {

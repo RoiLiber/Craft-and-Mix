@@ -1,5 +1,5 @@
 //==== CAROUSEL ===============================================
-import logo from '../../assets/icon/Crift & Mix_logo icon.svg';
+import logo from '../../assets/icon/logos/Crift & Mix_logo icon.svg';
 import aboutUs from "../../assets/img/carousel/About us.jpeg";
 import ourServices from "../../assets/img/carousel/Our Services.jpeg";
 import ourMood from "../../assets/img/carousel/Mode.jpeg";
@@ -28,7 +28,6 @@ import mezcal2 from '../../assets/img/mood/mezcal compassion/photo2.jpeg';
 import mezcal3 from '../../assets/img/mood/mezcal compassion/photo3.jpeg';
 import mezcal4 from '../../assets/img/mood/mezcal compassion/photo4.jpeg';
 import mezcal5 from '../../assets/img/mood/mezcal compassion/photo5.jpeg';
-import mezcal6 from '../../assets/img/mood/mezcal compassion/photo6.jpeg';
 import greyGoose1 from '../../assets/img/mood/grey-goose/photo1.jpeg';
 import greyGoose2 from '../../assets/img/mood/grey-goose/photo2.jpeg';
 import greyGoose3 from '../../assets/img/mood/grey-goose/photo3.jpeg';
@@ -62,14 +61,14 @@ import nina6 from '../../assets/img/mood/anglo & nina/photo6.jpeg';
 import orange1 from '../../assets/img/mood/orange/photo1.jpeg';
 
 //==== CLIENTS ================================================
-import louisVuitton from '../../assets/icon/louisVuitton.png';
-import morris from '../../assets/icon/morris.png';
-import goose from '../../assets/icon/greyGoose.png';
-import milk from '../../assets/icon/m&h.png';
-import audi from '../../assets/icon/audi-logo.png';
-import alfa from '../../assets/icon/alfa.png';
-import mobileye from '../../assets/icon/mobileye.svg.png';
-import google from '../../assets/icon/google.png';
+import louisVuitton from '../../assets/icon/clients-site logos/louisVuitton.png';
+import morris from '../../assets/icon/clients-site logos/morris.png';
+import goose from '../../assets/icon/clients-site logos/greyGoose.png';
+import milk from '../../assets/icon/clients-site logos/m&h.png';
+import audi from '../../assets/icon/clients-site logos/audi-logo.png';
+import alfa from '../../assets/icon/clients-site logos/alfa.png';
+import mobileye from '../../assets/icon/clients-site logos/mobileye.svg.png';
+import google from '../../assets/icon/clients-site logos/google.png';
 //=============================================================
 
 export const menuList = [
@@ -97,120 +96,21 @@ export const topCarousel = [
 ];
 
 export const moodPhotos = [
-    { location: 'Triple Orange love',
-        photos: [
-            { text: 'On the Roof1', img: orange1 },
-        ]
-    },
-    { location: 'We love Anglo&Nina and Jaffa more',
-        photos: [
-            { text: 'On the Roof1', img: nina1 },
-            { text: 'On the Roof2', img: nina2 },
-            { text: 'On the Roof1', img: nina3 },
-            { text: 'On the Roof2', img: nina4 },
-            { text: 'On the Roof1', img: nina5 },
-            { text: 'On the Roof2', img: nina6 },
-        ]
-    },
-    { location: 'Rothschild Mood at night',
-        photos: [
-            { text: 'On the Roof1', img: mood1 },
-            { text: 'On the Roof2', img: mood2 },
-            { text: 'On the Roof1', img: mood3 },
-            { text: 'On the Roof2', img: mood4 },
-            { text: 'On the Roof1', img: mood5 },
-        ]
-    },
-    { location: 'but Rothschild is Beautiful at night',
-        photos: [
-            { text: 'On the Roof1', img: night1 },
-            { text: 'On the Roof2', img: night2 },
-            { text: 'On the Roof2', img: night3 },
-            { text: 'On the Roof1', img: night4 },
-            { text: 'On the Roof2', img: night5 },
-            { text: 'On the Roof2', img: night6 },
-        ]
-    },
-    { location: 'Rothschild is nice from the roof at noon',
-        photos: [
-            { text: 'On the Roof1', img: noon1 },
-            { text: 'On the Roof2', img: noon2 },
-        ]
-    },
-    { location: 'We just make good shit like',
-        photos: [
-            { text: 'On the Roof1', img: makingGoodShit1 },
-            { text: 'On the Roof2', img: makingGoodShit2 },
-        ]
-    },
-    { location: 'New Goose eve',
-        photos: [
-            { text: 'On the Roof1', img: greyGoose1 },
-            { text: 'On the Roof2', img: greyGoose2 },
-            { text: 'On the Roof1', img: greyGoose3 },
-            { text: 'On the Roof2', img: greyGoose4 },
-            { text: 'On the Roof1', img: greyGoose5 },
-            { text: 'On the Roof2', img: greyGoose6 },
-            { text: 'On the Roof1', img: greyGoose7 },
-            { text: 'On the Roof2', img: greyGoose8 },
-            { text: 'On the Roof1', img: greyGoose9 },
-        ]
-    },
-    { location: 'Mezcal compassion',
-        photos: [
-            { text: 'On the Roof1', img: mezcal1 },
-            { text: 'On the Roof1', img: mezcal2 },
-            { text: 'On the Roof1', img: mezcal3 },
-            { text: 'On the Roof1', img: mezcal4 },
-            { text: 'On the Roof1', img: mezcal5 },
-            { text: 'On the Roof1', img: mezcal6 },
-        ]
-    },
-    { location: 'Martini1 Tlv',
-        photos: [
-            { text: 'On the Roof2', img: martini1 },
-        ]
-    },
-    { location: 'Bachelorette & Cocktails, We think you know her',
-        photos: [
-            { text: 'On the Roof2', img: bachelorette1 },
-            { text: 'On the Roof2', img: bachelorette2 },
-            { text: 'On the Roof2', img: bachelorette3 },
-            { text: 'On the Roof2', img: bachelorette4 },
-            { text: 'On the Roof2', img: bachelorette5 },
-        ]
-    },
-    { location: 'I Dont Know',
-        photos: [
-            { text: 'On the Roof1', img: iDontKnow1 },
-            { text: 'On the Roof2', img: iDontKnow2 },
-            { text: 'On the Roof1', img: iDontKnow3 },
-        ]
-    },
-    { location: 'A Cloud with a taste, Google',
-        photos: [
-            { text: 'On the Roof1', img: google1 },
-            { text: 'On the Roof1', img: google2 },
-        ]
-    },
-    { location: 'King David family event',
-        photos: [
-            { text: 'On the Roof1', img: kingDavid1 },
-            { text: 'On the Roof1', img: kingDavid2 },
-        ]
-    },
-    { location: 'Milk & Honey event',
-        photos: [
-            { text: 'On the Roof1', img: milk1 },
-            { text: 'On the Roof1', img: milk2 },
-        ]
-    },
-    { location: 'Porim p&p',
-        photos: [
-            { text: 'On the Roof2', img: porim1 },
-            { text: 'On the Roof2', img: porim2 },
-        ]
-    },
+    { location: 'Triple Orange love', photos: [ orange1 ] },
+    { location: 'We love Anglo&Nina and Jaffa more', photos: [ nina1, nina2, nina3,nina4, nina5, nina6 ] },
+    { location: 'Rothschild Mood at night', photos: [ mood1, mood2, mood3, mood4, mood5 ] },
+    { location: 'but Rothschild is Beautiful at night', photos: [ night1, night2, night3, night4, night5, night6 ] },
+    { location: 'Rothschild is nice from the roof at noon', photos: [ noon1, noon2 ] },
+    { location: 'We just make good shit like', photos: [ makingGoodShit1, makingGoodShit2 ] },
+    { location: 'New Goose eve', photos: [ greyGoose1, greyGoose2, greyGoose3, greyGoose4, greyGoose5, greyGoose6, greyGoose7, greyGoose8, greyGoose9 ] },
+    { location: 'Mezcal compassion', photos: [ mezcal1, mezcal2, mezcal3, mezcal4, mezcal5 ] },
+    { location: 'Martini1 Tlv', photos: [ martini1 ] },
+    { location: 'Bachelorette & Cocktails, We think you know her', photos: [ bachelorette1, bachelorette2, bachelorette3, bachelorette4, bachelorette5 ] },
+    { location: 'I Dont Know', photos: [ iDontKnow1, iDontKnow2, iDontKnow3 ] },
+    { location: 'A Cloud with a taste, Google', photos: [ google1, google2 ] },
+    { location: 'King David family event', photos: [ kingDavid1, kingDavid2 ] },
+    { location: 'Milk & Honey event', photos: [ milk1, milk2 ] },
+    { location: 'Porim p&p', photos: [ porim1, porim2 ] },
 ];
 
 export const clients = [

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import logo from '../../assets/icon/Crift&Mix-black logo.svg';
-import logoOneLine from '../../assets/icon/Crift&Mix-black logo_v2.svg';
+import logo from '../../assets/icon/logos/Crift&Mix-black logo.svg';
+import logoOneLine from '../../assets/icon/logos/Crift&Mix-black logo_v2.svg';
 import { openAboutUsSection, setPhotos } from '../../store/actions/mainActions';
 import { Slide } from 'react-reveal';
 import Pulse from 'react-reveal/Pulse';

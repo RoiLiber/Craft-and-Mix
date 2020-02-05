@@ -18,7 +18,6 @@ class Mood extends Component {
 
     render() {
         const { larger, moodPhotos, setPhotos } = this.props;
-        // const shuffleMood = shuffle(moodPhotos);
         const numberOfPhotos = larger
             ? slice(moodPhotos, 0, 15)
             : slice(moodPhotos, 0, 12);
@@ -29,8 +28,7 @@ class Mood extends Component {
                     <p>Some mood Photos from our Events</p>
                     {numberOfPhotos.map((photos, index) => {
                         const location = photos.location;
-                        const shufflePhotos = shuffle(photos.photos);
-                        const photo = shufflePhotos[0].img;
+                        const photo = photos.photos[0];
 
                         return <div key={index} className={'photo_wrapper'} onClick={() => setPhotos(photos)}>
                             {this.setPhoto(photo, location)}

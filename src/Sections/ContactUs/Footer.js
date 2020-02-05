@@ -2,7 +2,7 @@ import React from 'react';
 import Section from "../../components/Section";
 import { Fade } from "react-reveal";
 import { useSpring, animated } from 'react-spring';
-import logo from '../../assets/icon/Crift&Mix-black logo.svg';
+import logo from '../../assets/icon/logos/Crift&Mix-black logo.svg';
 import { Link } from "react-scroll";
 import './style.scss';
 
