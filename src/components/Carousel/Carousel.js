@@ -21,7 +21,7 @@ class Carousel extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         const { activeCarousel, carouselNextItem } = this.state;
-        const { carouselArray,delay } = this.props;
+        const { carouselArray, delay } = this.props;
         const index = carouselNextItem && findIndex(carouselArray, { text: carouselNextItem.text });
 
         if (prevState.activeCarousel !== activeCarousel && activeCarousel) {

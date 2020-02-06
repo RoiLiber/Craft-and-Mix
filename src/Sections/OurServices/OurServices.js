@@ -17,7 +17,7 @@ class OurServices extends Component {
                             </Fade>
                         </div>
                         <div className={'wrap_service'}>
-                            <Fade bottom delay={500}>
+                            <Fade cascade bottom delay={500}>
                                 <p>Bar & Cocktails services</p>
                                 <p>for any event</p>
                             </Fade>
@@ -30,7 +30,7 @@ class OurServices extends Component {
                             </Fade>
                         </div>
                         <div className={'wrap_service'}>
-                            <Fade bottom delay={800}>
+                            <Fade cascade bottom delay={800}>
                                 <p>Bar & Cocktail's menu</p>
                                 <p>Consultancy services</p>
                             </Fade>

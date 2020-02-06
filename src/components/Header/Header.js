@@ -53,9 +53,9 @@ class Header extends Component {
             ? 'ourServices'
             : windowScrollY >= height50vh * 3 && windowScrollY < height50vh * 6
                 ? 'mood'
-                : windowScrollY >= height50vh * 6 && windowScrollY < height50vh * 8.5
+                : windowScrollY >= height50vh * 6 && windowScrollY < height50vh * 8
                     ? 'clients'
-                    : windowScrollY >= height50vh * 8.5
+                    : windowScrollY >= height50vh * 8
                         ? 'contactUs'
                         : '';
 
@@ -114,7 +114,7 @@ class Header extends Component {
 
         return (
             <div className={shrinkHeader && openMenu ? 'header sm background' : shrinkHeader ? 'header sm' : 'header'}>
-                {windowScrollY > scrollEnd ? '' : <div className={'header_logo'}>
+                {windowScrollY > scrollEnd && !large ? '' : <div className={'header_logo'}>
                     <img src={shrinkHeader ? logoOneLine : logo} alt={'logo'}/>
                 </div>}
                 <div className={`menu_button ${openMenu ? 'menu_animation' : ''}`}>

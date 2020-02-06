@@ -4,6 +4,7 @@ import { shuffle, slice } from 'lodash';
 import Section from "../../components/Section";
 import { setPhotos } from "../../store/actions/mainActions";
 import './style.scss';
+import { Fade } from "react-reveal";
 
 class Mood extends Component {
 
@@ -25,7 +26,9 @@ class Mood extends Component {
         return (
             <Section elementName={'mood'} text={'Mood'} textColor={'black'} color={'gold'}>
                 <div className={'mood_section'}>
-                    <p>Some mood Photos from our Events</p>
+                    <Fade cascade bottom>
+                        <p>Some mood Photos from our Events</p>
+                    </Fade>
                     {numberOfPhotos.map((photos, index) => {
                         const location = photos.location;
                         const photo = photos.photos[0];
