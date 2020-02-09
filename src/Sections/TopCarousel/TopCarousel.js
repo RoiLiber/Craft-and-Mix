@@ -19,7 +19,6 @@ class TopCarousel extends Component {
             carouselNextItem: this.props.topCarousel[1],
             selectedCarouselItem: 0,
             activeCarousel: false,
-            forceCarousel: false
         };
     }
 

@@ -3,16 +3,18 @@ import { Fade } from "react-reveal";
 import Section from "../../components/Section";
 import cocktailIcon from '../../assets/icon/site-icons/cocktail-icon.png';
 import menuIcon from '../../assets/icon/site-icons/menu-icon.png';
+// import VisibilitySensor from "react-visibility-sensor/visibility-sensor";
 import './style.scss';
 
 class OurServices extends Component {
+
     render() {
         return (
             <Section elementName={'ourServices'} text={'Our services'} textColor={'black'} color={'gold'}>
                 <div className={'services'}>
                     <div className={'service'}>
                         <div className={'wrap_service'}>
-                            <Fade bottom delay={300}>
+                            <Fade bottom whem delay={300}>
                                 <img src={cocktailIcon} alt={'icon'}/>
                             </Fade>
                         </div>

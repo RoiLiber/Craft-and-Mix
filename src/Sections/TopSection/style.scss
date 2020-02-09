@@ -1,0 +1,241 @@
+@import "../../styles/colorsConfig";
+@import "../../styles/mixins";
+
+div.carousel_section {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    @include respond-to('large') {
+        flex-wrap: nowrap;
+        height: 80vh;
+    }
+
+    & > div.about_in {
+        position: absolute;
+        z-index: 700;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: rgba($primary-black, 0.95);
+
+        & > span.go_back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            position: absolute;
+            top: 8vh;
+            left: 35px;
+            color: $primary-white;
+            z-index: 700;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            @include respond-to('medium') {
+                font-size: 25px;
+            }
+        }
+    }
+
+    & > span {
+        font-size: 15px;
+        cursor: pointer;
+        color: $primary-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-gold;
+        border: thin solid $primary-white;
+        width: 120px;
+        height: 36px;
+        position: absolute;
+        bottom: calc( 50% - 18px );
+        left: calc( 50% - 60px );
+        z-index: 500;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 05px 10px 5px rgba($primary-black, 0.5);
+        @include respond-to('medium') {
+            width: 150px;
+            height: 50px;
+            left: calc( 50% - 75px );
+            font-size: 20px;
+        }
+        @include respond-to('large') {
+            bottom: 5vh;
+        }
+    }
+    & > span:hover {
+        background-color: $primary-white;
+        color: $primary-gold;
+        font-size: 17px;
+        box-shadow: 0 15px 20px 5px rgba($primary-black, 0.8);
+        @include respond-to('medium') {
+            font-size: 22px;
+        }
+    }
+    & > span.about_clicked {
+        background-color: $primary-gold;
+        color: $primary-white;
+        font-size: 15px;
+        box-shadow: 0 05px 10px 5px rgba($primary-black, 0.5);
+    }
+
+    & > img.logo {
+        position: absolute;
+        top: calc( 50% - 27px);
+        left: calc( 50% - 20px);
+        width: 40px;
+        z-index: 700;
+        @include respond-to('large') {
+            top: calc( 50% - 65px);
+            left: calc( 50% - 35px);
+            width: 70px;
+        }
+    }
+
+    div.carousel_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        position: relative;
+
+        & > div.white {
+            background-color: $primary-white;
+            color: $primary-black;
+        }
+        & > div.gold {
+            background-color: $primary-gold;
+            color: $primary-white;
+        }
+        & > div.black {
+            background-color: $primary-black;
+            color: $primary-white;
+        }
+
+        & > div.carousel_background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > img {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+            & > div {
+                margin: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                max-width: 350px;
+                font-size: 20px;
+                @include respond-to('large') {
+                    font-size: 30px;
+                    max-width: 500px;
+                }
+                & > p {
+                    margin: 5px;
+                    width: 100%;
+                    & > span {
+                        color: $primary-black;
+                    }
+                }
+            }
+        }
+        & > .carousel_img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 600;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    & > div.dots {
+        position: absolute;
+        top: 50%;
+        font-size: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        color: $primary-white;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        z-index: 700;
+        margin: 10px;
+        transition: 0.9s ease-in-out;
+        @include respond-to('large') {
+            top: 0;
+        }
+
+        & > i {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.7s ease-in-out;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        & > div.pulse-loader {
+            height: 15px;
+            margin: 10px 0;
+            position: relative;
+            width: 15px;
+            transition: 0.2s ease-in-out;
+
+            &:before,
+            &:after {
+                animation: pulse-loader infinite 2s;
+                box-shadow: 0 0 5px $primary-gold;
+                border-radius: 50%;
+                border: 3px solid $primary-gold;
+                content: '';
+                display: block;
+                height: 100%;
+                left: -#{3px};
+                opacity: 0;
+                position: absolute;
+                top: -#{3px};
+                width: 100%;
+                @include respond-to('large') {
+                    box-shadow: 0 0 5px $primary-white;
+                    border: 3px solid $primary-white;
+                }
+            }
+            &:after {
+                animation-delay: 2s / 2;
+            }
+        }
+    }
+}
+
+@keyframes pulse-loader {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    60% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1)
+    }
+}

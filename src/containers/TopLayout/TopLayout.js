@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Footer from "../../sections/ContactUs";
 import OurServices from "../../sections/OurServices";
 import Clients from "../../sections/Clients";
-import TopCarousel from "../../sections/TopCarousel/TopCarousel";
+import TopCarousel from "../../sections/TopCarousel";
 import { setPhotos } from '../../store/actions/mainActions';
 import Mood from "../../sections/Mood/Mood";
 import PopUpImg from "../../components/PopUpPhoto";
