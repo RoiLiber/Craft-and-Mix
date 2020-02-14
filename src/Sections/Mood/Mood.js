@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { shuffle, slice } from 'lodash';
+import { slice } from 'lodash';
 import Section from "../../components/Section";
 import { setPhotos } from "../../store/actions/mainActions";
 import './style.scss';

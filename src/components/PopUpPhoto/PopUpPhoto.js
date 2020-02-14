@@ -9,7 +9,7 @@ export default function PopUpPhoto(props) {
         {photosObj.photos.map((photo, index) => {
             return <Slide bottom duretion={500} key={index}>
                 <div className={'photo'}>
-                    <img src={photo} alt={`photo${index}`}/>
+                    <img src={photo} alt={index}/>
                 </div>
                 <div className={`pop_up_text_wrapper`}>
                     <Zoom deley={200}>

@@ -6,7 +6,7 @@ import SpinLogo from "../../components/UI/SpinLogo";
 import AboutUs from "../AboutUs";
 import { openAboutUsSection } from '../../store/actions/mainActions';
 import './style.scss';
-import {animateScroll as scroll} from "react-scroll";
+// import {animateScroll as scroll} from "react-scroll";
 import Pulse from "react-reveal/Pulse";
 
 class TopCarousel extends Component {
@@ -132,7 +132,7 @@ class TopCarousel extends Component {
         return <div className={`carousel_wrapper`} onClick={() => this.forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>
                 {selected
-                    ?   <img src={img} alt={'photo'}/>
+                    ?   <img src={img} alt={'backPhoto'}/>
                     :   <div>{this.textBreak(text)}</div>}
             </div>
             {activeCarousel && <Slide
@@ -142,7 +142,7 @@ class TopCarousel extends Component {
             >
                 <div className={`carousel_background ${nextBackgroundColor}`}>
                     {activeCarousel && !selected
-                        ?   <img src={nextImg} alt={'photo'} className={'carousel_img'}/>
+                        ?   <img src={nextImg} alt={'frontPhoto'} className={'carousel_img'}/>
                         :   <div className={`carousel_img ${nextBackgroundColor}`}>{this.textBreak(nextText)}</div>}
                 </div>
 

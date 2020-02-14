@@ -20,8 +20,8 @@ class OurServices extends Component {
                         </div>
                         <div className={'wrap_service'}>
                             <Fade cascade bottom delay={500}>
-                                <p>Bar & Cocktails services</p>
-                                <p>for any event</p>
+                                <p>Bar & Cocktails Services</p>
+                                <p>For Any Event</p>
                             </Fade>
                         </div>
                     </div>
@@ -33,8 +33,8 @@ class OurServices extends Component {
                         </div>
                         <div className={'wrap_service'}>
                             <Fade cascade bottom delay={800}>
-                                <p>Bar & Cocktail's menu</p>
-                                <p>Consultancy services</p>
+                                <p>Bar & Cocktail Menu Creating</p>
+                                <p>Consultancy Services</p>
                             </Fade>
                         </div>
                     </div>

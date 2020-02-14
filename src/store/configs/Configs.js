@@ -79,19 +79,18 @@ export const menuList = [
 ];
 
 export const topCarousel = [
-    { text: 'Created by- Asaf Amir,|' +
-            'CRAFT & MIX- is set to give you|' +
-            'the best cocktail and bar|' +
-            'experience you can get!', img: aboutUs, backgroundColor: 'gold' },
+    { text: 'CRAFT & MIX- is set to give you|' +
+            'the best bar and cocktail|' +
+            'experience available!', img: aboutUs, backgroundColor: 'gold' },
     { text: 'Our top priority is|' +
-            'professional and kind service|' +
-            'next to deep|' +
+            'professional, warm service|' +
+            'mixed with|' +
             'mixology creativity|' +
-            'and fancy cocktails.', img: ourServices, backgroundColor: 'black' },
-    { text: 'We give services to|' +
+            'and unique cocktails.', img: ourServices, backgroundColor: 'black' },
+    { text: 'We provide services to|' +
             'private clients,|' +
-            'business companies,|' +
-            'bars and restaurants.', img: ourMood, backgroundColor: 'gold' },
+            'business and corporate events,|' +
+            'as well as bars and restaurants.', img: ourMood, backgroundColor: 'gold' },
     { text: logo, img: onTheMenu, backgroundColor: 'black' }
 ];
 

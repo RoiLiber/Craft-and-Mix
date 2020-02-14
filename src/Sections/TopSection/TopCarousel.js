@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch  } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { findIndex, split, includes } from 'lodash';
 import { Slide } from "react-reveal";
 import SpinLogo from "../../components/UI/SpinLogo";
@@ -9,7 +9,6 @@ import Pulse from "react-reveal/Pulse";
 import './style.scss';
 
 export default function TopCarousel(props) {
-
     const [carouselArray] = useState(props.topCarousel);
     const [carouselItem, setCarouselItem] = useState(props.topCarousel[0]);
     const [carouselNextItem, setCarouselNextItem] = useState(props.topCarousel[1]);
@@ -22,17 +21,16 @@ export default function TopCarousel(props) {
     useEffect(() => {
         const index = findIndex(props.topCarousel, { text: carouselNextItem.text });
         // debugger
-        console.log('activeCarousel change');
         setTimeout(() => {
             if (activeCarousel) {
-                console.log(activeCarousel);
-                setStateConfig(index, false)
+                setStateConfig(index, () => {
+                    setActiveCarousel(true);
+                })
             }
         }, 6000)
-
     }, [activeCarousel]);
 
-    const setStateConfig = (index, forceState) => {
+    const setStateConfig = (index, setActive) => {
         const { topCarousel } = props;
         const carouselItem = topCarousel[index];
         const carouselNextItem = index === topCarousel.length - 1
@@ -42,14 +40,15 @@ export default function TopCarousel(props) {
         setCarouselItem(carouselItem);
         setCarouselNextItem(carouselNextItem);
         setSelectedCarouselItem(index);
-        setActiveCarousel(!forceState);
+        setActive()
     };
 
     const forceCarouselItem = index => {
-        setStateConfig(index, true);
-        setTimeout(() => {
-            setActiveCarousel(true);
-        }, 6000)
+        setStateConfig(index, () => {
+            setTimeout(() => {
+                setActiveCarousel(true);
+            }, 6000)
+        });
     };
 
     const textBreak = text => {
@@ -86,7 +85,7 @@ export default function TopCarousel(props) {
         return <div className={`carousel_wrapper`} onClick={() => forceCarouselItem(selectedCarouselItem)}>
             <div className={`carousel_background ${backgroundColor}`}>
                 {selected
-                    ?   <img src={img} alt={'photo'}/>
+                    ?   <img src={img} alt={'backPhoto'}/>
                     :   <div>{textBreak(text)}</div>}
             </div>
             {activeCarousel && <Slide
@@ -96,7 +95,7 @@ export default function TopCarousel(props) {
             >
                 <div className={`carousel_background ${nextBackgroundColor}`}>
                     {activeCarousel && !selected
-                        ?   <img src={nextImg} alt={'photo'} className={'carousel_img'}/>
+                        ?   <img src={nextImg} alt={'frontPhoto'} className={'carousel_img'}/>
                         :   <div className={`carousel_img ${nextBackgroundColor}`}>{textBreak(nextText)}</div>}
                 </div>
 
