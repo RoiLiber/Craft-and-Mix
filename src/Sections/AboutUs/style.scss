@@ -29,6 +29,7 @@ div.about_us {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    height: 70%;
     @include respond-to('medium') {
       height: 50%;
     }

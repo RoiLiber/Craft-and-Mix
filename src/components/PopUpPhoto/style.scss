@@ -7,7 +7,7 @@ div.pop_photos_wrapper {
   width: 100%;
   overflow-y: scroll;
   justify-content: center;
-  padding: 15vh 0;
+  padding: 25vh 0;
   border-radius: 25px 25px 0 0 ;
   @include respond-to('medium') {
     width: 80%;
@@ -21,13 +21,13 @@ div.pop_photos_wrapper {
     font-size: 15px;
     display: flex;
     justify-content: center;
-    height: 55vh;
+    height: 35vh;
     width: 100%;
     @include respond-to('medium') {
-      height: 55vh;
+      height: 45vh;
     }
     @include respond-to('large') {
-      height: 60vh;
+      height: 55vh;
     }
 
     & > img {
