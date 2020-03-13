@@ -6,7 +6,7 @@ A cocktail service company site
   <img src="https://i.ibb.co/6gkK3n3/top.jpg" width="30%"/>
   <img src="https://i.ibb.co/cNT0gCg/mood.jpg" width="30%"/>
   <img src="https://i.ibb.co/WgwDWRZ/get-in-touch.jpg" width="30%"/>
-  <img src="https://i.ibb.co/zR7J7CF/services.png" width="30%"/>
+  <img src="https://i.ibb.co/zR7J7CF/services.png" width="50%" height="300px"/>
 </div>
 
 ## Demo
