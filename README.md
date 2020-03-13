@@ -8,7 +8,10 @@ A cocktail service company site
   <img src="https://i.ibb.co/WgwDWRZ/get-in-touch.jpg" width="30%"/>
 </div>
 
-## Download & Run
+# Demo
+[https://roiliber.github.io/Craft-and-Mix/](https://roiliber.github.io/Craft-and-Mix/)
+
+# Download & Run
 Run the following commands
 ```
   git clone https://github.com/RoiLiber/Craft-and-Mix.git RoiLiber
